@@ -1,58 +1,39 @@
 # Projeto de Interação Humano-Computador (IHC)
 
-> **Template acadêmico para documentação do projeto no GitHub.**  
-> Substitua todo texto entre `{{...}}`, remova exemplos que não se aplicam e mantenha evidências no próprio repositório sempre que possível.
-
-## Princípio do projeto da disciplina
-
-A disciplina utiliza **preferencialmente o tema do TCC em andamento** como domínio para exercitar os métodos de Interação Humano-Computador.
-
-Isso vale também quando o TCC é predominantemente técnico e **não previa o desenvolvimento de uma interface**.
-
-- Se o TCC **já prevê interface**, ela pode ser o objeto principal das atividades de IHC.
-- Se o TCC **não prevê interface**, a equipe deverá derivar um **escopo de IHC** a partir da contribuição técnica: quem poderia utilizar ou se beneficiar do resultado, o que essa pessoa precisaria fazer, em qual contexto e que interação seria necessária.
-- A interface criada na disciplina **não se torna automaticamente uma obrigação do TCC**. Ela pode ser um protótipo de aprendizagem, uma extensão conceitual ou uma demonstração de aplicação potencial. Sua incorporação ao TCC depende de decisão da equipe e do orientador.
-
-Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do TCC](GUIA_ESCOPO_IHC.md).
-
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto de IHC:** Interface de Visualização e Controle para o Ralph Wiggum Loop Adaptado  
+**TCC/projeto de origem:** Um Harness de IA para Resolução de Perguntas em Linguagem Natural: Adaptando o Ralph Wiggum Loop Além do Desenvolvimento de Software  
+**Orientador(a):** Prof. Charles Henrique Porto Ferreira  
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** Centro Universitário FEI  
+**Semestre:** 2026 / 8º Semestre
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Hugo Emílio Nomura | 22.123.051-9 | [@HG0304](https://github.com/HG0304) | Front-end e Integração da Interface |
+| Pedro Henrique Correia de Oliveira | 22.222.009-7 | [@PedroHCorreia](https://github.com/PedroHCorreia) | Design de Interação e Protótipos |
+| Pedro Henrique Satoru Lima Takahashi | 22.123.019-6 | [@PedroSatoru](https://github.com/PedroSatoru) | Arquitetura de Software e Fluxo de Dados |
+| Vitor Monteiro Vianna | 22.223.085-6 | [@VitorMonteiroVianna](https://github.com/VitorMonteiroVianna) | Avaliação de Usabilidade e Testes |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
-
-> **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
+| Tema central do TCC | Aprimoramento de outputs de IA por meio de sistemas compostos (harnesses) utilizando ciclos iterativos de raciocínio, decomposição de tarefas e refinamento de respostas, baseado no Ralph Wiggum Loop, visando mitigar o decaimento de contexto (*context rot*). |
+| Resultado técnico esperado do TCC | Um harness de orquestração de IA (backend com API contendo os endpoints `/message/reasoning` e `/message/default`) e benchmarks de acurácia com modelos Llama 3.1 no MMLU e GPQA. |
+| O TCC já previa interface? | sim |
+| Capacidade técnica que pode gerar valor para pessoas | Permite visualizar detalhadamente e interativamente o processo interno de pensamento (thinking), decomposição em tarefas, validação de critérios de aceite e síntese de respostas dos LLMs, tornando os processos de raciocínio da IA transparentes e controláveis. |
+| Usuário principal adotado em IHC | Engenheiros de prompt, desenvolvedores de sistemas de IA, pesquisadores ou usuários avançados que necessitam auditar, configurar e acompanhar a resolução de tarefas complexas passo a passo. |
+| Objetivo principal desse usuário | Compreender como a IA decompôs o problema, auditar o raciocínio intermediário de cada subtarefa e configurar as estratégias de orquestração (fases, modelos, providers) para obter melhores respostas com controle sobre o consumo de tokens e a janela de contexto. |
+| Interface/recorte explorado na disciplina | Um dashboard web interativo contendo seleção de modelo/fluxo, painel de "Open Thinking" em tempo real com a linha do tempo das tarefas/aprendizados (fases A, B e C), monitoramento do consumo de tokens/janelas de contexto e painel de resultados. |
+| Relação com o escopo formal do TCC | parte prevista |
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
-
-Evite começar pela tecnologia.
-
-> **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
+**Desenvolvedores e engenheiros de prompt** precisam **auditar e validar o processo de raciocínio de sistemas compostos de IA** em **tarefas complexas de linguagem natural**. Atualmente enfrentam a **falta de transparência nas etapas intermediárias de raciocínio (caixa-preta) e o decaimento progressivo da qualidade das respostas devido ao acúmulo de contexto (*context rot*)**, utilizando **prompts lineares tradicionais sem visibilidade de fluxo**. O tema do TCC investiga **a orquestração stateless do Ralph Wiggum Loop adaptado para linguagem natural, mitigando o context rot**. Para fins da disciplina de IHC, será explorada uma interface que permita **configurar parâmetros de execução (como modelo e fluxo), acompanhar visualmente o ciclo de planejamento, execução e síntese das tarefas em tempo real, e monitorar o tamanho do contexto e o uso de tokens a cada etapa**.
 
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 
