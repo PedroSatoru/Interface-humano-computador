@@ -8,16 +8,16 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | {{...}} | {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}} | {{...}} | definido |
-| O TCC previa interface? | sim / não / parcialmente | {{...}} | definido |
-| Capacidade/contribuição central | {{o que a tecnologia permite}} | {{...}} | definido |
-| Possíveis beneficiários/stakeholders | {{...}} | {{fonte ou hipótese}} | F / H / ? |
-| Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
-| Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
-| Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
-| Interface/recorte de IHC | {{...}} | {{como deriva dos itens acima}} | proposta / revisada |
-| Relação com o TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra | {{...}} | definido |
+| Tema do TCC | Aprimoramento de outputs de IA por meio de orquestração multi-fase baseada no Ralph Wiggum Loop para mitigar o decaimento de contexto (*context rot*). | Artigo/Paper do TCC e documentação do backend | definido |
+| Resultado técnico esperado | Um harness de orquestração de IA (serviço backend local) e benchmarks comparativos nos datasets MMLU/GPQA. | Arquitetura de código e scripts de benchmark | definido |
+| O TCC previa interface? | sim | Documentação inicial e demo web demonstrativa integrada | definido |
+| Capacidade/contribuição central | Orquestrar e isolar o contexto das chamadas de LLM por meio de tarefas atômicas e transferência de aprendizados (*Fresh Context*). | Algoritmo stateless de raciocínio | definido |
+| Possíveis beneficiários/stakeholders | Pesquisadores, estudantes, analistas acadêmicos e profissionais que utilizam LLMs para tarefas de alta complexidade. | `[H]` Levantamento de perfil de público-alvo | H |
+| Usuário escolhido para IHC | Pesquisador / Estudante / Analista de Explicabilidade | `[H]` Por necessitarem de explicabilidade nas respostas geradas pela IA | H |
+| Objetivo principal do usuário | Submeter perguntas lógicas complexas e acompanhar as etapas de raciocínio da IA em tempo real para validar a veracidade da resposta. | `[H]` Necessidade de auditoria e mitigação de alucinações | H |
+| Contexto de uso adotado | Ambientes de estudo acadêmico, laboratórios de pesquisa ou escritórios de análise de dados. | `[H]` Foco individual e necessidade de alta atenção aos detalhes | H |
+| Interface/recorte de IHC | Dashboard interativo contendo entrada de dados, linha do tempo vertical de "Open Thinking" e monitoramento de tokens/contexto. | `[H]` Permite a visualização didática do loop de raciocínio em tempo real | proposta |
+| Relação com o TCC | parte prevista | Interface demonstrativa oficial do projeto | definido |
 
 > Se o escopo de IHC mudar ao longo do semestre, preserve a decisão anterior no histórico e registre **qual evidência motivou a mudança**.
 
@@ -27,15 +27,15 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 | ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência obtida | Estado atual | Impacto no projeto |
 |---|---|---|---|---|---|---|---|
-| H01 | {{...}} | H / ? | {{...}} | Entrega 2 / 3 / 7 / outra | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
-| H02 | {{...}} | H / ? | {{...}} | {{...}} | {{...}} | aberta | {{...}} |
+| H01 | Pesquisadores e estudantes preferem acompanhar a resolução lógica das subtarefas em formato de linha do tempo vertical (timeline) para validar e confiar na resposta final. | H | Define a estrutura visual principal da interface (Open Thinking). | Entrega 6 (Prototipação em papel) / Entrega 13 (Heurísticas) | PENDENTE | aberta | Alto |
+| H02 | A sinalização de sucesso (✓) ou falha (✗) dos critérios de aceite na timeline é suficiente para indicar quando a IA corrigiu o raciocínio. | H | Evita a sobrecarga de leitura de logs longos pelo usuário. | Entrega 13 (Heurísticas) / Entrega 14 (Testes com usuários) | PENDENTE | aberta | Médio |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | {{ex.: recomendação de otimização}} | {{...}} | {{P01}} | {{C01}} | {{T01}} | {{links}} | {{...}} | {{M01}} | {{F01...}} | {{V01 ou —}} | {{UT01}} | {{...}} |
-| R02 |  |  |  |  |  |  |  |  |  |  |  |  |
+| R01 | Orquestração stateless (Ralph Loop) | Auditar o raciocínio intermediário do LLM | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R02 | Monitoramento de contexto/tokens | Identificar eficiência de custo e context rot | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -43,15 +43,14 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 
 | ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
 |---|---|---|---|---|---|
-| F01 | dashboard | {{T01}} | {{...}} | {{H01/evidência...}} | {{C01/M01}} |
-| F02 | histórico com filtros | {{T02}} | {{...}} | {{...}} | {{...}} |
-| F03 | administração/CRUD | {{T03}} | {{...}} | {{...}} | {{...}} |
+| F01 | dashboard / timeline | Visualizar o progresso de pensamento em tempo real | Exibição de cards de tarefas por fases (Setup, Loop, Síntese) | `[H]` Necessidade de auditoria e acompanhamento de tarefas da IA | PENDENTE |
+| F02 | seletor / parametrização | Ajustar modelo e fluxo de forma simplificada | Botões de seleção de modelo (Llama 3.1 8B/70B/405B) e tipo de fluxo | `[F]` (demo já possui esse seletor inicial) | PENDENTE |
 
 ## 5. Registro de mudanças de escopo
 
 | Data | O que mudou | Evidência/feedback que motivou | Artefatos afetados | Responsável |
 |---|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| 22/08/2026 | Derivação inicial do escopo e hipóteses baseadas no TCC | Criação inicial do repositório da disciplina | README.md, docs/01_conhecendo_o_problema.md | Equipe de IHC |
 
 ## Como usar
 
