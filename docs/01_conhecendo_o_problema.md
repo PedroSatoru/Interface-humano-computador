@@ -412,7 +412,7 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 - [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
 - [x] A equipe declarou se o TCC já previa interface.
-- [] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
+- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
 - [x] A interface de IHC não foi apresentada como obrigação automática do TCC.
 - [x] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
 - [x] Usuários diretos e stakeholders foram diferenciados.
