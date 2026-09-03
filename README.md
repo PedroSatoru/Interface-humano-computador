@@ -26,14 +26,14 @@
 | Resultado técnico esperado do TCC | Um harness de orquestração de IA (serviço backend local para integração interna de fluxos) e benchmarks de acurácia com modelos Llama 3.1 no MMLU e GPQA. |
 | O TCC já previa interface? | sim |
 | Capacidade técnica que pode gerar valor para pessoas | Permite visualizar detalhadamente e interativamente o processo interno de pensamento (thinking), decomposição em tarefas, validação de critérios de aceite e síntese de respostas dos LLMs, tornando os processos de raciocínio da IA transparentes e controláveis. |
-| Usuário principal adotado em IHC | Pesquisadores, estudantes e analistas acadêmicos/profissionais que necessitam acompanhar e auditar a resolução de tarefas lógicas complexas passo a passo. |
-| Objetivo principal desse usuário | Compreender como a IA decompôs o problema, acompanhar as decisões tomadas em cada subtarefa e verificar a acurácia do raciocínio lógico intermediário e do consumo de tokens. |
-| Interface/recorte explorado na disciplina | Um dashboard web interativo contendo painel de entrada de perguntas, visualização do "Open Thinking" em tempo real com a linha do tempo das tarefas (fases A, B e C), monitoramento de tokens/contexto e painel de resultado final. |
+| Usuário principal adotado em IHC | Estudantes, pesquisadores, empresas e entusiastas de IA que buscam respostas de alta acurácia para perguntas de grande complexidade. |
+| Objetivo principal desse usuário | Obter respostas de linguagem natural refinadas e com qualidade superior, selecionando modelos de LLM e acompanhando a evolução do raciocínio da IA. |
+| Interface/recorte explorado na disciplina | Um dashboard web interativo contendo seleção de modelo/fluxo, painel de entrada de perguntas, visualização do "Open Thinking" em tempo real com a linha do tempo das tarefas e painel de resultado final sintetizado. |
 | Relação com o escopo formal do TCC | parte prevista |
 
 ## Resumo do projeto pela perspectiva do usuário
 
-**Pesquisadores, estudantes e analistas acadêmicos** precisam **auditar e validar o processo de raciocínio de sistemas compostos de IA** em **tarefas complexas de linguagem natural**. Atualmente enfrentam a **falta de transparência nas etapas intermediárias de raciocínio (caixa-preta) e o decaimento progressivo da qualidade das respostas devido ao acúmulo de contexto (*context rot*)**, utilizando **chatbots clássicos de forma linear direta**. O tema do TCC investiga **a orquestração stateless do Ralph Wiggum Loop adaptado para linguagem natural, mitigando o context rot**. Para fins da disciplina de IHC, será explorada uma interface que permita **submeter a pergunta complexa em linguagem natural, acompanhar visualmente o ciclo de planejamento, execução e síntese das tarefas em tempo real na linha do tempo, e monitorar o tamanho do contexto e o uso de tokens por etapa**.
+**Estudantes, pesquisadores, empresas e entusiastas de IA** precisam **obter respostas precisas e de alta acurácia** em **tarefas complexas de linguagem natural**. Atualmente enfrentam a **queda de acurácia e o surgimento de erros lógicos em raciocínios longos**, utilizando **chatbots clássicos de forma linear direta**. O tema do TCC investiga **a orquestração stateless do Ralph Wiggum Loop adaptado para linguagem natural, elevando a qualidade e a acurácia das respostas dos modelos**. Para fins da disciplina de IHC, será explorada uma interface que permita **selecionar o modelo de LLM, submeter a pergunta complexa em linguagem natural, acompanhar visualmente a geração da resposta e a linha do tempo das tarefas em tempo real para decidir se o resultado está correto, e visualizar a resposta sintetizada**.
 
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 
@@ -81,7 +81,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 
 | # | Entrega | Quantidade mínima / responsabilidade | Status |
 |---:|---|---|---|
-| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | ⬜ |
+| 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟨 |
 | 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | ⬜ |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | ⬜ |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | ⬜ |

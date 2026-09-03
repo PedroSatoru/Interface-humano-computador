@@ -108,11 +108,11 @@ O projeto propõe um orquestrador que divide perguntas complexas para LLMs em ta
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
-Nosso TCC produz, melhora, analisa ou permite **orquestrar e isolar o contexto das chamadas de LLM por meio de tarefas atômicas e aprendizados pontuais acumulados (*Fresh Context*), mitigando a degradação de contexto durante o raciocínio complexo**.
+Nosso TCC produz, melhora, analisa ou permite **orquestrar a resolução de perguntas complexas por meio de tarefas atômicas e aprendizados acumulados (*Fresh Context*), elevando a acurácia e a qualidade final das respostas dos modelos de linguagem**.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-`[H]` **Acurácia e Confiabilidade:** Espera-se que usuários obtenham respostas significativamente mais precisas, lógicas e livres de alucinações para problemas complexos (como as questões avançadas do GPQA e MMLU) sem que o sistema sofra degradação de desempenho à medida que o raciocínio se estende.
+`[H]` **Acurácia e Confiabilidade:** Espera-se que usuários obtenham respostas significativamente mais precisas, lógicas e livres de alucinações para problemas complexos (como as questões avançadas do GPQA e MMLU) através do processo de orquestração e refinamento contínuo.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -126,15 +126,15 @@ Nosso TCC produz, melhora, analisa ou permite **orquestrar e isolar o contexto d
 
 ## 2.1 Quem interage diretamente com o produto, se já existe interface prevista?
 
-`[H]` **Estudantes, Pesquisadores e Analistas Acadêmicos/Profissionais:** Usuários que submetem perguntas complexas (de múltipla escolha ou discursivas) e precisam de uma resposta de alta acurácia, com a possibilidade de acompanhar e auditar o passo a passo do raciocínio da IA para fins de transparência e verificação de alucinações.
+`[H]` **Estudantes, Pesquisadores, Empresas e Entusiastas de IA:** Usuários e organizações que submetem perguntas complexas de raciocínio (de múltipla escolha ou discursivas) e necessitam de respostas refinadas de alta qualidade e acurácia, com o auxílio de uma interface gráfica para selecionar o modelo, acompanhar a evolução da execução e verificar a coerência do resultado.
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| Pesquisador / Estudante | Usuário final do sistema | Submete a pergunta complexa e consome a resposta final | `[H]` |
-| Analista / Auditor | Avaliador da explicabilidade | Acompanha a execução das tarefas e a validação lógica na timeline para auditar se o raciocínio foi correto | `[H]` |
-| Operador do Sistema | Usuário de monitoramento | Visualiza o consumo de tokens e o fluxo de novas janelas de contexto geradas | `[H]` |
+| Estudante / Pesquisador | Usuário final do sistema | Submete perguntas acadêmicas e científicas complexas para obter respostas sintetizadas de alta acurácia e qualidade | `[H]` |
+| Empresa / Organização | Usuário corporativo e tomador de decisão | Utiliza o harness para resolver problemas lógicos de alta complexidade do seu domínio e seleciona o modelo de LLM adequado às suas demandas | `[H]` |
+| Entusiasta de IA | Usuário explorador | Experimenta e avalia o ganho de qualidade e o desempenho do Ralph Wiggum Loop adaptado em comparação com inferências diretas | `[H]` |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
@@ -146,31 +146,28 @@ Não foram identificados stakeholders afetados que não utilizariam a interface 
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-`[H]` O perfil priorizado compreende usuários acadêmicos e profissionais que possuem familiaridade com métricas de IA, mas que necessitam de uma visualização didática e transparente para auditar o raciocínio das respostas sem precisar interagir com códigos ou logs brutos. A interface precisa de clareza conceitual na linha do tempo das tarefas lógicas e legibilidade imediata das métricas de contexto e tokens.
-
----
-
-# 3. Entendendo objetivos e atividades
+`[H]` O público compreende estudantes, pesquisadores, empresas e entusiastas de IA que buscam respostas de alta fidelidade para problemas complexos.
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 
-`[H]` Validar se o processo de raciocínio de um modelo de linguagem para uma determinada questão de alta complexidade foi executado de forma estruturada e se o resultado final de fato obedece aos critérios lógicos esperados, garantindo a audibilidade do sistema de IA.
+`[H]` Obter respostas de alta qualidade, acurácia e coerência lógica para perguntas de grande complexidade em linguagem natural.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Submeter a pergunta complexa para processamento no orquestrador | Pesquisador / Estudante | Alta frequência / Alta criticidade | `[F]` |
-| A02 | Acompanhar a execução das fases de raciocínio intermediárias (Setup, Loop, Síntese) em tempo real | Pesquisador / Auditor | Alta frequência / Alta criticidade (auditoria) | `[F]` |
-| A03 | Monitorar o consumo acumulado de tokens e o fluxo de contextos | Pesquisador / Operador | Média frequência / Média criticidade | `[F]` |
+| A01 | Submeter a pergunta complexa para processamento no orquestrador | Estudantes, Pesquisadores, Empresas e Entusiastas | Alta frequência / Alta criticidade | `[F]` |
+| A02 | Acompanhar a execução das fases de raciocínio e o progresso da geração da resposta | Estudantes, Pesquisadores, Empresas e Entusiastas | Alta frequência / Média criticidade | `[F]` |
+| A03 | Selecionar o modelo de LLM que estamos utilizando | Empresas e Pesquisadores | Média frequência / Média criticidade | `[F]` |
+| A04 | Melhorar as respostas dos modelos (decomposição, ciclos stateless e refinamento) | Projeto / Harness (Sistema) | Alta frequência / Alta criticidade | `[F]` |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-`[F]` **Acompanhar a execução das fases de raciocínio (A02):** Como o processo do Ralph Wiggum Loop envolve múltiplos ciclos de verificação e reflexão da IA, o pesquisador ou analista passará a maior parte do tempo observando a linha do tempo do progresso das tarefas e como os aprendizados estão sendo processados a cada janela de contexto limpa.
+`[F]` **Acompanhar a execução e a geração da resposta (A02):** Após submeter a pergunta, o usuário acompanha a evolução do processamento em tempo real enquanto o sistema atua para construir a resposta sintetizada.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-`[H]` **Auditar a fidelidade do raciocínio lógico (A02):** Se a visualização for confusa ou omitir as reais tentativas de correção da IA, o usuário não conseguirá confiar na resposta final gerada e poderá tomar decisões baseadas em alucinações não detectadas.
+`[F]` **Melhora das respostas dos modelos (A04):** A atividade mais crítica do projeto é garantir o ganho efetivo de acurácia e a melhoria da qualidade das respostas dos LLMs. Se a orquestração do harness falhar em aplicar a decomposição e o ciclo de refinamento do Ralph Wiggum Loop, o modelo entregará respostas imprecisas ou com falhas lógicas ao usuário.
 
 ---
 
@@ -178,29 +175,29 @@ Não foram identificados stakeholders afetados que não utilizariam a interface 
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
 
-`[F]` Geralmente, o usuário submete perguntas a chatbots tradicionais (como ChatGPT ou Claude) de forma linear e direta, recebendo apenas o bloco de texto final sem qualquer visibilidade do raciocínio interno ou das validações feitas sob o capô.
+`[F]` **Processo atual sem o harness:** Usuários submetem perguntas complexas a LLMs tradicionais em chatbots (como ChatGPT ou Claude) ou chamadas de API diretas. Nesses cenários lineares, conforme o raciocínio se estende em perguntas difíceis, a acurácia tende a cair, gerando respostas imprecisas ou alucinadas. O TCC foi concebido com o objetivo inicial de melhorar a qualidade dessas respostas desenvolvendo um harness de orquestração stateless baseado no Ralph Wiggum Loop adaptado; posteriormente, implementou-se uma interface gráfica para permitir a seleção de modelos, o acompanhamento visual da execução e a facilidade de verificação do resultado.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-`[F]` A ausência de transparência (caixa-preta) impede que o usuário saiba se o modelo de linguagem alucinou em alguma etapa intermediária, se o contexto excessivo degradou a lógica aplicada ou se as premissas adotadas pela IA foram validadas individualmente antes do encerramento.
+`[F]` A dificuldade principal em problemas complexos é a queda na qualidade e na acurácia das respostas à medida que o raciocínio se prolonga de forma linear. Sem uma arquitetura de decomposição de tarefas e ciclos de refinamento (Ralph Loop), a IA não consegue autocorrigir erros intermediários para gerar respostas melhores.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-`[H]` Qual tarefa está ativa, quais critérios individuais passaram ou falharam, o conteúdo da reflexão do modelo, o acumulado de tokens gerados e se a janela de contexto foi reinicializada corretamente para manter a mente limpa.
+`[H]` A resposta sintetizada final, a acurácia e coerência da solução apresentada, o modelo de LLM selecionado para o processamento e o estado de progresso das tarefas na linha do tempo da interface gráfica.
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-`[F]` O usuário aceita respostas que parecem plausíveis mas contêm erros lógicos internos indetectáveis, levando a decisões equivocadas em análises científicas ou acadêmicas.
+`[F]` O modelo entrega uma resposta incorreta ou imprecisa devido à ausência de refinamento no raciocínio, o que leva estudantes, pesquisadores e empresas a tomarem decisões baseadas em conclusões falhas.
 
 ## 4.5 Conte uma situação concreta.
 
-`[F]` **Caso de uso do Ralph Wiggum Loop:** Maria, uma pesquisadora acadêmica, precisa responder a uma questão complexa de biologia molecular. Ela submete a pergunta em nossa interface e acompanha a linha do tempo do "Open Thinking" em tempo real. Ela observa a Fase A criar 3 tarefas atômicas. Durante a Fase B, ela acompanha a execução da Tarefa 2 (validação de membrana celular) e visualiza um sinalizador de erro (✗) de uma premissa incorreta na primeira iteração, seguido pela correção imediata (✓) em um novo contexto limpo. Ao final, a Fase C exibe a resposta sintetizada. Graças à visualização gráfica das etapas de raciocínio, Maria pôde confiar na resposta sabendo exatamente quais caminhos a IA trilhou.
+`[F]` **Caso de uso do Ralph Wiggum Loop:** Maria, uma pesquisadora (ou representante de empresa), precisa resolver uma questão lógica complexa de biologia molecular. Ao utilizar um chatbot tradicional, a IA comete erros lógicos e entrega uma resposta incorreta. Ao utilizar o orquestrador do TCC, a pergunta é dividida em tarefas atômicas executadas pelo Ralph Wiggum Loop adaptado, permitindo autocrítica e reflexão para melhorar a resposta final. Com a adição posterior da interface gráfica, Maria pode selecionar o modelo de LLM desejado, acompanhar o raciocínio em tempo real e decidir com segurança se a resposta gerada está correta.
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
-| Dificuldade de auditoria de modelos de linguagem | A necessidade de enxergar graficamente e em tempo real as fases A, B e C de raciocínio e validação. | Relatos informais de usuários e literatura de explicabilidade em IA. |
+| Literatura de LLMs e Benchmarks do TCC | A limitação na acurácia de LLMs em tarefas de raciocínio complexo e o ganho comprovado de qualidade com a orquestração do Ralph Loop nos datasets MMLU/GPQA. | Artigos da literatura e resultados dos testes de benchmark do projeto. |
 
 ---
 
@@ -238,28 +235,29 @@ Não foram identificados fatores sociais ou organizacionais relevantes para o es
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| LangSmith / Langfuse | Engenheiros de IA | Rastreamento e visualização de cadeias de execução (chains) de LLM. | `[F]` (ferramentas amplamente adotadas no mercado) |
-| Console do OpenRouter / OpenAI Playground | Desenvolvedores | Testes manuais lineares e acompanhamento de chamadas brutas. | `[F]` |
+| Chatbots tradicionais (ChatGPT, Claude) | Estudantes, pesquisadores, empresas e entusiastas | Submetem perguntas complexas de forma direta, mas enfrentam limitações de acurácia em raciocínios longos | `[F]` |
+| Playgrounds de LLM (OpenAI Playground) | Empresas e pesquisadores | Testam prompts e comparam modelos de forma manual e sem ciclo de orquestração | `[F]` |
+| Frameworks de Agentes / Prompt Engineering | Empresas e desenvolvedores | Implementam lógicas de prompt customizadas via código para tentar melhorar a qualidade das respostas | `[F]` |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-`[F]` Ferramentas de observabilidade de LLM (LLMOps) focadas em rastreamento de traces de agentes e monitoramento de custos de tokens.
+`[F]` Frameworks de orquestração de agentes e ferramentas de engenharia de prompt / observabilidade de LLM.
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
 
-`[F]` VS Code (IDEs), interfaces de chat clássicas (ChatGPT, Claude), dashboards de monitoramento (Grafana, Datadog) e plataformas de desenvolvimento de prompt.
+`[F]` Interfaces de chat conversacional (ChatGPT, Claude), Playgrounds de IA e dashboards de acompanhamento de execução.
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
-`[F]` Exibir detalhadamente cada chamada HTTP feita aos LLMs e o tempo de resposta.
+`[F]` Responder a perguntas simples e diretas com alta velocidade e boa usabilidade.
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
-`[H]` Falham em representar fluxos de raciocínio específicos baseados em reinicialização de contexto e ciclos de feedback baseados em histórias do Ralph Wiggum Loop, dificultando a visualização didática e focada na mitigação de *context rot*.
+`[H]` Não garantem a máxima acurácia em perguntas de raciocínio encadeado longo. Chatbots padrão não aplicam uma arquitetura de orquestração com ciclos de reflexão e autocorreção (Ralph Wiggum Loop) para assegurar que a resposta final seja a mais precisa possível. A visualização gráfica e o acompanhamento do pensamento ajudam o usuário a interpretar e validar o resultado, mas o diferencial central é a geração de respostas superiores.
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-`[F]` Gráficos de linha do tempo (timelines), painéis laterais (split panels), badges indicadoras de status (sucesso/erro), métricas de tokens (tk), e representações em árvore ou grafos.
+`[F]` Seleção de modelos de LLM, campo de entrada de texto (prompt), linhas de progresso (timeline de tarefas) e painéis de exibição de resultado sintetizado.
 
 ---
 
@@ -275,17 +273,19 @@ A interface demonstrativa web que exibe o fluxo do harness será o objeto princi
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-Pesquisador / Estudante / Analista de Explicabilidade.
+## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-**Por que esse perfil foi escolhido?** `[H]` Pois são as pessoas que utilizam o sistema para obter respostas precisas e necessitam da transparência do processo (visualização de tarefas, aprendizados, contexto) para validar a resposta final sem precisar lidar com código ou logs brutos.
+Estudantes, Pesquisadores, Empresas e Entusiastas de IA.
+
+**Por que esse perfil foi escolhido?** `[H]` Pois são as pessoas e organizações que utilizam o sistema para resolver problemas complexos e necessitam de respostas de alta acurácia sem sofrer degradação por *context rot*, beneficiando-se da seleção de modelos e do acompanhamento do fluxo de execução.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-Auditar a eficácia do Ralph Wiggum Loop adaptado na resolução de uma pergunta complexa, analisando o comportamento das tarefas lógicas, os aprendizados e o consumo de tokens associado a cada janela de contexto.
+Obter respostas com qualidade e acurácia superiores em perguntas complexas, acompanhando a evolução do raciocínio e a mitigação do decaimento de contexto através da interface.
 
 ## 7.4 Que interface será explorada na disciplina?
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a pesquisadores e estudantes utilizar o painel de visualização do Ralph Wiggum Loop adaptado para acompanhar de forma transparente e interativa a decomposição, execução stateless e síntese de respostas de LLMs, no contexto de auditoria e verificação de acurácia de modelos.**
+> **Para fins da disciplina de IHC, será projetada uma interface que permita a estudantes, pesquisadores, empresas e entusiastas utilizar o painel do Ralph Wiggum Loop adaptado para submeter perguntas, selecionar o modelo de LLM e acompanhar de forma transparente a decomposição, execução stateless e síntese de respostas de alta acurácia.**
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
@@ -328,16 +328,16 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Transparência e facilidade na auditoria de respostas de IA | Compreender o processo lógico adotado pela IA e monitorar se o consumo de tokens e a janela de contexto foram eficientes | Pesquisador / Estudante | `[H]` |
+| Respostas de LLMs com alta qualidade e acurácia, com acompanhamento visual do raciocínio | Dificuldade em obter respostas precisas em perguntas complexas e entender o fluxo de pensamento da IA para decidir se o resultado está correto | Estudantes, Pesquisadores, Empresas e Entusiastas | `[H]` |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Enviar uma pergunta complexa em linguagem natural | Disparar a execução do loop de raciocínio da IA | Alta |
-| F02 | Alternar entre o fluxo "Ralph Wiggum Loop" e "Inferência Simples" | Comparar a resposta estruturada com a resposta linear | Alta |
-| F03 | Selecionar o modelo (Llama 3.1 8B, 70B, 405B) | Avaliar a execução do raciocínio em diferentes escalas de modelo | Alta |
-| F04 | Visualizar cards detalhados por etapa com tags e contagem de tokens | Auditar o consumo e o isolamento de contexto (*Fresh Context*) | Alta |
+| F01 | Enviar uma pergunta complexa em linguagem natural | Disparar o orquestrador para gerar a resposta de alta qualidade | Alta |
+| F02 | Selecionar o modelo de LLM (Llama 3.1 8B, 70B, 405B) | Escolher o modelo de linguagem mais adequado às necessidades do problema | Alta |
+| F03 | Alternar entre o fluxo "Ralph Wiggum Loop" e "Inferência Simples" | Comparar a resposta refinada e estruturada com a resposta linear comum | Alta |
+| F04 | Acompanhar a execução por etapas e métricas do fluxo | Visualizar a evolução do pensamento da IA e confirmar se a resposta final está correta | Alta |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -354,8 +354,8 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | Pesquisadores e estudantes preferem acompanhar a resolução lógica das subtarefas em formato de linha do tempo vertical (timeline) para validar e confiar na resposta final. | Define a arquitetura de informação e a disposição visual da tela principal (Open Thinking). | Prototipação em papel (Entrega 6) e avaliação heurística (Entrega 13). |
-| H02 | A sinalização de sucesso (✓) ou falha (✗) dos critérios de aceite na timeline é suficiente para indicar quando a IA corrigiu o raciocínio. | Evita a sobrecarga cognitiva do usuário ao ler logs de texto longos de autocrítica do modelo. | Avaliação heurística (Entrega 13) e testes de usabilidade com usuários (Entrega 14). |
+| H01 | Estudantes, pesquisadores, empresas e entusiastas preferem acompanhar a resolução lógica das subtarefas em formato de linha do tempo vertical (timeline) para entender a geração da resposta. | Define a arquitetura de informação e a disposição visual da tela principal (Open Thinking). | Prototipação em papel (Entrega 6) e avaliação heurística (Entrega 13). |
+| H02 | A sinalização de sucesso (✓) ou falha (✗) dos critérios de aceite na timeline é suficiente para indicar a autocorreção e o refinamento da resposta do modelo. | Evita a sobrecarga cognitiva do usuário ao ler logs de texto longos de autocrítica do modelo. | Avaliação heurística (Entrega 13) e testes de usabilidade com usuários (Entrega 14). |
 
 
 ---
@@ -366,12 +366,12 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 |---|---|
 | Qual é a contribuição central do TCC? | O aprimoramento de outputs de LLMs via Ralph Wiggum Loop adaptado, mitigando o decaimento de contexto. |
 | O TCC já previa interface? | Sim, uma interface de visualização do fluxo. |
-| Quem é o usuário prioritário de IHC? | Pesquisadores, estudantes e analistas acadêmicos/profissionais. |
-| O que ele precisa alcançar? | Compreender e auditar o processo de raciocínio de múltiplas fases do loop. |
-| Qual problema/atividade será estudado? | A auditoria do fluxo de raciocínio e visualização dos custos e contexto das chamadas de LLM. |
-| Como isso acontece hoje? | Leitura de respostas textuais diretas e opacas (caixa-preta) em chatbots comuns. |
-| Qual é o contexto de uso? | Ambientes de estudo acadêmico, pesquisa e análise científica. |
-| Que interface/recorte será explorado? | Painel de entrada de perguntas e linha do tempo de "Open Thinking" em tempo real. |
+| Quem é o usuário prioritário de IHC? | Estudantes, pesquisadores, empresas e entusiastas de IA. |
+| O que ele precisa alcançar? | Obter respostas de alta qualidade e acurácia em perguntas complexas de linguagem natural. |
+| Qual problema/atividade será estudado? | A mitigação do decaimento de contexto (*context rot*) e a melhoria das respostas dos LLMs através da orquestração stateless. |
+| Como isso acontece hoje? | Leitura de respostas textuais diretas em chatbots comuns (ChatGPT, Claude), que sofrem perda de qualidade em contextos longos. |
+| Qual é o contexto de uso? | Ambientes de estudo acadêmico, pesquisa, escritórios corporativos e testes de entusiasmo tecnológico. |
+| Que interface/recorte será explorado? | Painel de entrada de perguntas, seletor de modelos de LLM e linha do tempo de "Open Thinking" em tempo real. |
 | Como a interface se relaciona ao TCC? | É a aplicação demonstrativa/visual integrada oficialmente no escopo do TCC. |
 | Quais pontos ainda são hipóteses? | H01 e H02 (preferência por timeline e eficácia dos sinalizadores visuais ✓/✗). |
 
@@ -402,9 +402,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 # 13. Relação com INOVA e comunicação do projeto
 
 
-1. **Problema/atividade humana:** Desenvolvedores e pesquisadores têm dificuldade em entender e auditar como a inteligência artificial chegou a uma resposta em tarefas lógicas complexas, além de sofrerem com a perda de qualidade quando a conversa fica longa demais (*context rot*).
-2. **Contribuição técnica do TCC:** O TCC desenvolve um orquestrador que quebra a pergunta em tarefas de objetivo único, reinicializa o contexto a cada etapa para manter a mente do modelo limpa e valida logicamente os critérios de aceite de cada resposta antes de entregá-la.
-3. **Como uma pessoa poderia utilizar essa contribuição:** O usuário interage com um dashboard em que envia sua pergunta complexa e acompanha em tempo real, através de uma linha do tempo intuitiva, como cada subtarefa foi planejada, executada, corrigida e compilada na resposta final.
+1. **Problema/atividade humana:** Estudantes, pesquisadores e empresas enfrentam o decaimento de qualidade das respostas de IA em perguntas complexas quando a conversa ou contexto fica longo demais (*context rot*).
+2. **Contribuição técnica do TCC:** O TCC desenvolve um harness de orquestração stateless baseado no Ralph Wiggum Loop adaptado que divide a pergunta em tarefas atômicas e limpa o contexto a cada etapa, melhorando significativamente a acurácia do resultado final.
+3. **Como uma pessoa poderia utilizar essa contribuição:** O usuário seleciona o modelo de LLM, envia sua pergunta complexa na interface gráfica e obtém uma resposta de alta precisão, podendo acompanhar em tempo real o progresso de execução e a evolução do raciocínio.
 
 ---
 
