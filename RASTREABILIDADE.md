@@ -27,7 +27,7 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 | ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência obtida | Estado atual | Impacto no projeto |
 |---|---|---|---|---|---|---|---|
-| H01 | Estudantes, pesquisadores, empresas e entusiastas preferem acompanhar a resolução lógica das subtarefas em formato de linha do tempo vertical (timeline) para entender a geração da resposta. | H | Define a estrutura visual principal da interface (Open Thinking). | Entrega 6 (Prototipação em papel) / Entrega 13 (Heurísticas) | PENDENTE | aberta | Alto |
+| H01 | Estudantes, pesquisadores, empresas e entusiastas preferem acompanhar a resolução lógica das subtarefas em formato de linha do tempo vertical (timeline) para entender a geração da resposta. | H | Define a estrutura visual principal da interface (Open Thinking). | Entrega 6 (Prototipação em papel) / Entrega 13 (Heurísticas) | Evidência parcial de mercado (Entrega 2, docs/02_analise_concorrencia.md): Claude Code (checkpoints/Plan Mode) e GitHub Copilot (aceitar/desfazer por unidade de trabalho) já usam padrões de acompanhamento granular por etapa, mas nenhum concorrente estrutura isso como timeline visual por fase — ainda requer validação direta com usuários | aberta (evidência de mercado favorável, teste com usuário pendente) | Alto |
 | H02 | A sinalização de sucesso (✓) ou falha (✗) dos critérios de aceite na timeline é suficiente para indicar a autocorreção e o refinamento da resposta do modelo. | H | Evita a sobrecarga cognitiva do usuário ao ler logs de texto longos de autocrítica do modelo. | Entrega 13 (Heurísticas) / Entrega 14 (Testes com usuários) | PENDENTE | aberta | Médio |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
@@ -51,6 +51,7 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 | Data | O que mudou | Evidência/feedback que motivou | Artefatos afetados | Responsável |
 |---|---|---|---|---|
 | 22/08/2026 | Derivação inicial do escopo e hipóteses baseadas no TCC | Criação inicial do repositório da disciplina | README.md, docs/01_conhecendo_o_problema.md | Equipe de IHC |
+| 09/09/2026 | Análise de concorrência com 4 interfaces de IA (Claude Code, GitHub Copilot, ChatGPT, Copilot do Windows), confirmando que nenhuma expõe raciocínio em timeline estruturada por fases | Pesquisa de mercado e documentação oficial de cada produto (2026) | docs/02_analise_concorrencia.md | Equipe de IHC |
 
 ## Como usar
 
