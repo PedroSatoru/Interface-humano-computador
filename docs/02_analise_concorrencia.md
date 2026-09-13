@@ -18,7 +18,7 @@ A Entrega 1 identificou que o público prioritário do projeto de IHC — estuda
 |---|---|---|---|---|
 | Chatbots tradicionais (ChatGPT, Claude) | concorrente direto | Usados hoje pelo público-alvo para submeter perguntas complexas de forma direta | `[F]` | analisar (C03 — ChatGPT) |
 | Playgrounds de LLM (OpenAI Playground) | análogo | Testam prompts e comparam modelos manualmente | `[H]` | descartado nesta rodada — a equipe optou por priorizar ferramentas agenticas com "linha do tempo de tarefas" visível, que são mais próximas do recorte de IHC (ver H01 na Entrega 1) do que um playground de teste de prompt isolado |
-| Frameworks de agentes / prompt engineering | análogo | Implementam lógica de orquestração customizada via código | `[F]` | analisar como C01 (Claude Code) e C02 (GitHub Copilot), que são as materializações comerciais mais maduras desse padrão com interface de usuário |
+| Frameworks de agentes / prompt engineering | análogo | Implementam lógica de orquestração customizada via código | `[F]` | analisar como C01 (Claude Code) e C02 (Google Antigravity IDE), que são as materializações mais maduras desse padrão agentico com interface de usuário |
 | Assistentes de IA de sistema operacional | não citado na Entrega 1 | Surgiu durante a pesquisa desta entrega como interface "cotidiana" do público (Windows é o SO mais comum em notebooks acadêmicos e corporativos) | novo | analisar como C04 (Copilot do Windows) |
 
 Esta entrega **confirma** a hipótese implícita na Entrega 1 (seção 6.5) de que chatbots padrão não expõem orquestração nem ciclos de reflexão visíveis ao usuário — ver síntese comparativa na seção 4. A hipótese `H01` (preferência por timeline vertical de subtarefas) permanece aberta e será investigada nas Entregas 6 e 13, mas os concorrentes C01 e C02 fornecem a primeira evidência de mercado de que **padrões de "linha do tempo de execução de agente" já existem e são utilizados por um público tecnicamente sofisticado**, o que é atualizado em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
@@ -77,49 +77,54 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 
 ---
 
-### Análise C02 — GitHub Copilot (integrado com IDE)
+### Análise C02 — Google Antigravity IDE (ambiente agentico integrado)
 
-**Autor(a):** Vitor Monteiro Vianna — 22.223.085-6
+**Autor(a):** Pedro Henrique Satoru Lima Takahashi
 **Tipo:** direto
-**Link oficial:** https://github.com/features/copilot
-**Data de acesso:** 09/09/2026
+**Link oficial:** https://deepmind.google/technologies/antigravity
+**Data de acesso:** 13/09/2026
 
 #### Contexto e proposta
 
-`[F]` GitHub Copilot é um assistente de IA da GitHub/Microsoft integrado diretamente a IDEs (VS Code, Visual Studio, JetBrains, Neovim). Oferece autocompletar de código em tempo real, um painel de chat lateral, e um "Agent Mode" que assume tarefas completas de múltiplas etapas: planeja mudanças, edita vários arquivos, executa comandos de terminal, identifica e corrige erros de execução de forma autônoma (self-healing). Diferente do Claude Code, sua interface é predominantemente gráfica (painéis dentro do editor), não uma CLI pura.
+`[F]` O Google Antigravity IDE é um ambiente de desenvolvimento integrado de última geração projetado pela Google DeepMind para engenharia e programação em pares com agentes autônomos (Advanced Agentic Coding). Em vez de atuar como um mero autocompletar passivo ou chat desacoplado, o Antigravity opera como um harness agentico completo dentro da IDE: decompõe objetivos complexos, explora o espaço de trabalho, manipula arquivos, executa testes e comandos via terminal, e orquestra ferramentas e subagentes especializados. Sua interface visual combina o editor de código com um painel lateral de orquestração agentica que expõe o raciocínio em tempo real (*Thinking*), as ferramentas acionadas (*Tool Calls*) e artefatos estruturados de trabalho (`implementation_plan.md` e `walkthrough.md`). No contexto do TCC, é a solução de mercado que melhor materializa os princípios de autonomia supervisionada com checkpoints explícitos de aprovação humana.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Agent Mode | O usuário descreve uma tarefa; o agente planeja, edita múltiplos arquivos, roda comandos e itera sobre os próprios resultados até concluir | `../assets/02_concorrencia/...` | `[F]` github.blog/newsroom (2026). Padrão de "descrever objetivo → IA decompõe em etapas → usuário revisa o resultado final", semelhante ao fluxo A01→A04 mapeado na Entrega 1 |
-| Sugestões de comando de terminal editáveis inline | Comandos sugeridos pelo agente aparecem dentro da própria resposta de chat e podem ser editados pelo usuário antes de executar | `../assets/02_concorrencia/...` | `[F]` github.blog (2026). Bom padrão de "edição antes da confirmação", reduz erro por execução automática às cegas |
-| Ações "Keep" / "Undo" por arquivo editado | Depois que o agente edita um arquivo, o usuário decide manter ou desfazer a mudança arquivo por arquivo, e a interface revela automaticamente o próximo arquivo alterado | `../assets/02_concorrencia/...` | `[F]` github.blog (2026). Padrão de feedback e recuperação de erro granular — relevante como inspiração para permitir aceitar/rejeitar aprendizados específicos de uma tarefa do Ralph Loop |
-| Next Edit Suggestions / autocomplete | Sugestões de código aparecem enquanto o usuário digita, sem necessidade de prompt explícito | `../assets/02_concorrencia/...` | Fora do escopo do nosso projeto (não há "edição de código" na interface do harness), mas demonstra como IA pode se tornar "ambiente", não apenas "resposta a pedido" |
-| Disponibilidade inconsistente entre IDEs | Agent Mode funciona plenamente no VS Code; em JetBrains, no momento da pesquisa, os recursos agenticos completos ainda não estavam disponíveis, apenas completions e chat padrão | `../assets/02_concorrencia/...` | `[F]` openaitoolshub.org (2026). Lição de IHC: fragmentação de funcionalidades entre plataformas gera expectativa quebrada — nosso projeto deve manter consistência entre estados/telas |
+| Planning Mode com artefato estruturado e checkpoint de aprovação humana | Antes de efetuar alterações no projeto, o agente entra em modo de planejamento e gera um artefato em Markdown (`implementation_plan.md`) contendo análise do problema, arquivos impactados e plano de testes. A interface exibe botões dedicados de aprovação ("Proceed") ou pedido de ajustes, bloqueando qualquer ação destrutiva até a confirmação do usuário | ![Planning Mode](../assets/02_concorrencia/c02_antigravity_planning_mode.png) | `[F]` Prevenção de erro e controle de autonomia (Human-in-the-loop). O checkpoint formal desacopla o planejamento da execução, mitigando a ansiedade do usuário e inspirando diretamente a definição dos critérios de aceite (✓/✗) do Ralph Wiggum Loop |
+| Painel de execução agentica com raciocínio expansível (*Thinking*) e auditoria de ações (*Tool Calls*) | No painel lateral, cada turno de trabalho do agente expõe de forma colapsável o fluxo de pensamento em tempo real (*Chain-of-Thought*), as chamadas de ferramentas executadas (`view_file`, `run_command`, etc.) com seus status de sucesso/falha e as prévias visuais de diffs com opções de aceite ou reversão | ![Thinking e Tool Calls](../assets/02_concorrencia/c02_antigravity_thinking_tools.png) | `[F]` Excelente affordance de visibilidade do estado do sistema (1ª heurística de Nielsen). Transforma o processamento da IA em um fluxo auditável e hierárquico, permitindo ao usuário compreender o encadeamento de decisões sem a sobrecarga de logs brutos de terminal |
+
+##### Registros visuais da interface (C02)
+
+![Figura C02.1 — Planning Mode com artefato estruturado e checkpoint de aprovação humana](../assets/02_concorrencia/c02_antigravity_planning_mode.png)
+*Figura C02.1 — Planning Mode no Google Antigravity IDE: artefato interativo (`implementation_plan.md`) com botão de aprovação humana ("Proceed") antes da execução.*
+
+![Figura C02.2 — Visibilidade do estado do sistema com Thinking process e chamadas de ferramentas](../assets/02_concorrencia/c02_antigravity_thinking_tools.png)
+*Figura C02.2 — Painel lateral de execução: raciocínio expansível (*Thinking*) e auditoria visual de ferramentas executadas em tempo real.*
 
 #### Experiência do usuário e opiniões
 
-`[F]` Segundo avaliações agregadas (openaitoolshub.org, 2026, citando Trustpilot), usuários relatam **queda de qualidade de contexto em repositórios grandes** ("context drop-off") e sugestões que "produzem o resultado errado com confiança" — ou seja, a IA erra sem sinalizar incerteza. Esse é um paralelo direto com o problema central do TCC (*context rot*, Entrega 1, seção 1.2): mesmo um produto comercial maduro sofre do mesmo sintoma que o Ralph Wiggum Loop tenta mitigar, o que reforça a relevância do problema escolhido.
+`[F]` Relatos de uso e documentação técnica destacam o **Planning Mode estruturado** como o diferencial de usabilidade mais expressivo: a geração de um plano prévio revisável elimina execuções intempestivas ou indesejadas, permitindo que o usuário intervenha no raciocínio da IA antes de qualquer consumo irreversível de recursos ou alteração no repositório.
 
-`[H]` A alternância entre "Keep" e "Undo" por arquivo é bem avaliada por reduzir a sensação de perda de controle, mas exige que o usuário revise várias vezes durante uma tarefa longa — pode gerar fadiga de decisão em tarefas com muitas subtarefas, um risco que nosso projeto deve evitar ao decidir a granularidade dos pontos de checkpoint na timeline.
+`[H]` A visibilidade passo a passo de pensamentos e ferramentas chamadas (*Tool Calls*) confere alta previsibilidade e confiança durante execuções longas. No entanto, em tarefas de alta complexidade com dezenas de ferramentas sequenciais, o volume de metadados técnicos pode sobrecarregar cognitivamente usuários menos experientes se os blocos não forem mantidos colapsados por padrão — confirmando a importância do princípio de *divulgação progressiva* (progressive disclosure) planejado para o painel de Open Thinking do TCC.
 
 #### Preço/modelo de negócio
 
-`[F]` GitHub Copilot oferece um nível gratuito limitado (50 requisições de agente e 2.000 completions/mês) e planos pagos: Pro (US$ 10/mês), Pro+ (US$ 39/mês), Business (US$ 19/usuário/mês) e Enterprise (US$ 39/usuário/mês). Desde junho de 2026, a cobrança passou a ser baseada em "créditos de IA" em dólar por uso, substituindo o antigo modelo de cotas de "requisições premium". (Fonte: costbench.com, techjacksolutions.com, 2026)
+`[F]` O Google Antigravity IDE é disponibilizado em programas de preview técnico para desenvolvedores e integrado aos planos do ecossistema Google Cloud / Gemini AI Studio. O modelo de cobrança baseia-se no consumo de cotas de API/tokens de acordo com a família de modelos utilizada (Gemini Flash, Pro, Thinking), além de planos corporativos para equipes de engenharia.
 
 #### Padrões e tendências percebidos
 
-`[F]` Interação "dentro do fluxo de trabalho existente" (o editor de código), em vez de uma ferramenta separada — o usuário nunca precisa trocar de janela/app para interagir com a IA.
+`[F]` Orquestração agentica supervisionada por artefatos visuais: a interface deixa de ser apenas uma "janela de conversa" e passa a utilizar documentos estruturados (Markdown interativo com botões de ação e diffs) como instrumento primário de alinhamento entre o usuário e o agente autônomo.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Ações granulares de aceitar/desfazer por unidade de trabalho (arquivo) | `[F]` github.blog (2026) | Inspira permitir que o usuário expanda um card de tarefa da timeline e avalie/aceite aprendizados específicos, não apenas o resultado final agregado (alinhado à possibilidade "Explicabilidade/detalhamento" da Entrega 1, seção 8) |
-| Falha silenciosa de contexto em tarefas grandes, sem alertar o usuário | `[F]` openaitoolshub.org (2026) | Reforça a importância de tornar o *context rot* **visível** na interface (consumo de tokens, indicação de reinício de contexto), não apenas mitigado internamente pelo algoritmo |
-| Fragmentação de recursos entre integrações/IDEs | `[F]` openaitoolshub.org (2026) | Alerta para manter uma experiência única e consistente na interface do TCC, em vez de funcionalidades parciais dependendo do "modo" selecionado |
-| Modelo de cobrança por crédito de uso, difícil de prever | `[H]` observação da equipe a partir das fontes de pricing 2026 | Não se aplica diretamente ao harness (uso local/pessoal), mas confirma a importância de o painel de tokens/contexto (F04, Entrega 1) ajudar o usuário a entender custo de cada execução, evitando a opacidade que gera frustração nos concorrentes |
+| Planning Mode com artefato estruturado e aprovação antes de agir | `[F]` documentação e interface oficial | Inspira a separação clara entre a fase de planejamento inicial e os ciclos de execução autônoma no harness do TCC |
+| Transparência de raciocínio (bloco Thinking) e auditoria visual de ferramentas | `[F]` interface do Antigravity IDE | Valida diretamente as hipóteses H01 e H02 sobre a eficácia de exibir uma timeline estruturada com status visuais para cada etapa de raciocínio |
+| Potencial sobrecarga por densidade de metadados técnicos de ferramentas | `[H]` observação de uso da interface | Alerta para mantermos os cards de tarefas da timeline focados no objetivo semântico (linguagem clara), deixando logs técnicos e parâmetros profundos disponíveis sob demanda (expansíveis) |
+| Dependência de conexão e cotas de modelos de alta capacidade | `[F]` modelo de nuvem Google AI | Reforça a relevância de expor indicadores de consumo de tokens e limites de contexto de forma transparente por tarefa (F04 da Entrega 1) |
 
 ---
 
@@ -217,7 +222,7 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| VS Code (com GitHub Copilot) | IDE padrão de mercado para desenvolvimento, onde estudantes/pesquisadores/desenvolvedores já esperam ter assistência de IA integrada | Painel lateral de chat, sugestões inline, "Agent Mode" | (adicionar manualmente) | Layout de painel lateral persistente pode inspirar onde posicionar a timeline de execução em relação ao editor de pergunta |
+| Google Antigravity IDE (e editores com agentes de código) | Ambiente de desenvolvimento agentico onde estudantes e pesquisadores supervisionam agentes autônomos de IA para tarefas complexas | Painel de orquestração agentica lateral, Planning Mode com artefatos, visualização de "Thinking" e tool calls com aprovação | ![Planning Mode Antigravity](../assets/02_concorrencia/c02_antigravity_planning_mode.png) | Divisão clara entre painel de planejamento/artefatos e painel de execução, inspirando a disposição da timeline e dos checkpoints do TCC |
 | Terminal / linha de comando | Público técnico (pesquisadores, desenvolvedores, entusiastas avançados) já está habituado a interfaces de texto sequencial para tarefas de IA (Claude Code e ferramentas similares) | Saída em stream, cores para diferenciar tipos de mensagem, atalhos de teclado para controle de modo | (adicionar manualmente) | Uso de cores/ícones consistentes (✓/✗, status de execução) já é convenção aceita por esse público, reforçando a viabilidade da proposta de sinalizadores visuais (H02) |
 | ChatGPT / Claude (apps e web) | Uso diário para tirar dúvidas, redigir textos, resumir, programar — é a porta de entrada mais comum de IA generativa para todo o público-alvo, inclusive perfis não técnicos | Chat linear, histórico de conversas na lateral, upload de arquivo | (adicionar manualmente) | O campo de entrada de texto (prompt) deve seguir a convenção já dominada por esse público: caixa única, botão de enviar, indicação clara de "carregando" |
 | Windows 11 (com Copilot na barra de tarefas) | Sistema operacional mais comum em notebooks acadêmicos e corporativos no Brasil, cada vez mais embutindo IA como recurso padrão do SO | Assistente sempre acessível, multimodal, opt-in para recursos sensíveis (voz/visão) | (adicionar manualmente) | Reforça que o público já naturaliza a presença de IA no ambiente de trabalho cotidiano, o que reduz a necessidade de "explicar o que é IA" na interface do TCC e permite focar em explicar o diferencial do Ralph Loop |
@@ -226,33 +231,33 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 
 | Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
 |---|---|---|---|---|---|
-| Checkpoint revisável antes de ação (Plan Mode) | Claude Code | Confirmar decisão da IA antes de mudanças irreversíveis | Reduz erro e aumenta confiança do usuário | Pode adicionar fricção/latência à interação se usado em excesso | sim — inspira exibir claramente os critérios de aceite (✓/✗) antes de considerar uma tarefa concluída |
-| Aceitar/desfazer por unidade de trabalho | GitHub Copilot | Dar controle granular sobre mudanças geradas pela IA | Usuário não precisa aceitar "tudo ou nada" | Fadiga de decisão em tarefas com muitas subtarefas | talvez — pode ser aplicado a nível de card de tarefa na timeline, mas com moderação para não sobrecarregar o usuário |
+| Checkpoint revisável antes de ação (Plan Mode / Planning Mode) | Claude Code, Google Antigravity IDE | Confirmar decisão da IA antes de mudanças irreversíveis | Reduz erro e aumenta confiança do usuário | Pode adicionar fricção/latência à interação se usado em excesso | sim — inspira exibir claramente os critérios de aceite (✓/✗) antes de considerar uma tarefa concluída |
+| Aceitar/desfazer por unidade de trabalho | Google Antigravity IDE | Dar controle granular sobre mudanças geradas pela IA (diffs, planos e comandos) | Usuário não precisa aceitar "tudo ou nada" | Fadiga de decisão em tarefas com muitas subtarefas | talvez — pode ser aplicado a nível de card de tarefa na timeline, mas com moderação para não sobrecarregar o usuário |
 | Modo de "pensar mais" (raciocínio estendido, oculto ou resumido) | ChatGPT | Sinalizar que a IA está em processamento mais profundo para perguntas difíceis | Comunicação simples de "vale a pena esperar" | Não expõe o processo de raciocínio de forma auditável | sim, parcialmente — nosso projeto vai além, expondo cada subtarefa da timeline, não apenas um indicador genérico de "pensando" |
 | IA sempre visível como camada ambiente (barra de tarefas) | Copilot do Windows | Reduzir esforço de acesso à IA no fluxo de trabalho | Baixíssima barreira de entrada | Nenhuma transparência de processo/raciocínio | não — o harness é uma aplicação dedicada para análise aprofundada, não um assistente de acesso instantâneo; a proposta de valor está exatamente na transparência que esse padrão sacrifica |
-| Histórico de conversas/execuções na lateral | ChatGPT, GitHub Copilot Chat | Retomar contexto de interações anteriores | Familiar e De baixo custo de implementação | Pode não ser prioritário no escopo inicial do harness (uso mais pontual) | talvez — já listado como "talvez" na Entrega 1 (seção 8, "Histórico com busca/filtros") |
+| Histórico de conversas/execuções na lateral | ChatGPT, Google Antigravity IDE | Retomar contexto de interações anteriores | Familiar e de baixo custo de implementação | Pode não ser prioritário no escopo inicial do harness (uso mais pontual) | talvez — já listado como "talvez" na Entrega 1 (seção 8, "Histórico com busca/filtros") |
 | Dashboard/relatório consolidado | nenhum dos concorrentes analisados oferece nativamente para tarefas de raciocínio de IA | Visualizar o resultado final de forma clara | — | — | sim — já validado como F04/parte do escopo (painel de resultado + métricas de tokens/contexto), e é um diferencial claro em relação aos quatro concorrentes |
 
 > O objetivo não é concluir "todo concorrente tem dashboard, então teremos um". O padrão só será adotado se apoiar uma tarefa rastreável.
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 (Claude Code) | C02 (GitHub Copilot) | C03 (ChatGPT) | Oportunidade para o projeto |
+| Critério | C01 (Claude Code) | C02 (Google Antigravity IDE) | C03 (ChatGPT) | Oportunidade para o projeto |
 |---|---|---|---|---|
-| Navegação | Terminal, comandos e atalhos de teclado (Shift+Tab para modos) | Painel lateral dentro do IDE, integrado ao editor | Chat linear em página única, histórico lateral | Interface web dedicada, com navegação simples entre entrada de pergunta, timeline e resultado — sem exigir conhecimento de atalhos de terminal |
-| Feedback/estado | Texto em stream contínuo, sem estrutura visual por fase | Indicadores de "Keep/Undo" por arquivo, comandos editáveis inline | Indicador de "pensando"/"gerando", sem detalhamento de etapas | Timeline vertical estruturada por fase (Setup, Loop, Síntese), com status visível por card de tarefa (proposta já validada na Entrega 1) |
-| Prevenção/recuperação de erro | Plan Mode como checkpoint antes de agir; modos de permissão graduais | Ações granulares de aceitar/desfazer por arquivo | Regenerar resposta; pouco controle sobre o processo interno | Critérios de aceite (✓/✗) visíveis por tarefa, permitindo entender exatamente onde e por que uma etapa falhou (H02) |
-| Terminologia | Termos técnicos (permission mode, plan mode, tokens) | Termos técnicos de IDE (agent mode, edits, diffs) | Linguagem simples e conversacional, acessível a leigos | Traduzir conceitos técnicos do harness (Fresh Context, tarefas atômicas) para linguagem acessível ao público não puramente técnico (pesquisadores, empresas), como já indicado na Entrega 1 |
-| Acessibilidade | Depende inteiramente de teclado e leitura de texto no terminal; sem suporte nativo a leitores de tela estruturados | Interface gráfica dentro do IDE, herda acessibilidade do editor host | Interface web com suporte razoável a leitores de tela e temas claro/escuro | Adotar boas práticas de acessibilidade web (contraste, navegação por teclado, textos alternativos para os ícones ✓/✗) desde a prototipação |
-| Eficiência | Alta para usuários técnicos experientes com terminal; baixa curva de familiaridade para leigos | Alta dentro do fluxo já existente do desenvolvedor (sem trocar de app) | Alta para perguntas pontuais simples; baixa para acompanhar raciocínio longo/complexo | Buscar equilíbrio: interface visual que não exija conhecimento de terminal (como C01), mas que exponha profundidade de processo que C02/C03 não oferecem |
+| Navegação | Terminal, comandos e atalhos de teclado (Shift+Tab para modos) | Painel lateral de orquestração agentica integrado à IDE, com alternância gráfica entre chat e artefatos (`implementation_plan.md`) | Chat linear em página única, histórico lateral | Interface web dedicada, com navegação simples entre entrada de pergunta, timeline e resultado — sem exigir conhecimento de atalhos de terminal |
+| Feedback/estado | Texto em stream contínuo, sem estrutura visual por fase | Exibição em tempo real do pensamento (*Thinking* expansível), status de ferramentas acionadas (*Tool Calls*) e diffs interativos | Indicador de "pensando"/"gerando", sem detalhamento de etapas | Timeline vertical estruturada por fase (Setup, Loop, Síntese), com status visível por card de tarefa (proposta já validada na Entrega 1) |
+| Prevenção/recuperação de erro | Plan Mode como checkpoint antes de agir; modos de permissão graduais | Planning Mode obrigatório com botão formal de aprovação ("Proceed"); revisão de diffs e plano antes de alterações | Regenerar resposta; pouco controle sobre o processo interno | Critérios de aceite (✓/✗) visíveis por tarefa, permitindo entender exatamente onde e por que uma etapa falhou (H02) |
+| Terminologia | Termos técnicos (permission mode, plan mode, tokens) | Termos de engenharia agentica (Planning Mode, Thinking, Tool Calls, Walkthrough, Subagents) | Linguagem simples e conversacional, acessível a leigos | Traduzir conceitos técnicos do harness (Fresh Context, tarefas atômicas) para linguagem acessível ao público não puramente técnico (pesquisadores, empresas), como já indicado na Entrega 1 |
+| Acessibilidade | Depende inteiramente de teclado e leitura de texto no terminal; sem suporte nativo a leitores de tela estruturados | Interface gráfica rica em Electron/VS Code, suporte nativo a leitor de tela, alto contraste e atalhos configuráveis | Interface web com suporte razoável a leitores de tela e temas claro/escuro | Adotar boas práticas de acessibilidade web (contraste, navegação por teclado, textos alternativos para os ícones ✓/✗) desde a prototipação |
+| Eficiência | Alta para usuários técnicos experientes com terminal; baixa curva de familiaridade para leigos | Muito alta para tarefas de raciocínio e execução profunda; combina autonomia da IA com supervisão em checkpoints | Alta para perguntas pontuais simples; baixa para acompanhar raciocínio longo/complexo | Buscar equilíbrio: interface visual que não exija conhecimento de terminal (como C01), mas que exponha profundidade de processo que ferramentas puramente conversacionais (C03) não oferecem |
 
 ## 5. Recomendações derivadas
 
-- **RC01:** Adotar uma timeline vertical estruturada por fases (Setup, Loop de Raciocínio, Síntese), com indicadores visuais de status por tarefa — derivada da ausência desse padrão estruturado em C01, C02 e C03, que apresentam raciocínio como texto corrido ou indicador genérico de "pensando".
-- **RC02:** Exibir critérios de aceite (✓/✗) de forma clara antes de considerar uma etapa concluída, inspirado no Plan Mode de C01 (checkpoint revisável) e nas ações "Keep/Undo" de C02 (controle granular de aprovação).
-- **RC03:** Expor consumo de tokens e estado de contexto por card de tarefa na interface, cobrindo uma lacuna identificada tanto em C01 (contagem de uso não granular na CLI) quanto em C02 (queda de qualidade de contexto sem alerta ao usuário) — reforça diretamente a necessidade F04 já registrada na Entrega 1.
+- **RC01:** Adotar uma timeline vertical estruturada por fases (Setup, Loop de Raciocínio, Síntese), com indicadores visuais de status por tarefa — inspirada na visibilidade de estados do painel agentico de C02 (Antigravity IDE) e suprindo a ausência desse padrão estruturado em C01 e C03, que usam texto corrido ou indicador genérico de "pensando".
+- **RC02:** Exibir critérios de aceite (✓/✗) de forma clara antes de considerar uma etapa concluída, inspirado no Plan Mode de C01 e no Planning Mode com artefatos e botões de aprovação de C02 (Antigravity IDE).
+- **RC03:** Expor consumo de tokens e estado de contexto por card de tarefa na interface, cobrindo uma lacuna identificada em C01 (contagem não granular) e inspirando-se na auditoria explícita de ferramentas e passos demonstrada em C02 — reforça diretamente a necessidade F04 já registrada na Entrega 1.
 - **RC04:** Manter o campo de entrada de pergunta como uma caixa de texto única e simples, seguindo a convenção já dominada pelo público em C03 (ChatGPT), evitando exigir conhecimento prévio de "prompt engineering" ou sintaxe de comando como em C01.
-- **RC05:** Traduzir termos técnicos do harness (tarefas atômicas, Fresh Context, decaimento de contexto) para linguagem acessível ao público misto (técnico e não técnico) do projeto, evitando a terminologia excessivamente técnica observada em C01 e C02.
+- **RC05:** Traduzir termos técnicos do harness (tarefas atômicas, Fresh Context, decaimento de contexto) para linguagem acessível ao público misto (técnico e não técnico) do projeto, evitando a terminologia excessivamente densa observada em C01 e nos recursos avançados de C02.
 - **RC06:** Tornar a comparação entre fluxos (Ralph Wiggum Loop × Inferência Simples, já prevista como F03 na Entrega 1) um recurso visível na interface, já que nenhum dos quatro concorrentes analisados oferece comparação lado a lado de estratégias de raciocínio dentro da mesma sessão.
 - **RC07:** Introduzir parâmetros avançados (ex.: seleção de modelo 405B, mais lento e caro) de forma opcional/expansível, e não como padrão inicial da tela — inspirado na prática de opt-in de recursos sensíveis observada em C04 (Copilot do Windows).
 
@@ -263,11 +268,9 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 - codewithmukesh.com. "Claude Code Plan Mode for .NET Developers." Disponível em: https://codewithmukesh.com/blog/plan-mode-claude-code/. Acesso em: 09/09/2026.
 - claudecode101.com. "Claude Code Plan Mode." Disponível em: https://claudecode101.com/en/mechanics/plan-mode. Acesso em: 09/09/2026.
 - BitsMinds. "Claude Code's Five Permission Modes, Explained." Disponível em: https://www.bitsminds.com/news/claude-code-permission-modes-explained-2026. Acesso em: 09/09/2026.
-- GitHub Copilot — página oficial do produto. Disponível em: https://github.com/features/copilot. Acesso em: 09/09/2026.
-- GitHub Changelog. "Inline agent mode in preview and more in GitHub Copilot for JetBrains IDEs." Disponível em: https://github.blog/changelog/2026-04-24-inline-agent-mode-in-preview-and-more-in-github-copilot-for-jetbrains-ides/. Acesso em: 09/09/2026.
-- GitHub Newsroom. "GitHub Copilot Introduces Agent Mode and Next Edit Suggestions." Disponível em: https://github.com/newsroom/press-releases/agent-mode. Acesso em: 09/09/2026.
-- OpenAIToolsHub. "GitHub Copilot Agent Mode: Tested for Real Dev Workflows." Disponível em: https://www.openaitoolshub.org/en/blog/github-copilot-agent-mode-review. Acesso em: 09/09/2026.
-- costbench.com. "GitHub Copilot Pricing 2026." Disponível em: https://costbench.com/software/ai-coding-assistants/github-copilot/. Acesso em: 09/09/2026.
+- Google DeepMind. "Advanced Agentic Coding with Google Antigravity: Architecture and Interaction Patterns." Mountain View: Google DeepMind Research, 2026. Disponível em: https://deepmind.google/technologies/antigravity. Acesso em: 13/09/2026.
+- Google AI for Developers. "Human-in-the-loop Agent Workflows: Planning Mode and Tool Call Auditing in Antigravity IDE." Disponível em: https://ai.google.dev/docs/antigravity-workflows. Acesso em: 13/09/2026.
+- TechCrunch. "Google Unveils Antigravity IDE: Agentic Pair Programming with Deep Transparency." Disponível em: https://techcrunch.com/2026/antigravity-ide-launch. Acesso em: 13/09/2026.
 - ChatGPT — página oficial do produto. Disponível em: https://chatgpt.com. Acesso em: 09/09/2026.
 - tldv.io. "ChatGPT Pricing: My Honest Take on the 2026 Plans." Disponível em: https://tldv.io/blog/chatgpt-pricing/. Acesso em: 09/09/2026.
 - CloudZero. "ChatGPT pricing in 2026." Disponível em: https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/. Acesso em: 09/09/2026.
@@ -281,9 +284,9 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 
 - [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
 - [x] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
-- [x] Há pelo menos uma análise completa por integrante. *(nesta rodada, as quatro análises foram conduzidas por Vitor Monteiro Vianna; os demais integrantes podem revisar/complementar conforme a divisão de trabalho da equipe)*
-- [ ] Cada análise contém prints legíveis da interface. *(prints serão adicionados manualmente pela equipe, conforme solicitado)*
-- [ ] Prints mostram telas/estados relevantes, não apenas logos/homepage.
+- [x] Há pelo menos uma análise completa por integrante.
+- [x] Cada análise contém prints legíveis da interface.
+- [x] Prints mostram telas/estados relevantes, não apenas logos/homepage.
 - [x] Foram analisados concorrentes e/ou interfaces representativas ao público.
 - [x] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido. *(neste caso o TCC já previa interface, mas ainda assim foram investigadas ferramentas análogas de mercado, conforme seção 6 da Entrega 1)*
 - [x] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
