@@ -176,47 +176,58 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 
 ### Análise C04 — Copilot (padrão do Windows)
 
-**Autor(a):** Vitor Monteiro Vianna — 22.223.085-6
+**Autor(a):** Pedro Henrique Correia de Oliveira — 22.222.009-7
 **Tipo:** indireto/análogo
 **Link oficial:** https://www.microsoft.com/microsoft-copilot
-**Data de acesso:** 09/09/2026
+**Data de acesso:** 16/09/2026
 
 #### Contexto e proposta
 
-`[F]` O Copilot do Windows é o assistente de IA de propósito geral embutido no sistema operacional, acessível pela barra de tarefas ("Ask Copilot"), com suporte a voz (ativação por comando "Hey, Copilot"), visão computacional sobre a tela do usuário (Copilot Vision) e integração com apps do sistema (Explorer, Configurações). Não é uma ferramenta de codificação; representa o público mais amplo e menos técnico dentro do perfil "entusiasta de IA" definido na Entrega 1 — a pessoa que usa IA no dia a dia sem necessariamente saber o que é um "prompt" ou uma "janela de contexto".
+`[F]` O Microsoft Copilot é um assistente de IA de propósito geral disponível como aplicativo no Windows. Sua interface segue o modelo conversacional de pergunta e resposta, com suporte a texto, voz, arquivos e conteúdo visual compartilhado pelo usuário. O aplicativo pode ser acessado pelo menu Iniciar, pela barra de tarefas ou por atalhos do sistema. No contexto do TCC, representa a experiência cotidiana de usuários que recorrem à IA para pesquisar, resumir conteúdos, produzir textos e obter orientação sem utilizar ferramentas técnicas de programação.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| "Ask Copilot" na barra de tarefas | Substitui a caixa de busca estática por uma entrada multimodal conversacional, sempre visível e a um clique de distância | `../assets/02_concorrencia/...` | `[F]` windowsforum.com (2026). Excelente exemplo de affordance de baixo esforço cognitivo: a IA está sempre "à mão", sem precisar abrir um app separado |
-| Ativação por voz ("Hey, Copilot") | Palavra de ativação local, opcional (opt-in), habilitada nas configurações | `../assets/02_concorrencia/...` | `[F]` windowsforum.com (2026). Padrão de acessibilidade e conveniência, mas desligado por padrão — reforça a boa prática de manter captura de voz/tela como recurso opt-in explícito, relevante caso o projeto do TCC considere entradas alternativas no futuro |
-| Copilot Vision | Usuário compartilha a tela e a IA "enxerga" o conteúdo para ajudar em uma tarefa em andamento | `../assets/02_concorrencia/...` | `[F]` windowsforum.com (2026). Fora do escopo do harness, mas ilustra a tendência de IA como "camada de assistência contínua" sobre o que o usuário já está fazendo, e não uma ferramenta isolada |
-| Integração com apps do sistema (Explorer, Configurações) | A IA pode agir sobre arquivos e configurações do próprio sistema operacional, não apenas responder texto | `../assets/02_concorrencia/...` | `[F]` windowsforum.com (2026). Traz a discussão de governança: quanto mais ações autônomas a IA pode tomar sobre o ambiente do usuário, maior a necessidade de transparência e possibilidade de desfazer — tema central também no harness do TCC |
-| Rollout gradual via Windows Insider (recurso experimental) | As funcionalidades mais recentes (voz, visão na barra de tarefas) ainda estão em fase de teste controlado, desligadas por padrão | `../assets/02_concorrencia/...` | `[F]` windowsforum.com (2026). Boa prática de introdução gradual de funcionalidades de IA, evitando sobrecarregar usuários não preparados |
+| Conversa em linguagem natural e histórico | O usuário escreve uma solicitação em uma caixa de texto e recebe a resposta no fluxo da conversa; ao entrar com uma conta Microsoft, pode acessar o histórico e conversas mais longas | ![Conversa em linguagem natural](../assets/02_concorrencia/c04_copilot_chat.png) | `[F]` O padrão de chat reduz a curva de aprendizado, mas mantém a interação em um fluxo linear, sem separar visualmente planejamento, execução e validação |
+| Copilot Vision e compartilhamento de contexto | Durante uma sessão de voz, o usuário escolhe uma tela ou aplicativo para compartilhar. O Copilot analisa o conteúdo e oferece orientação passo a passo, sem clicar ou executar ações diretamente | ![Copilot Vision](../assets/02_concorrencia/c04_copilot_vision.png) | `[F]` O compartilhamento explícito preserva o controle do usuário e comunica qual contexto está sendo utilizado pela IA |
+| Busca de arquivos e integração com o OneDrive | Ao solicitar um arquivo, o Copilot pede autorização antes de se conectar ao OneDrive e oferece as opções de permitir ou recusar o acesso | ![Permissão para acessar arquivos](../assets/02_concorrencia/c04_copilot_arquivos.png) | `[F]` O pedido de consentimento antes da conexão oferece controle ao usuário e torna explícita a origem dos dados consultados |
+
+##### Registros visuais da interface (C04)
+
+![Figura C04.1 — Interface conversacional do Copilot no Windows](../assets/02_concorrencia/c04_copilot_chat.png)
+*Figura C04.1 — Interface conversacional do Copilot no Windows com resposta estruturada para uma tarefa de planejamento de estudos.*
+
+![Figura C04.2 — Copilot Vision e compartilhamento de tela](../assets/02_concorrencia/c04_copilot_vision.png)
+*Figura C04.2 — Copilot Vision com aviso de privacidade, indicação da tela compartilhada e controle para interromper a sessão.*
+
+![Figura C04.3 — Autorização para acessar arquivos no OneDrive](../assets/02_concorrencia/c04_copilot_arquivos.png)
+*Figura C04.3 — Pedido de autorização antes de conectar o Copilot ao OneDrive para localizar um arquivo.*
 
 #### Experiência do usuário e opiniões
 
-`[H]` Por estar embutido no sistema operacional e ser "sempre visível", o Copilot do Windows tem a menor barreira de acesso entre os quatro concorrentes analisados, mas também é o que **menos expõe qualquer forma de raciocínio ou processo intermediário** — a experiência é a de um assistente que "simplesmente responde ou age", sem qualquer visualização de etapas, tarefas ou critérios de validação. Isso o torna o exemplo mais distante do padrão de transparência que o projeto do TCC busca oferecer, mas também o mais representativo de "como usuários leigos esperam que uma IA se comporte por padrão" (ação direta, sem necessidade de entender o processo).
+`[F]` A documentação oficial prioriza o acesso rápido e a continuidade do fluxo de trabalho: o aplicativo pode ser aberto por atalho, aceita interação por voz e permite consultar arquivos e conteúdos já presentes no computador. Esses recursos diminuem o esforço necessário para fornecer contexto à IA.
 
-`[?]` A equipe não localizou avaliações de usabilidade formais e específicas (estudos de UX publicados) sobre a experiência do Copilot na barra de tarefas do Windows, apenas cobertura jornalística de lançamento de recursos — item registrado como lacuna de evidência.
+`[H]` A interface conversacional é familiar e adequada para consultas pontuais, porém oferece pouca estrutura visual para acompanhar tarefas complexas. O usuário recebe orientações e respostas no histórico do chat, sem uma timeline dividida por fases, critérios de aceite ou indicadores detalhados por subtarefa. Essa limitação reforça o diferencial do painel de Open Thinking proposto no TCC.
 
 #### Preço/modelo de negócio
 
-`[F]` O Copilot do Windows está incluído gratuitamente no sistema operacional para funcionalidades básicas de assistente; recursos avançados de produtividade (Microsoft 365 Copilot, com acesso a modelos como Claude Opus 4.8 e GPT-5.5 Reasoning dentro de Word/Excel/PowerPoint/Teams) exigem assinatura corporativa separada, tipicamente cobrada por usuário/mês dentro de planos Microsoft 365. (Fonte: techcommunity.microsoft.com, 2026)
+`[F]` O Microsoft Copilot possui uma modalidade gratuita para perguntas gerais, escrita, resumo e pesquisa na web. Recursos e limites adicionais variam conforme a conta e o plano Microsoft 365; o Copilot Vision, por exemplo, exige uma assinatura pessoal elegível.
 
 #### Padrões e tendências percebidos
 
-`[F]` IA como "camada ambiente" do sistema operacional, sempre disponível e multimodal (texto, voz, visão), priorizando velocidade de acesso sobre profundidade de controle ou transparência de processo.
+`[F]` IA integrada ao ambiente de trabalho, com interação conversacional e acesso ao contexto autorizado pelo usuário. O produto prioriza conveniência e continuidade da tarefa, mantendo recursos sensíveis, como visão e leitura de arquivos, dependentes de permissão explícita.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Acesso de um clique/comando de voz, sempre visível na barra de tarefas | `[F]` windowsforum.com (2026) | Não aplicável à arquitetura do harness (é uma aplicação web dedicada), mas reforça que o campo de entrada da pergunta (F01) deve estar imediatamente visível e sem etapas de navegação prévias |
-| Recursos multimodais avançados desligados por padrão (opt-in) | `[F]` windowsforum.com (2026) | Boa prática de introdução gradual: se o projeto do TCC evoluir para incluir parâmetros avançados (ex.: seleção de modelo 405B, mais lenta/cara), esses devem ficar "escondidos" atrás de uma ação explícita, não como padrão |
-| Nenhuma exposição de processo de raciocínio ou etapas intermediárias | `[H]` observação da equipe | Confirma que, entre os quatro concorrentes, nenhum oferece nativamente a "timeline de raciocínio por fases" proposta na Entrega 1 — reforça que esse é o principal espaço de diferenciação do projeto de IHC |
-| Integração de ações diretamente sobre arquivos/configurações do usuário sem histórico visível de auditoria consultado nesta pesquisa | `[?]` lacuna de evidência | Reforça a importância que já havíamos identificado (Entrega 1, seção 5.5) de que toda execução do harness precise manter rastreabilidade auditável — um diferencial que nenhum dos quatro concorrentes demonstra de forma clara e acessível ao usuário final |
+| Interface conversacional familiar e acesso rápido pelo Windows | `[F]` documentação oficial do produto | Manter o campo de entrada da pergunta simples, visível e escrito em linguagem acessível |
+| Compartilhamento de tela e arquivos iniciado pelo usuário | `[F]` documentação do Copilot Vision e da busca de arquivos | Indicar claramente quais dados estão sendo utilizados e permitir que o usuário interrompa o compartilhamento |
+| Respostas apresentadas em um histórico linear | `[H]` observação da interface | Organizar tarefas complexas em uma timeline estruturada, evitando que etapas e resultados se percam em uma conversa longa |
+| Ausência de critérios de aceite e status detalhado por subtarefa | `[H]` observação da equipe | Exibir o estado e o resultado de cada tarefa do Ralph Loop, tornando o processo mais auditável |
+
+---
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
@@ -225,7 +236,7 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 | Google Antigravity IDE (e editores com agentes de código) | Ambiente de desenvolvimento agentico onde estudantes e pesquisadores supervisionam agentes autônomos de IA para tarefas complexas | Painel de orquestração agentica lateral, Planning Mode com artefatos, visualização de "Thinking" e tool calls com aprovação | ![Planning Mode Antigravity](../assets/02_concorrencia/c02_antigravity_planning_mode.png) | Divisão clara entre painel de planejamento/artefatos e painel de execução, inspirando a disposição da timeline e dos checkpoints do TCC |
 | Terminal / linha de comando | Público técnico (pesquisadores, desenvolvedores, entusiastas avançados) já está habituado a interfaces de texto sequencial para tarefas de IA (Claude Code e ferramentas similares) | Saída em stream, cores para diferenciar tipos de mensagem, atalhos de teclado para controle de modo | (adicionar manualmente) | Uso de cores/ícones consistentes (✓/✗, status de execução) já é convenção aceita por esse público, reforçando a viabilidade da proposta de sinalizadores visuais (H02) |
 | ChatGPT / Claude (apps e web) | Uso diário para tirar dúvidas, redigir textos, resumir, programar — é a porta de entrada mais comum de IA generativa para todo o público-alvo, inclusive perfis não técnicos | Chat linear, histórico de conversas na lateral, upload de arquivo | (adicionar manualmente) | O campo de entrada de texto (prompt) deve seguir a convenção já dominada por esse público: caixa única, botão de enviar, indicação clara de "carregando" |
-| Windows 11 (com Copilot na barra de tarefas) | Sistema operacional mais comum em notebooks acadêmicos e corporativos no Brasil, cada vez mais embutindo IA como recurso padrão do SO | Assistente sempre acessível, multimodal, opt-in para recursos sensíveis (voz/visão) | (adicionar manualmente) | Reforça que o público já naturaliza a presença de IA no ambiente de trabalho cotidiano, o que reduz a necessidade de "explicar o que é IA" na interface do TCC e permite focar em explicar o diferencial do Ralph Loop |
+| Windows 11 (com Copilot) | Consultas, redação, resumos e orientação durante estudos e trabalho | Chat conversacional, acesso por voz e compartilhamento autorizado de contexto | ![Copilot no Windows](../assets/02_concorrencia/c04_copilot_chat.png) | Combinar uma entrada simples e familiar com feedback detalhado sobre o andamento das tarefas |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
@@ -234,7 +245,7 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 | Checkpoint revisável antes de ação (Plan Mode / Planning Mode) | Claude Code, Google Antigravity IDE | Confirmar decisão da IA antes de mudanças irreversíveis | Reduz erro e aumenta confiança do usuário | Pode adicionar fricção/latência à interação se usado em excesso | sim — inspira exibir claramente os critérios de aceite (✓/✗) antes de considerar uma tarefa concluída |
 | Aceitar/desfazer por unidade de trabalho | Google Antigravity IDE | Dar controle granular sobre mudanças geradas pela IA (diffs, planos e comandos) | Usuário não precisa aceitar "tudo ou nada" | Fadiga de decisão em tarefas com muitas subtarefas | talvez — pode ser aplicado a nível de card de tarefa na timeline, mas com moderação para não sobrecarregar o usuário |
 | Modo de "pensar mais" (raciocínio estendido, oculto ou resumido) | ChatGPT | Sinalizar que a IA está em processamento mais profundo para perguntas difíceis | Comunicação simples de "vale a pena esperar" | Não expõe o processo de raciocínio de forma auditável | sim, parcialmente — nosso projeto vai além, expondo cada subtarefa da timeline, não apenas um indicador genérico de "pensando" |
-| IA sempre visível como camada ambiente (barra de tarefas) | Copilot do Windows | Reduzir esforço de acesso à IA no fluxo de trabalho | Baixíssima barreira de entrada | Nenhuma transparência de processo/raciocínio | não — o harness é uma aplicação dedicada para análise aprofundada, não um assistente de acesso instantâneo; a proposta de valor está exatamente na transparência que esse padrão sacrifica |
+| IA integrada ao ambiente de trabalho | Copilot do Windows | Consultar a IA sem abandonar a tarefa atual | Baixo esforço de acesso e compartilhamento direto de contexto | Pouca estrutura visual para acompanhar tarefas complexas | sim, parcialmente — manter a entrada acessível e combinar conveniência com status por tarefa |
 | Histórico de conversas/execuções na lateral | ChatGPT, Google Antigravity IDE | Retomar contexto de interações anteriores | Familiar e de baixo custo de implementação | Pode não ser prioritário no escopo inicial do harness (uso mais pontual) | talvez — já listado como "talvez" na Entrega 1 (seção 8, "Histórico com busca/filtros") |
 | Dashboard/relatório consolidado | nenhum dos concorrentes analisados oferece nativamente para tarefas de raciocínio de IA | Visualizar o resultado final de forma clara | — | — | sim — já validado como F04/parte do escopo (painel de resultado + métricas de tokens/contexto), e é um diferencial claro em relação aos quatro concorrentes |
 
@@ -242,24 +253,24 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 (Claude Code) | C02 (Google Antigravity IDE) | C03 (ChatGPT) | Oportunidade para o projeto |
-|---|---|---|---|---|
-| Navegação | Terminal, comandos e atalhos de teclado (Shift+Tab para modos) | Painel lateral de orquestração agentica integrado à IDE, com alternância gráfica entre chat e artefatos (`implementation_plan.md`) | Chat linear em página única, histórico lateral | Interface web dedicada, com navegação simples entre entrada de pergunta, timeline e resultado — sem exigir conhecimento de atalhos de terminal |
-| Feedback/estado | Texto em stream contínuo, sem estrutura visual por fase | Exibição em tempo real do pensamento (*Thinking* expansível), status de ferramentas acionadas (*Tool Calls*) e diffs interativos | Indicador de "pensando"/"gerando", sem detalhamento de etapas | Timeline vertical estruturada por fase (Setup, Loop, Síntese), com status visível por card de tarefa (proposta já validada na Entrega 1) |
-| Prevenção/recuperação de erro | Plan Mode como checkpoint antes de agir; modos de permissão graduais | Planning Mode obrigatório com botão formal de aprovação ("Proceed"); revisão de diffs e plano antes de alterações | Regenerar resposta; pouco controle sobre o processo interno | Critérios de aceite (✓/✗) visíveis por tarefa, permitindo entender exatamente onde e por que uma etapa falhou (H02) |
-| Terminologia | Termos técnicos (permission mode, plan mode, tokens) | Termos de engenharia agentica (Planning Mode, Thinking, Tool Calls, Walkthrough, Subagents) | Linguagem simples e conversacional, acessível a leigos | Traduzir conceitos técnicos do harness (Fresh Context, tarefas atômicas) para linguagem acessível ao público não puramente técnico (pesquisadores, empresas), como já indicado na Entrega 1 |
-| Acessibilidade | Depende inteiramente de teclado e leitura de texto no terminal; sem suporte nativo a leitores de tela estruturados | Interface gráfica rica em Electron/VS Code, suporte nativo a leitor de tela, alto contraste e atalhos configuráveis | Interface web com suporte razoável a leitores de tela e temas claro/escuro | Adotar boas práticas de acessibilidade web (contraste, navegação por teclado, textos alternativos para os ícones ✓/✗) desde a prototipação |
-| Eficiência | Alta para usuários técnicos experientes com terminal; baixa curva de familiaridade para leigos | Muito alta para tarefas de raciocínio e execução profunda; combina autonomia da IA com supervisão em checkpoints | Alta para perguntas pontuais simples; baixa para acompanhar raciocínio longo/complexo | Buscar equilíbrio: interface visual que não exija conhecimento de terminal (como C01), mas que exponha profundidade de processo que ferramentas puramente conversacionais (C03) não oferecem |
+| Critério | C01 (Claude Code) | C02 (Google Antigravity IDE) | C03 (ChatGPT) | C04 (Copilot do Windows) | Oportunidade para o projeto |
+|---|---|---|---|---|---|
+| Navegação | Terminal, comandos e atalhos de teclado (Shift+Tab para modos) | Painel lateral de orquestração agentica integrado à IDE, com alternância gráfica entre chat e artefatos (`implementation_plan.md`) | Chat linear em página única, histórico lateral | Aplicativo de chat acessível pelo Windows, com histórico de conversas | Interface web dedicada, com navegação simples entre entrada de pergunta, timeline e resultado — sem exigir conhecimento de atalhos de terminal |
+| Feedback/estado | Texto em stream contínuo, sem estrutura visual por fase | Exibição em tempo real do pensamento (*Thinking* expansível), status de ferramentas acionadas (*Tool Calls*) e diffs interativos | Indicador de "pensando"/"gerando", sem detalhamento de etapas | Resposta no fluxo da conversa, sem status detalhado por subtarefa | Timeline vertical estruturada por fase (Setup, Loop, Síntese), com status visível por card de tarefa (proposta já validada na Entrega 1) |
+| Prevenção/recuperação de erro | Plan Mode como checkpoint antes de agir; modos de permissão graduais | Planning Mode obrigatório com botão formal de aprovação ("Proceed"); revisão de diffs e plano antes de alterações | Regenerar resposta; pouco controle sobre o processo interno | Permissão explícita para compartilhar tela e acessar arquivos; possibilidade de encerrar a sessão | Critérios de aceite (✓/✗) visíveis por tarefa, permitindo entender exatamente onde e por que uma etapa falhou (H02) |
+| Terminologia | Termos técnicos (permission mode, plan mode, tokens) | Termos de engenharia agentica (Planning Mode, Thinking, Tool Calls, Walkthrough, Subagents) | Linguagem simples e conversacional, acessível a leigos | Linguagem conversacional e orientada a tarefas cotidianas | Traduzir conceitos técnicos do harness (Fresh Context, tarefas atômicas) para linguagem acessível ao público não puramente técnico (pesquisadores, empresas), como já indicado na Entrega 1 |
+| Acessibilidade | Depende inteiramente de teclado e leitura de texto no terminal; sem suporte nativo a leitores de tela estruturados | Interface gráfica rica em Electron/VS Code, suporte nativo a leitor de tela, alto contraste e atalhos configuráveis | Interface web com suporte razoável a leitores de tela e temas claro/escuro | Interação por texto e voz, com atalho de acesso pelo Windows | Adotar boas práticas de acessibilidade web (contraste, navegação por teclado, textos alternativos para os ícones ✓/✗) desde a prototipação |
+| Eficiência | Alta para usuários técnicos experientes com terminal; baixa curva de familiaridade para leigos | Muito alta para tarefas de raciocínio e execução profunda; combina autonomia da IA com supervisão em checkpoints | Alta para perguntas pontuais simples; baixa para acompanhar raciocínio longo/complexo | Alta para consultas pontuais; limitada para acompanhar processos longos | Buscar equilíbrio: interface visual que não exija conhecimento de terminal (como C01), mas que exponha profundidade de processo que ferramentas puramente conversacionais (C03 e C04) não oferecem |
 
 ## 5. Recomendações derivadas
 
-- **RC01:** Adotar uma timeline vertical estruturada por fases (Setup, Loop de Raciocínio, Síntese), com indicadores visuais de status por tarefa — inspirada na visibilidade de estados do painel agentico de C02 (Antigravity IDE) e suprindo a ausência desse padrão estruturado em C01 e C03, que usam texto corrido ou indicador genérico de "pensando".
+- **RC01:** Adotar uma timeline vertical estruturada por fases (Setup, Loop de Raciocínio, Síntese), com indicadores visuais de status por tarefa — inspirada na visibilidade de estados do painel agentico de C02 (Antigravity IDE) e suprindo a ausência desse padrão estruturado em C01, C03 e C04, que usam texto corrido ou fluxo conversacional.
 - **RC02:** Exibir critérios de aceite (✓/✗) de forma clara antes de considerar uma etapa concluída, inspirado no Plan Mode de C01 e no Planning Mode com artefatos e botões de aprovação de C02 (Antigravity IDE).
 - **RC03:** Expor consumo de tokens e estado de contexto por card de tarefa na interface, cobrindo uma lacuna identificada em C01 (contagem não granular) e inspirando-se na auditoria explícita de ferramentas e passos demonstrada em C02 — reforça diretamente a necessidade F04 já registrada na Entrega 1.
-- **RC04:** Manter o campo de entrada de pergunta como uma caixa de texto única e simples, seguindo a convenção já dominada pelo público em C03 (ChatGPT), evitando exigir conhecimento prévio de "prompt engineering" ou sintaxe de comando como em C01.
+- **RC04:** Manter o campo de entrada de pergunta como uma caixa de texto única e simples, seguindo a convenção já dominada pelo público em C03 (ChatGPT) e C04 (Copilot), evitando exigir conhecimento prévio de "prompt engineering" ou sintaxe de comando como em C01.
 - **RC05:** Traduzir termos técnicos do harness (tarefas atômicas, Fresh Context, decaimento de contexto) para linguagem acessível ao público misto (técnico e não técnico) do projeto, evitando a terminologia excessivamente densa observada em C01 e nos recursos avançados de C02.
 - **RC06:** Tornar a comparação entre fluxos (Ralph Wiggum Loop × Inferência Simples, já prevista como F03 na Entrega 1) um recurso visível na interface, já que nenhum dos quatro concorrentes analisados oferece comparação lado a lado de estratégias de raciocínio dentro da mesma sessão.
-- **RC07:** Introduzir parâmetros avançados (ex.: seleção de modelo 405B, mais lento e caro) de forma opcional/expansível, e não como padrão inicial da tela — inspirado na prática de opt-in de recursos sensíveis observada em C04 (Copilot do Windows).
+- **RC07:** Introduzir parâmetros avançados (ex.: seleção de modelo 405B, mais lento e caro) de forma opcional/expansível e comunicar claramente permissões e contexto utilizado, seguindo o controle explícito observado em C04 (Copilot do Windows).
 
 ## Referências
 
@@ -275,10 +286,9 @@ Esse público já é usuário frequente de ferramentas de IA no cotidiano — se
 - tldv.io. "ChatGPT Pricing: My Honest Take on the 2026 Plans." Disponível em: https://tldv.io/blog/chatgpt-pricing/. Acesso em: 09/09/2026.
 - CloudZero. "ChatGPT pricing in 2026." Disponível em: https://www.cloudzero.com/blog/how-much-does-chatgpt-cost/. Acesso em: 09/09/2026.
 - metacto.com. "ChatGPT Pricing 2026: Plans, API Costs & Tiers." Disponível em: https://www.metacto.com/blogs/understanding-chatgpt-costs-usage-setup-integration-and-maintenance. Acesso em: 09/09/2026.
-- Microsoft Copilot — página oficial do produto. Disponível em: https://www.microsoft.com/microsoft-copilot. Acesso em: 09/09/2026.
-- Windows Forum. "Ask Copilot on Windows 11: Taskbar AI, Vision, and Voice Unveiled." Disponível em: https://windowsforum.com/threads/ask-copilot-on-windows-11-taskbar-ai-vision-and-voice-unveiled.385048/. Acesso em: 09/09/2026.
-- Windows Latest. "Microsoft tests a Windows 11 taskbar feature that lets AI see your open apps." Disponível em: https://www.windowslatest.com/2026/02/22/microsoft-tests-a-windows-11-taskbar-feature-that-lets-ai-see-your-open-apps-when-you-share-window/. Acesso em: 09/09/2026.
-- Microsoft Tech Community. "What's New in Microsoft 365 Copilot | June 2026." Disponível em: https://techcommunity.microsoft.com/blog/microsoft365copilotblog/what%E2%80%99s-new-in-microsoft-365-copilot--june-2026/4529572. Acesso em: 09/09/2026.
+- Microsoft Support. [Getting started with Copilot on Windows](https://support.microsoft.com/en-us/microsoft-copilot/getting-started-with-copilot-on-windows). Acesso em: 16/09/2026.
+- Microsoft Support. [Using Copilot Vision with Microsoft Copilot](https://support.microsoft.com/en-us/microsoft-copilot/using-copilot-vision-with-microsoft-copilot). Acesso em: 16/09/2026.
+- Microsoft Support. [What's the difference between Microsoft Copilot (free) and Copilot in Microsoft 365](https://support.microsoft.com/en-us/microsoft-365-copilot/what-s-the-difference-between-microsoft-copilot-free-and-copilot-in-microsoft-365). Acesso em: 16/09/2026.
 
 ## Checklist
 
