@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 530" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p02-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="p02-grad-badge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="p02-shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="530" rx="14" fill="#f8fafc"/>
+  <rect width="960" height="530" rx="14" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <path d="M0 14C0 6.268 6.268 0 14 0H946C953.732 0 960 6.268 960 14V88H0V14Z" fill="url(#p02-grad-header)"/>
+
+  <!-- Persona Avatar Circle -->
+  <circle cx="68" cy="48" r="32" fill="#8b5cf6" stroke="#ffffff" stroke-width="2.5"/>
+  <path d="M58 39H78V60H58V39Z" fill="none" stroke="#ffffff" stroke-width="2" rx="2"/>
+  <path d="M63 39V35C63 33 65 32 67 32H69C71 32 73 33 73 35V39" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+  <line x1="58" y1="47" x2="78" y2="47" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- Header Info -->
+  <text x="116" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Carlos Eduardo Prado, 38 anos</text>
+  <text x="116" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">Consultor Técnico de Inovação e P&amp;D em IA Corporativa</text>
+
+  <!-- Badges Top Right -->
+  <rect x="730" y="24" width="195" height="26" rx="13" fill="url(#p02-grad-badge)"/>
+  <text x="827" y="41" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">PERSONA SECUNDÁRIA (P02)</text>
+
+  <rect x="735" y="54" width="190" height="20" rx="10" fill="#334155"/>
+  <text x="830" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#cbd5e1" text-anchor="middle">Autor: Vitor Vianna (22.223.085-6)</text>
+
+  <!-- Left Column: Profile Card -->
+  <g filter="url(#p02-shadow)">
+    <rect x="25" y="104" width="280" height="400" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <text x="42" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Perfil e Hábitos</text>
+
+  <text x="42" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Conhecimento de Domínio:</text>
+  <text x="42" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Especialista em governança de dados,</text>
+  <text x="42" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">compliance técnico e arquitetura de IA.</text>
+
+  <text x="42" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Experiência com IA:</text>
+  <text x="42" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Avalia APIs de provedores comerciais;</text>
+  <text x="42" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">analisa custo em tokens vs acurácia.</text>
+
+  <text x="42" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Ambiente de Trabalho:</text>
+  <text x="42" y="286" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Escritório corporativo e reuniões;</text>
+  <text x="42" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Notebook ThinkPad 14" e chamadas de vídeo.</text>
+
+  <text x="42" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Comportamento Chave:</text>
+  <text x="42" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Exige métricas para justificar ROI</text>
+  <text x="42" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">para comitês; prioriza transparência</text>
+  <text x="42" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">e controle de custos de inferência.</text>
+
+  <rect x="40" y="456" width="250" height="26" rx="5" fill="#f1f5f9"/>
+  <text x="165" y="473" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#475569" text-anchor="middle">Hipóteses E1: H01 e H02</text>
+
+  <!-- Right Top 1: Objetivos & Necessidades -->
+  <g filter="url(#p02-shadow)">
+    <rect x="325" y="104" width="300" height="190" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="325" y="104" width="4" height="190" rx="2" fill="#10b981"/>
+  <text x="342" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">🎯 Objetivos e Necessidades</text>
+  <text x="342" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Selecionar modelos adequados (8B, 70B, 405B)</text>
+  <text x="352" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">ponderando acurácia lógica e custo financeiro.</text>
+  <text x="342" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Comprovar para clientes corporativos que</text>
+  <text x="352" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">a resposta foi validada contra critérios formais.</text>
+  <text x="342" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Ter relatórios auditáveis com consumo granular</text>
+  <text x="352" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">de tokens em cada etapa de processamento.</text>
+  <text x="342" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Apresentar sínteses claras a diretores e clientes.</text>
+
+  <!-- Right Top 2: Dores e Frustrações -->
+  <g filter="url(#p02-shadow)">
+    <rect x="645" y="104" width="290" height="190" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="645" y="104" width="4" height="190" rx="2" fill="#ef4444"/>
+  <text x="662" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">⚡ Dores e Frustrações</text>
+  <text x="662" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Falta de rastreabilidade do raciocínio em</text>
+  <text x="672" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">chatbots impede compliance corporativo.</text>
+  <text x="662" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Custo invisível de chamadas de API em</text>
+  <text x="672" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">loops opacos sem controle de tokens.</text>
+  <text x="662" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Dificuldade de demonstrar aos comitês</text>
+  <text x="672" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">o valor do Ralph Loop sobre inferência direta.</text>
+  <text x="662" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Insegurança jurídica em diagnósticos de IA.</text>
+
+  <!-- Right Bottom: Decisões de Design no Projeto de IHC -->
+  <g filter="url(#p02-shadow)">
+    <rect x="325" y="310" width="610" height="194" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="325" y="310" width="4" height="194" rx="2" fill="#8b5cf6"/>
+  <text x="342" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">💡 Decisões de Design Influenciadas por P02</text>
+
+  <text x="342" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#6d28d9">1. Seletor Paramétrico de Modelos (F02):</text>
+  <text x="342" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Permite alternar facilmente entre modelos Llama 3.1 (8B, 70B, 405B) com indicação clara de capacidade.</text>
+
+  <text x="342" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#6d28d9">2. Telemetria e Auditoria de Tokens por Tarefa (F04):</text>
+  <text x="342" y="412" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Exibição de contagem de tokens (prompt e completion) em cada card de tarefa para governança e cálculo de ROI.</text>
+
+  <text x="342" y="438" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#6d28d9">3. Painel de Síntese Final Executiva:</text>
+  <text x="342" y="452" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Apresentação limpa da resposta com opção de colapsar logs intermediários para leitura executiva por gestores.</text>
+
+  <text x="342" y="478" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#6d28d9">4. Layout Responsivo e Compacto:</text>
+  <text x="342" y="492" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Interface adaptável a telas menores de notebooks corporativos (14") sem quebra de hierarquia visual.</text>
+</svg>

@@ -1,5 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" width="100%" height="100%">
+  <defs>
+    <linearGradient id="me-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="me-shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="980" height="640" rx="14" fill="#f8fafc"/>
+  <rect width="980" height="640" rx="14" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <path d="M0 14C0 6.268 6.268 0 14 0H966C973.732 0 980 6.268 980 14V82H0V14Z" fill="url(#me-grad-header)"/>
+
+  <!-- Persona Avatar in Header -->
+  <circle cx="50" cy="41" r="25" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+  <path d="M50 25L35 32L50 39L65 32L50 25Z" fill="#ffffff"/>
+  <path d="M40 37V46C40 50 44 53 50 53C56 53 60 50 60 46V37" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+
+  <text x="88" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Mapa de Empatia — Equipe 18</text>
+  <text x="88" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#94a3b8">Persona Foco: Dra. Mariana Siqueira (P01 — Pesquisadora em Bioinformática)</text>
+
+  <rect x="750" y="26" width="200" height="26" rx="13" fill="#2563eb"/>
+  <text x="850" y="43" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">ARTEFATO CONSOLIDADO</text>
+
+  <!-- Row 1: O que ela VÊ? (Left) & O que ela OUVE? (Right) -->
+  <!-- Box 1: VÊ (x: 25, y: 96, w: 455, h: 165) -->
+  <g filter="url(#me-shadow)">
+    <rect x="25" y="96" width="455" height="165" rx="9" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="25" y="96" width="4" height="165" rx="2" fill="#0284c7"/>
+  <text x="40" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0369a1">👁️ O QUE ELA VÊ?</text>
+  <text x="40" y="137" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Respostas de chatbots que soam convincentes, mas contêm erros lógicos.</text>
+  <text x="40" y="153" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Colegas no laboratório gastando horas conferindo deduções manuais.</text>
+  <text x="40" y="169" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Papers recentes alertando sobre riscos de alucinações e context rot [F].</text>
+  <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Telas repletas de artigos em PDF, cadernos Jupyter e scripts Python.</text>
+  <text x="40" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#0284c7">Fontes: Observação de rotina acadêmica e literatura [F]</text>
+
+  <!-- Box 2: OUVE (x: 500, y: 96, w: 455, h: 165) -->
+  <g filter="url(#me-shadow)">
+    <rect x="500" y="96" width="455" height="165" rx="9" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="500" y="96" width="4" height="165" rx="2" fill="#8b5cf6"/>
+  <text x="515" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#6d28d9">👂 O QUE ELA OUVE?</text>
+  <text x="515" y="137" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Orientador cobrando reprodutibilidade rigorosa e validação de dados.</text>
+  <text x="515" y="153" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Críticas na pós-graduação sobre a opacidade de caixas-pretas de IA.</text>
+  <text x="515" y="169" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Notícias sobre raciocínio agentico e orquestração stateless [F].</text>
+  <text x="515" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Avisos de conferências contra o uso acrítico de LLMs em publicações.</text>
+  <text x="515" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#7c3aed">Fontes: Diretrizes acadêmicas e ambiente universitário [F]</text>
+
+  <!-- Row 2: O que ela PENSA e SENTE? (Left) & O que ela DIZ e FAZ? (Right) -->
+  <!-- Box 3: PENSA E SENTE (x: 25, y: 275, w: 455, h: 165) -->
+  <g filter="url(#me-shadow)">
+    <rect x="25" y="275" width="455" height="165" rx="9" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="25" y="275" width="4" height="165" rx="2" fill="#f59e0b"/>
+  <text x="40" y="297" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#b45309">🧠 O QUE ELA PENSA E SENTE?</text>
+  <text x="40" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• "Não posso confiar em respostas sem ver a dedução passo a passo."</text>
+  <text x="40" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Ansiedade de publicar conclusões apoiadas em premissas falsas.</text>
+  <text x="40" y="348" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Desejo de acelerar a pesquisa sem ser refém de alucinações silenciosas [H].</text>
+  <text x="40" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Alívio ao ver critérios de aceite formais sendo validados pela máquina.</text>
+  <text x="40" y="423" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#d97706">Hipótese derivada de entrevistas e H01/H02 [H]</text>
+
+  <!-- Box 4: DIZ E FAZ (x: 500, y: 275, w: 455, h: 165) -->
+  <g filter="url(#me-shadow)">
+    <rect x="500" y="275" width="455" height="165" rx="9" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="500" y="275" width="4" height="165" rx="2" fill="#10b981"/>
+  <text x="515" y="297" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#047857">🗣️ O QUE ELA DIZ E FAZ?</text>
+  <text x="515" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Diz: "Preciso de um passo a passo claro, não de uma conclusão pronta."</text>
+  <text x="515" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Formula prompts cheios de travas e restrições para tentar conter erros.</text>
+  <text x="515" y="348" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Compara saídas de diferentes modelos quando a questão é crítica.</text>
+  <text x="515" y="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Registra deduções intermediárias para auditar a lógica no artigo.</text>
+  <text x="515" y="423" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#059669">Prática de trabalho acadêmico documentada [F]</text>
+
+  <!-- Row 3: DORES (Left) & GANHOS (Right) -->
+  <!-- Box 5: DORES (x: 25, y: 454, w: 455, h: 168) -->
+  <g filter="url(#me-shadow)">
+    <rect x="25" y="454" width="455" height="168" rx="9" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="25" y="454" width="4" height="168" rx="2" fill="#ef4444"/>
+  <text x="40" y="474" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#dc2626">⚡ DORES (Frustrações e Riscos)</text>
+  <text x="40" y="493" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Decaimento de contexto (context rot): a IA perde o foco em conversas longas [F].</text>
+  <text x="40" y="508" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Falta de transparência: impossibilidade de auditar critérios de aceite [F].</text>
+  <text x="40" y="523" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Cansaço mental lendo textos corridos para identificar falhas lógicas.</text>
+  <text x="40" y="538" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Perda de tempo refazendo inferências do zero sem histórico confiável.</text>
+  <rect x="40" y="556" width="425" height="52" rx="6" fill="#fef2f2"/>
+  <text x="48" y="572" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#991b1b">Impacto no Projeto de IHC:</text>
+  <text x="48" y="588" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#b91c1c">Exigência de Fresh Context por tarefa e sinalizadores de critérios de aceite (✓/✗).</text>
+  <text x="48" y="601" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#b91c1c">Mitigação do cansaço visual via cards de tarefas estruturados e colapsáveis.</text>
+
+  <!-- Box 6: GANHOS (x: 500, y: 454, w: 455, h: 168) -->
+  <g filter="url(#me-shadow)">
+    <rect x="500" y="454" width="455" height="168" rx="9" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="500" y="454" width="4" height="168" rx="2" fill="#10b981"/>
+  <text x="515" y="474" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#059669">🌟 GANHOS (Desejos e Necessidades)</text>
+  <text x="515" y="493" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Acurácia superior comprovada por tarefas atômicas no Ralph Loop [F].</text>
+  <text x="515" y="508" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Timeline vertical de Open Thinking auditável para validação em tempo real [H].</text>
+  <text x="515" y="523" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Resposta final sintetizada e fundamentada pronta para citação acadêmica.</text>
+  <text x="515" y="538" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Redução drástica da ansiedade com segurança metodológica comprovada.</text>
+  <rect x="515" y="556" width="425" height="52" rx="6" fill="#f0fdf4"/>
+  <text x="523" y="572" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#166534">Oportunidade de Design em IHC:</text>
+  <text x="523" y="588" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#15803d">Painel em 2 colunas: timeline de tarefas à esquerda e resposta sintetizada à direita.</text>
+  <text x="523" y="601" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#15803d">Botão de cópia rápida em Markdown e exportação direta do histórico da sessão.</text>
 </svg>

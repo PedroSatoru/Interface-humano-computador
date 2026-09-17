@@ -34,8 +34,10 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | Orquestração stateless (Ralph Loop) | Melhorar a acurácia e qualidade das respostas de LLM | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
-| R02 | Monitoramento de contexto/tokens | Identificar eficiência de custo e context rot | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R01 | Orquestração stateless (Ralph Loop) | Mitigar context rot e obter alta acurácia lógica em perguntas complexas | P01, P04 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R02 | Monitoramento de contexto/tokens | Avaliar eficiência de custos, consumo de tokens e renovação Fresh Context | P02, P03 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R03 | Comparação de fluxos (Ralph Loop vs Direto) | Avaliar experimentalmente o ganho de acurácia frente à inferência baseline | P03 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R04 | Verificação de critérios de aceite (✓/✗) | Auditar a autocrítica e comprovar conformidade antes da síntese final | P01, P02 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -43,15 +45,16 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 
 | ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
 |---|---|---|---|---|---|
-| F01 | dashboard / timeline | Visualizar o progresso de pensamento em tempo real | Exibição de cards de tarefas por fases (Setup, Loop, Síntese) | `[H]` Necessidade de auditoria e acompanhamento de tarefas da IA | PENDENTE |
-| F02 | seletor / parametrização | Ajustar modelo e fluxo de forma simplificada | Botões de seleção de modelo (Llama 3.1 8B/70B/405B) e tipo de fluxo | `[F]` (demo já possui esse seletor inicial) | PENDENTE |
+| F01 | dashboard / timeline | Visualizar o progresso de pensamento em tempo real | Exibição de cards de tarefas por fases (Setup, Loop, Síntese) | `[H]` Necessidade de auditoria e acompanhamento de tarefas da IA | P01, P03, P04, docs/03_personas_contexto_jornada.md |
+| F02 | seletor / parametrização | Ajustar modelo e fluxo de forma simplificada | Botões de seleção de modelo (Llama 3.1 8B/70B/405B) e tipo de fluxo | `[F]` (demo já possui esse seletor inicial) | P02, P03, docs/03_personas_contexto_jornada.md |
 
 ## 5. Registro de mudanças de escopo
 
 | Data | O que mudou | Evidência/feedback que motivou | Artefatos afetados | Responsável |
 |---|---|---|---|---|
 | 22/08/2026 | Derivação inicial do escopo e hipóteses baseadas no TCC | Criação inicial do repositório da disciplina | README.md, docs/01_conhecendo_o_problema.md | Equipe de IHC |
-| 09/09/2026 | Análise de concorrência com 4 interfaces de IA (Claude Code, GitHub Copilot, ChatGPT, Copilot do Windows), confirmando que nenhuma expõe raciocínio em timeline estruturada por fases | Pesquisa de mercado e documentação oficial de cada produto (2026) | docs/02_analise_concorrencia.md | Equipe de IHC |
+| 09/09/2026 | Análise de concorrência com 4 interfaces de IA (Claude Code, Google Antigravity IDE, ChatGPT, Copilot do Windows), confirmando que nenhuma expõe raciocínio em timeline estruturada por fases | Pesquisa de mercado e documentação oficial de cada produto (2026) | docs/02_analise_concorrencia.md | Equipe de IHC |
+| 16/09/2026 | Conclusão da Entrega 3: definição de 4 personas (P01 Dra. Mariana, P02 Carlos Prado, P03 Lucas Zanin, P04 Beatriz Fagundes), mapa de empatia para P01, contexto de uso consolidado nas 7 dimensões e mapeamento da jornada do usuário | Validação de perfis baseada em literatura de LLMs, benchmarks GPQA/MMLU e análises de concorrência | docs/03_personas_contexto_jornada.md, RASTREABILIDADE.md, assets/03_personas/* | Equipe de IHC (Pedro Correia, Vitor Vianna, Pedro Satoru, Hugo Nomura) |
 
 ## Como usar
 

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 530" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p04-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="p04-grad-badge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <filter id="p04-shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="530" rx="14" fill="#f8fafc"/>
+  <rect width="960" height="530" rx="14" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <path d="M0 14C0 6.268 6.268 0 14 0H946C953.732 0 960 6.268 960 14V88H0V14Z" fill="url(#p04-grad-header)"/>
+
+  <!-- Persona Avatar Circle -->
+  <circle cx="68" cy="48" r="32" fill="#f43f5e" stroke="#ffffff" stroke-width="2.5"/>
+  <path d="M54 57C54 57 60 54 68 54C76 54 82 57 82 57V40C82 40 76 37 68 37C60 37 54 40 54 40V57Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="68" y1="37" x2="68" y2="54" stroke="#ffffff" stroke-width="1.8"/>
+
+  <!-- Header Info -->
+  <text x="116" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Beatriz Fagundes, 22 anos</text>
+  <text x="116" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">Estudante de Graduação em Engenharia da Computação (8º Semestre)</text>
+
+  <!-- Badges Top Right -->
+  <rect x="730" y="24" width="195" height="26" rx="13" fill="url(#p04-grad-badge)"/>
+  <text x="827" y="41" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">PERSONA SECUNDÁRIA (P04)</text>
+
+  <rect x="735" y="54" width="190" height="20" rx="10" fill="#334155"/>
+  <text x="830" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#cbd5e1" text-anchor="middle">Autor: Hugo Nomura (22.123.051-9)</text>
+
+  <!-- Left Column: Profile Card -->
+  <g filter="url(#p04-shadow)">
+    <rect x="25" y="104" width="280" height="400" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <text x="42" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Perfil e Hábitos</text>
+
+  <text x="42" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Conhecimento de Domínio:</text>
+  <text x="42" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Fundamentos sólidos de computação,</text>
+  <text x="42" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">algoritmos e matemática discreta.</text>
+
+  <text x="42" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Experiência com IA:</text>
+  <text x="42" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Usa ChatGPT e Copilot para estudos;</text>
+  <text x="42" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">quer entender o raciocínio por trás.</text>
+
+  <text x="42" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Ambiente de Trabalho:</text>
+  <text x="42" y="286" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Laboratório da FEI e quarto de estudos;</text>
+  <text x="42" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Notebook Dell 14" portátil e tablet.</text>
+
+  <text x="42" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Comportamento Chave:</text>
+  <text x="42" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Busca aprender com a resolução;</text>
+  <text x="42" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">evita UIs confusas com excesso de</text>
+  <text x="42" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">parâmetros e termos ininteligíveis.</text>
+
+  <rect x="40" y="456" width="250" height="26" rx="5" fill="#f1f5f9"/>
+  <text x="165" y="473" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="600" fill="#475569" text-anchor="middle">Hipóteses E1: H01 e H02</text>
+
+  <!-- Right Top 1: Objetivos & Necessidades -->
+  <g filter="url(#p04-shadow)">
+    <rect x="325" y="104" width="300" height="190" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="325" y="104" width="4" height="190" rx="2" fill="#10b981"/>
+  <text x="342" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">🎯 Objetivos e Necessidades</text>
+  <text x="342" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Obter suporte na resolução de exercícios</text>
+  <text x="352" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">conceituais difíceis com lógica passo a passo.</text>
+  <text x="342" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Acompanhar a quebra em subtarefas para</text>
+  <text x="352" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">aprender a estratégia correta de solução.</text>
+  <text x="342" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Usar uma interface amigável sem ter que</text>
+  <text x="352" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">dominar parâmetros obscuros de backend.</text>
+  <text x="342" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Ter respostas confiáveis para seus estudos.</text>
+
+  <!-- Right Top 2: Dores e Frustrações -->
+  <g filter="url(#p04-shadow)">
+    <rect x="645" y="104" width="290" height="190" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="645" y="104" width="4" height="190" rx="2" fill="#ef4444"/>
+  <text x="662" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">⚡ Dores e Frustrações</text>
+  <text x="662" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Chatbots convencionais "pulam" etapas</text>
+  <text x="672" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">de dedução e induzem a erros conceituais.</text>
+  <text x="662" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Textões corridos desestruturados geram</text>
+  <text x="672" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">cansaço visual e dificultam tirar dúvidas.</text>
+  <text x="662" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Telas que parecem travadas quando a IA</text>
+  <text x="672" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">demora muito sem dar retorno de progresso.</text>
+  <text x="662" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Excesso de termos técnicos desnecessários.</text>
+
+  <!-- Right Bottom: Decisões de Design no Projeto de IHC -->
+  <g filter="url(#p04-shadow)">
+    <rect x="325" y="310" width="610" height="194" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  </g>
+  <rect x="325" y="310" width="4" height="194" rx="2" fill="#f43f5e"/>
+  <text x="342" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">💡 Decisões de Design Influenciadas por P04</text>
+
+  <text x="342" y="358" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#be123c">1. Entrada Intuitiva e Limpa (F01):</text>
+  <text x="342" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Caixa de entrada simples inspirada no modelo mental de chats, com placeholder orientador de perguntas.</text>
+
+  <text x="342" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#be123c">2. Vocabulário Acessível e Didático:</text>
+  <text x="342" y="412" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Exibição de rótulos claros como "Etapas de Resolução" sem intimidar a usuária com termos hiper-técnicos.</text>
+
+  <text x="342" y="438" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#be123c">3. Indicadores Ativos de Progresso:</text>
+  <text x="342" y="452" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Feedback contínuo de status por pulso suave e animações discretas, eliminando a sensação de congelamento.</text>
+
+  <text x="342" y="478" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#be123c">4. Destaque Visual da Síntese Final:</text>
+  <text x="342" y="492" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Apresentação limpa da resposta com hierarquia tipográfica clara para leitura rápida e estudo direcionado.</text>
+</svg>
