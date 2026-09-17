@@ -293,8 +293,8 @@ A tabela a seguir consolida as 7 dimensões do contexto de uso da interface do R
 - [x] Está claro o que é dado real/evidência (`[F]`) e o que é hipótese/proto-persona (`[H]`).
 - [x] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência direta.
 - [x] Objetivos e dores têm consequência direta e rastreável para o design da interface.
-- [x] Contexto de uso está plenamente coerente com a Entrega 1 e com o domínio do TCC (harness do Ralph Wiggum Loop).
-- [x] A persona possui relação explícita com a capacidade técnica do TCC (mitigação de *context rot* por orquestração stateless).
+- [x] Contexto de uso está plenamente coerente com a Entrega 1 e com o domínio do TCC 
+- [x] A persona possui relação explícita com a capacidade técnica do TCC 
 - [x] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos e tarefas genuinamente diferentes.
 - [x] A jornada do usuário possui etapas cronológicas (antes, durante e depois), dores, sentimentos, pensamentos e oportunidades concretas de IHC, não sendo um mero wireflow de telas.
-- [x] IDs das personas (`P01`, `P02`, `P03`, `P04`) foram atualizados na matriz de rastreabilidade (`RASTREABILIDADE.md`).
+- [x] IDs das personas 
