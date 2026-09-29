@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 550" width="1100" height="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #0969da; stroke-width: 2; rx: 6; }
+      .box-root { fill: #0969da; stroke: #0550ae; stroke-width: 2; rx: 8; }
+      .box-sub { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.5; rx: 6; }
+      .text-title { fill: #ffffff; font-weight: 600; font-size: 15px; text-anchor: middle; }
+      .text-node { fill: #1f2328; font-weight: 600; font-size: 12px; text-anchor: middle; }
+      .text-id { fill: #0969da; font-weight: 700; font-size: 11px; }
+      .text-sub { fill: #57606a; font-size: 10px; text-anchor: middle; }
+      .line { stroke: #8c959f; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="550" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="550" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">HTA T04 — Submeter exercício e acompanhar validação didática passo a passo</text>
+  <text x="550" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Hugo Emílio Nomura (22.123.051-9) — Persona: Beatriz Fagundes (P04)</text>
+
+  <!-- Linha tronco do Nível 0 -->
+  <line x1="550" y1="115" x2="550" y2="140" class="line"/>
+  <line x1="120" y1="140" x2="960" y2="140" class="line"/>
+
+  <!-- Linhas para Nível 1 -->
+  <line x1="120" y1="140" x2="120" y2="165" class="line"/>
+  <line x1="330" y1="140" x2="330" y2="165" class="line"/>
+  <line x1="540" y1="140" x2="540" y2="165" class="line"/>
+  <line x1="750" y1="140" x2="750" y2="165" class="line"/>
+  <line x1="960" y1="140" x2="960" y2="165" class="line"/>
+
+  <!-- Nível 0 -->
+  <rect x="300" y="65" width="500" height="50" class="box-root"/>
+  <text x="550" y="88" class="text-title">0. Submeter questão de lógica e acompanhar validação didática</text>
+  <text x="550" y="104" fill="#d0d7de" font-size="11px" text-anchor="middle">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4; após sanar dúvidas, conclua em 5.</text>
+
+  <!-- Nível 1 -->
+  <!-- 1 -->
+  <rect x="40" y="165" width="160" height="60" class="box"/>
+  <text x="50" y="183" class="text-id">1</text>
+  <text x="120" y="191" class="text-node">Digitar enunciado</text>
+  <text x="120" y="209" class="text-sub">no Composer central</text>
+
+  <!-- 2 -->
+  <rect x="250" y="165" width="160" height="60" class="box"/>
+  <text x="260" y="183" class="text-id">2</text>
+  <text x="330" y="191" class="text-node">Acionar Ralph Loop</text>
+  <text x="330" y="209" class="text-sub">via ModeCard ou Enter</text>
+
+  <!-- 3 -->
+  <rect x="460" y="165" width="160" height="60" class="box"/>
+  <text x="470" y="183" class="text-id">3</text>
+  <text x="540" y="191" class="text-node">Acompanhar etapas</text>
+  <text x="540" y="209" class="text-sub">decomposição atômica</text>
+
+  <!-- 4 -->
+  <rect x="670" y="165" width="160" height="60" class="box"/>
+  <text x="680" y="183" class="text-id">4</text>
+  <text x="750" y="191" class="text-node">Checar critérios (✓/✗)</text>
+  <text x="750" y="209" class="text-sub">validação sem alucinação</text>
+
+  <!-- 5 -->
+  <rect x="880" y="165" width="160" height="60" class="box"/>
+  <text x="890" y="183" class="text-id">5</text>
+  <text x="960" y="191" class="text-node">Compreender síntese</text>
+  <text x="960" y="209" class="text-sub">e fixar conceito para prova</text>
+
+  <!-- Ramo da Tarefa 1: Coluna Vertical -->
+  <line x1="120" y1="225" x2="120" y2="255" class="line"/>
+  <line x1="120" y1="305" x2="120" y2="325" class="line"/>
+
+  <!-- 1.1 -->
+  <rect x="40" y="255" width="160" height="50" class="box-sub"/>
+  <text x="50" y="273" class="text-id">1.1</text>
+  <text x="120" y="280" class="text-node">Digitação direta</text>
+  <text x="120" y="296" class="text-sub">colar enunciado da lista</text>
+
+  <!-- 1.2 -->
+  <rect x="40" y="325" width="160" height="50" class="box-sub"/>
+  <text x="50" y="343" class="text-id">1.2</text>
+  <text x="120" y="350" class="text-node">Exemplo sugerido</text>
+  <text x="120" y="366" class="text-sub">card demonstrativo</text>
+
+  <!-- Ramo da Tarefa 4: Coluna Vertical -->
+  <line x1="750" y1="225" x2="750" y2="255" class="line"/>
+  <line x1="750" y1="305" x2="750" y2="325" class="line"/>
+
+  <!-- 4.1 -->
+  <rect x="670" y="255" width="160" height="50" class="box-sub"/>
+  <text x="680" y="273" class="text-id">4.1</text>
+  <text x="750" y="280" class="text-node">Ler badge de critério</text>
+  <text x="750" y="296" class="text-sub">verde (✓) ou vermelho (✗)</text>
+
+  <!-- 4.2 -->
+  <rect x="670" y="325" width="160" height="50" class="box-sub"/>
+  <text x="680" y="343" class="text-id">4.2</text>
+  <text x="750" y="350" class="text-node">Inspecionar tentativa</text>
+  <text x="750" y="366" class="text-sub">motivo da alternativa eleita</text>
+
+  <!-- Legenda de Planos -->
+  <rect x="40" y="480" width="1000" height="46" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="60" y="508" font-size="12" font-weight="bold" fill="#1f2328">Planos HTA:</text>
+  <text x="145" y="508" font-size="11" fill="#57606a">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4 &gt; 5. | Plano 1: Escolha entre 1.1 (digitação manual) ou 1.2 (exemplo prévio). | Plano 4: 4.1 seguido de 4.2 sob demanda.</text>
+</svg>

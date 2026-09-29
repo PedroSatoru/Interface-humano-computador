@@ -15,9 +15,9 @@
   <!-- Background -->
   <rect width="1100" height="550" fill="#ffffff"/>
 
-  <!-- Título do Diagrama -->
-  <text x="550" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">HTA T01 — Auditar premissas e deduções intermediárias em questão GPQA</text>
-  <text x="550" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Pedro Henrique Correia de Oliveira (22.222.009-7) — Persona: Dra. Mariana Siqueira (P01)</text>
+  <!-- Título -->
+  <text x="550" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">HTA T03 — Alternar fluxos e inspecionar renovação de Fresh Context</text>
+  <text x="550" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Pedro Henrique Satoru Lima Takahashi (22.123.019-6) — Persona: Lucas Zanin (P03)</text>
 
   <!-- Linha tronco do Nível 0 -->
   <line x1="550" y1="115" x2="550" y2="140" class="line"/>
@@ -30,41 +30,41 @@
   <line x1="750" y1="140" x2="750" y2="165" class="line"/>
   <line x1="960" y1="140" x2="960" y2="165" class="line"/>
 
-  <!-- Nível 0: Meta Principal -->
-  <rect x="310" y="65" width="480" height="50" class="box-root"/>
-  <text x="550" y="88" class="text-title">0. Auditar premissas e deduções lógicas no Ralph Loop</text>
-  <text x="550" y="104" fill="#d0d7de" font-size="11px" text-anchor="middle">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4; se concluído com rigor, faça 5.</text>
+  <!-- Nível 0 -->
+  <rect x="300" y="65" width="500" height="50" class="box-root"/>
+  <text x="550" y="88" class="text-title">0. Comparar fluxos de inferência e inspecionar Fresh Context</text>
+  <text x="550" y="104" fill="#d0d7de" font-size="11px" text-anchor="middle">Plano 0: 1 &gt; 2; em seguida faça 3 &gt; 4; conclua comparando em 5.</text>
 
-  <!-- Nível 1: Subtarefas Principais -->
+  <!-- Nível 1 -->
   <!-- 1 -->
   <rect x="40" y="165" width="160" height="60" class="box"/>
   <text x="50" y="183" class="text-id">1</text>
-  <text x="120" y="191" class="text-node">Formular pergunta</text>
-  <text x="120" y="209" class="text-sub">com restrições GPQA</text>
+  <text x="120" y="191" class="text-node">Selecionar fluxo</text>
+  <text x="120" y="209" class="text-sub">Simples vs Ralph Loop</text>
 
   <!-- 2 -->
   <rect x="250" y="165" width="160" height="60" class="box"/>
   <text x="260" y="183" class="text-id">2</text>
-  <text x="330" y="191" class="text-node">Disparar execução</text>
-  <text x="330" y="209" class="text-sub">no modo Ralph Loop</text>
+  <text x="330" y="191" class="text-node">Submeter pergunta</text>
+  <text x="330" y="209" class="text-sub">benchmark MMLU</text>
 
   <!-- 3 -->
   <rect x="460" y="165" width="160" height="60" class="box"/>
   <text x="470" y="183" class="text-id">3</text>
-  <text x="540" y="191" class="text-node">Acompanhar Timeline</text>
-  <text x="540" y="209" class="text-sub">de Open Thinking</text>
+  <text x="540" y="191" class="text-node">Alternar visualização</text>
+  <text x="540" y="209" class="text-sub">Modo Gráfico vs Chat</text>
 
   <!-- 4 -->
   <rect x="670" y="165" width="160" height="60" class="box"/>
   <text x="680" y="183" class="text-id">4</text>
-  <text x="750" y="191" class="text-node">Auditar critérios</text>
-  <text x="750" y="209" class="text-sub">de aceite (✓/✗)</text>
+  <text x="750" y="191" class="text-node">Inspecionar nós</text>
+  <text x="750" y="209" class="text-sub">arcos e Fresh Context</text>
 
   <!-- 5 -->
   <rect x="880" y="165" width="160" height="60" class="box"/>
   <text x="890" y="183" class="text-id">5</text>
-  <text x="960" y="191" class="text-node">Apropriar síntese</text>
-  <text x="960" y="209" class="text-sub">e exportar Markdown</text>
+  <text x="960" y="191" class="text-node">Comparar acurácia</text>
+  <text x="960" y="209" class="text-sub">baseline vs orquestrado</text>
 
   <!-- Ramo da Tarefa 3: Coluna Vertical -->
   <line x1="540" y1="225" x2="540" y2="255" class="line"/>
@@ -73,40 +73,33 @@
   <!-- 3.1 -->
   <rect x="460" y="255" width="160" height="50" class="box-sub"/>
   <text x="470" y="273" class="text-id">3.1</text>
-  <text x="540" y="280" class="text-node">Observar nós de tarefas</text>
-  <text x="540" y="296" class="text-sub">Setup &gt; Loop &gt; Síntese</text>
+  <text x="540" y="280" class="text-node">Usar ViewModeSwitch</text>
+  <text x="540" y="296" class="text-sub">GraphMode &lt;-&gt; ChatMode</text>
 
   <!-- 3.2 -->
   <rect x="460" y="325" width="160" height="50" class="box-sub"/>
   <text x="470" y="343" class="text-id">3.2</text>
-  <text x="540" y="350" class="text-node">Verificar Fresh Context</text>
-  <text x="540" y="366" class="text-sub">ausência de context rot</text>
+  <text x="540" y="350" class="text-node">Navegação contextual</text>
+  <text x="540" y="366" class="text-sub">onViewStepInChat</text>
 
   <!-- Ramo da Tarefa 4: Coluna Vertical -->
   <line x1="750" y1="225" x2="750" y2="255" class="line"/>
   <line x1="750" y1="305" x2="750" y2="325" class="line"/>
-  <line x1="750" y1="375" x2="750" y2="395" class="line"/>
 
   <!-- 4.1 -->
   <rect x="670" y="255" width="160" height="50" class="box-sub"/>
   <text x="680" y="273" class="text-id">4.1</text>
-  <text x="750" y="280" class="text-node">Identificar falha (✗)</text>
-  <text x="750" y="296" class="text-sub">em critério de aceite</text>
+  <text x="750" y="280" class="text-node">Verificar ContextMeter</text>
+  <text x="750" y="296" class="text-sub">reset stateless de tokens</text>
 
   <!-- 4.2 -->
   <rect x="670" y="325" width="160" height="50" class="box-sub"/>
   <text x="680" y="343" class="text-id">4.2</text>
-  <text x="750" y="350" class="text-node">Acompanhar correção</text>
-  <text x="750" y="366" class="text-sub">nova iteração do loop</text>
-
-  <!-- 4.3 -->
-  <rect x="670" y="395" width="160" height="50" class="box-sub"/>
-  <text x="680" y="413" class="text-id">4.3</text>
-  <text x="750" y="420" class="text-node">Confirmar sucesso (✓)</text>
-  <text x="750" y="436" class="text-sub">autocorreção auditada</text>
+  <text x="750" y="350" class="text-node">Inspecionar LoopArc</text>
+  <text x="750" y="366" class="text-sub">ciclos de autocrítica</text>
 
   <!-- Legenda de Planos -->
   <rect x="40" y="480" width="1000" height="46" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
   <text x="60" y="508" font-size="12" font-weight="bold" fill="#1f2328">Planos HTA:</text>
-  <text x="145" y="508" font-size="11" fill="#57606a">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4; se aprovado, faça 5. | Plano 3: 3.1 em paralelo com 3.2. | Plano 4: 4.1; se falha, faça 4.2 repetindo até 4.3.</text>
+  <text x="145" y="508" font-size="11" fill="#57606a">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4 &gt; 5. | Plano 3: Escolha entre 3.1 (toggle global) ou 3.2 (salto por nó). | Plano 4: 4.1 em paralelo com 4.2.</text>
 </svg>

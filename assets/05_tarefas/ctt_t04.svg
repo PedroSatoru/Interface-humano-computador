@@ -16,12 +16,12 @@
   <rect width="1000" height="540" fill="#ffffff"/>
 
   <!-- Título -->
-  <text x="500" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">CTT T03 — ConcurTaskTrees: Alternar fluxos e inspecionar Fresh Context</text>
-  <text x="500" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Pedro Henrique Satoru Lima Takahashi (22.123.019-6) — Persona: Lucas Zanin (P03)</text>
+  <text x="500" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">CTT T04 — ConcurTaskTrees: Submeter exercício e acompanhar validação didática</text>
+  <text x="500" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Hugo Emílio Nomura (22.123.051-9) — Persona: Beatriz Fagundes (P04)</text>
 
   <!-- Nó Raiz -->
-  <rect x="330" y="65" width="340" height="55" class="node-abs"/>
-  <text x="500" y="88" class="text-title" font-size="13px">T03: Comparar Fluxos e Contexto</text>
+  <rect x="340" y="65" width="320" height="55" class="node-abs"/>
+  <text x="500" y="88" class="text-title" font-size="13px">T04: Submissão e Tutoria Didática</text>
   <text x="500" y="106" class="text-type" fill="#0969da">[Tarefa Abstrata]</text>
 
   <!-- Linhas para Nível 1 -->
@@ -34,77 +34,74 @@
   <line x1="880" y1="150" x2="880" y2="180" class="line"/>
 
   <!-- Operadores Temporais Nível 1 -->
-  <!-- Entre 1 e 2: Escolha [] -->
-  <rect x="230" y="140" width="30" height="20" class="op-badge"/>
-  <text x="245" y="154" class="op-text">[]</text>
+  <rect x="225" y="140" width="40" height="20" class="op-badge"/>
+  <text x="245" y="154" class="op-text">[]&gt;&gt;</text>
 
-  <!-- Entre 2 e 3: []>> (Habilitação com passagem de dados) -->
-  <rect x="480" y="140" width="40" height="20" class="op-badge"/>
-  <text x="500" y="154" class="op-text">[]&gt;&gt;</text>
+  <rect x="485" y="140" width="30" height="20" class="op-badge"/>
+  <text x="500" y="154" class="op-text">&gt;&gt;</text>
 
-  <!-- Entre 3 e 4: >> (Habilitação sequencial) -->
   <rect x="740" y="140" width="30" height="20" class="op-badge"/>
   <text x="755" y="154" class="op-text">&gt;&gt;</text>
 
   <!-- Nível 1 Nós -->
-  <!-- 1: Interação / Escolha de Fluxo -->
+  <!-- 1: Interação / Entrada Simples -->
   <rect x="35" y="180" width="170" height="66" class="node-int"/>
-  <text x="120" y="205" class="text-title">Escolher Modo de Fluxo</text>
-  <text x="120" y="222" class="text-type" fill="#1a7f37">[Interação / Escolha]</text>
+  <text x="120" y="205" class="text-title">Digitar no Composer</text>
+  <text x="120" y="222" class="text-type" fill="#1a7f37">[Interação / Entrada]</text>
 
-  <!-- 2: Interação / Execução -->
+  <!-- 2: Interação / Envio -->
   <rect x="285" y="180" width="170" height="66" class="node-int"/>
-  <text x="370" y="205" class="text-title">Executar Inferência</text>
+  <text x="370" y="205" class="text-title">Acionar Ralph Loop</text>
   <text x="370" y="222" class="text-type" fill="#1a7f37">[Interação / Disparo]</text>
 
-  <!-- 3: Abstrata (Alternância e Inspeção) -->
+  <!-- 3: Abstrata (Acompanhar e Verificar Critérios) -->
   <rect x="545" y="180" width="170" height="66" class="node-abs"/>
-  <text x="630" y="205" class="text-title">Inspecionar Contexto</text>
-  <text x="630" y="222" class="text-type" fill="#0969da">[Abstrata / Inspeção]</text>
+  <text x="630" y="205" class="text-title">Acompanhar Validação*</text>
+  <text x="630" y="222" class="text-type" fill="#0969da">[Abstrata Iterativa]</text>
 
-  <!-- 4: Usuário (Comparação Empírica) -->
+  <!-- 4: Usuário (Fixação Conceitual) -->
   <rect x="795" y="180" width="170" height="66" class="node-usr"/>
-  <text x="880" y="205" class="text-title">Confrontar Acurácia</text>
-  <text x="880" y="222" class="text-type" fill="#bf8700">[Usuário / Comparação]</text>
+  <text x="880" y="205" class="text-title">Fixar conceito lógico</text>
+  <text x="880" y="222" class="text-type" fill="#bf8700">[Usuário / Aprendizado]</text>
 
-  <!-- Decomposição de Inspecionar Contexto (Nó 3) -->
+  <!-- Decomposição de Acompanhar Validação (Nó 3) -->
   <line x1="630" y1="246" x2="630" y2="285" class="line"/>
   <line x1="450" y1="285" x2="810" y2="285" class="line"/>
   <line x1="450" y1="285" x2="450" y2="320" class="line"/>
   <line x1="630" y1="285" x2="630" y2="320" class="line"/>
   <line x1="810" y1="285" x2="810" y2="320" class="line"/>
 
-  <!-- Operadores do Sub-nível 3: [] (Escolha) e >> -->
+  <!-- Operadores do Sub-nível 3 -->
   <rect x="525" y="275" width="30" height="20" class="op-badge"/>
-  <text x="540" y="289" class="op-text">[]</text>
+  <text x="540" y="289" class="op-text">&gt;&gt;</text>
 
   <rect x="705" y="275" width="30" height="20" class="op-badge"/>
   <text x="720" y="289" class="op-text">&gt;&gt;</text>
 
   <!-- Subtarefas de 3 -->
-  <!-- 3.1: Interação (Alternar ViewModeSwitch com quebra de linha segura) -->
-  <rect x="365" y="320" width="170" height="66" class="node-int"/>
+  <!-- 3.1: Sistema -->
+  <rect x="365" y="320" width="170" height="66" class="node-sys"/>
   <text x="450" y="342" class="text-title">
-    <tspan x="450" dy="0">Alternar Modo</tspan>
-    <tspan x="450" dy="14">ViewModeSwitch</tspan>
+    <tspan x="450" dy="0">Exibir subtarefa</tspan>
+    <tspan x="450" dy="14">com status</tspan>
   </text>
-  <text x="450" y="374" class="text-type" fill="#1a7f37">[Interação / Toggle]</text>
+  <text x="450" y="374" class="text-type" fill="#6e7781">[Sistema]</text>
 
-  <!-- 3.2: Interação (Clicar onViewStepInChat com quebra de linha segura) -->
-  <rect x="545" y="320" width="170" height="66" class="node-int"/>
+  <!-- 3.2: Usuário -->
+  <rect x="545" y="320" width="170" height="66" class="node-usr"/>
   <text x="630" y="342" class="text-title">
-    <tspan x="630" dy="0">Navegar via atalho</tspan>
-    <tspan x="630" dy="14">onViewStepInChat</tspan>
+    <tspan x="630" dy="0">Interpretar badge</tspan>
+    <tspan x="630" dy="14">de critério (✓/✗)</tspan>
   </text>
-  <text x="630" y="374" class="text-type" fill="#1a7f37">[Interação / Salto]</text>
+  <text x="630" y="374" class="text-type" fill="#bf8700">[Usuário / Checagem]</text>
 
-  <!-- 3.3: Usuário (Verificar isolamento semântico com quebra de linha segura) -->
-  <rect x="725" y="320" width="170" height="66" class="node-usr"/>
+  <!-- 3.3: Interação -->
+  <rect x="725" y="320" width="170" height="66" class="node-int"/>
   <text x="810" y="342" class="text-title">
-    <tspan x="810" dy="0">Verificar isolamento</tspan>
-    <tspan x="810" dy="14">semântico limpo</tspan>
+    <tspan x="810" dy="0">Expandir detalhes</tspan>
+    <tspan x="810" dy="14">da tentativa</tspan>
   </text>
-  <text x="810" y="374" class="text-type" fill="#bf8700">[Usuário / Checagem]</text>
+  <text x="810" y="374" class="text-type" fill="#1a7f37">[Interação / Opcional]</text>
 
   <!-- Legenda CTT Paternò -->
   <rect x="30" y="430" width="940" height="85" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
@@ -122,5 +119,5 @@
   <rect x="620" y="468" width="20" height="16" class="node-abs"/>
   <text x="645" y="481" font-size="11" fill="#24292f">Abstrata (Composição)</text>
 
-  <text x="50" y="504" font-size="11" fill="#57606a">Operadores Temporais: &gt;&gt; (Habilitação) | []&gt;&gt; (Habilitação com passagem de dados) | [] (Escolha / Alternativa)</text>
+  <text x="50" y="504" font-size="11" fill="#57606a">Operadores Temporais: &gt;&gt; (Habilitação) | []&gt;&gt; (Passagem de dados) | * (Iteração do Ralph Loop)</text>
 </svg>

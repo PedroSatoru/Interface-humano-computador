@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 550" width="1100" height="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #0969da; stroke-width: 2; rx: 6; }
+      .box-root { fill: #0969da; stroke: #0550ae; stroke-width: 2; rx: 8; }
+      .box-sub { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.5; rx: 6; }
+      .text-title { fill: #ffffff; font-weight: 600; font-size: 15px; text-anchor: middle; }
+      .text-node { fill: #1f2328; font-weight: 600; font-size: 12px; text-anchor: middle; }
+      .text-id { fill: #0969da; font-weight: 700; font-size: 11px; }
+      .text-sub { fill: #57606a; font-size: 10px; text-anchor: middle; }
+      .line { stroke: #8c959f; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="550" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="550" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">HTA T02 — Parametrizar modelo Llama e auditar telemetria de tokens</text>
+  <text x="550" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Vitor Monteiro Vianna (22.223.085-6) — Persona: Carlos Eduardo Prado (P02)</text>
+
+  <!-- Linha tronco do Nível 0 -->
+  <line x1="550" y1="115" x2="550" y2="140" class="line"/>
+  <line x1="120" y1="140" x2="960" y2="140" class="line"/>
+
+  <!-- Linhas para Nível 1 -->
+  <line x1="120" y1="140" x2="120" y2="165" class="line"/>
+  <line x1="330" y1="140" x2="330" y2="165" class="line"/>
+  <line x1="540" y1="140" x2="540" y2="165" class="line"/>
+  <line x1="750" y1="140" x2="750" y2="165" class="line"/>
+  <line x1="960" y1="140" x2="960" y2="165" class="line"/>
+
+  <!-- Nível 0 -->
+  <rect x="300" y="65" width="500" height="50" class="box-root"/>
+  <text x="550" y="88" class="text-title">0. Parametrizar LLM e auditar viabilidade financeira de tokens</text>
+  <text x="550" y="104" fill="#d0d7de" font-size="11px" text-anchor="middle">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4; se métricas compatíveis com orçamento, faça 5.</text>
+
+  <!-- Nível 1 -->
+  <!-- 1 -->
+  <rect x="40" y="165" width="160" height="60" class="box"/>
+  <text x="50" y="183" class="text-id">1</text>
+  <text x="120" y="191" class="text-node">Acessar barra RunConfig</text>
+  <text x="120" y="209" class="text-sub">na tela inicial (Home)</text>
+
+  <!-- 2 -->
+  <rect x="250" y="165" width="160" height="60" class="box"/>
+  <text x="260" y="183" class="text-id">2</text>
+  <text x="330" y="191" class="text-node">Ajustar parâmetros</text>
+  <text x="330" y="209" class="text-sub">modelo, tokens e temp</text>
+
+  <!-- 3 -->
+  <rect x="460" y="165" width="160" height="60" class="box"/>
+  <text x="470" y="183" class="text-id">3</text>
+  <text x="540" y="191" class="text-node">Executar inferência</text>
+  <text x="540" y="209" class="text-sub">com dossiê de crédito</text>
+
+  <!-- 4 -->
+  <rect x="670" y="165" width="160" height="60" class="box"/>
+  <text x="680" y="183" class="text-id">4</text>
+  <text x="750" y="191" class="text-node">Auditar telemetria</text>
+  <text x="750" y="209" class="text-sub">tokens por fase</text>
+
+  <!-- 5 -->
+  <rect x="880" y="165" width="160" height="60" class="box"/>
+  <text x="890" y="183" class="text-id">5</text>
+  <text x="960" y="191" class="text-node">Validar ROI e laudo</text>
+  <text x="960" y="209" class="text-sub">apresentar ao comitê</text>
+
+  <!-- Ramo da Tarefa 2: Coluna Vertical -->
+  <line x1="330" y1="225" x2="330" y2="255" class="line"/>
+  <line x1="330" y1="305" x2="330" y2="325" class="line"/>
+
+  <!-- 2.1 -->
+  <rect x="250" y="255" width="160" height="50" class="box-sub"/>
+  <text x="260" y="273" class="text-id">2.1</text>
+  <text x="330" y="280" class="text-node">Selecionar Llama</text>
+  <text x="330" y="296" class="text-sub">8B vs 70B vs 405B</text>
+
+  <!-- 2.2 -->
+  <rect x="250" y="325" width="160" height="50" class="box-sub"/>
+  <text x="260" y="343" class="text-id">2.2</text>
+  <text x="330" y="350" class="text-node">Limitar max_tokens</text>
+  <text x="330" y="366" class="text-sub">evitar estouro de custo</text>
+
+  <!-- Ramo da Tarefa 4: Coluna Vertical -->
+  <line x1="750" y1="225" x2="750" y2="255" class="line"/>
+  <line x1="750" y1="305" x2="750" y2="325" class="line"/>
+
+  <!-- 4.1 -->
+  <rect x="670" y="255" width="160" height="50" class="box-sub"/>
+  <text x="680" y="273" class="text-id">4.1</text>
+  <text x="750" y="280" class="text-node">Checar ContextMeter</text>
+  <text x="750" y="296" class="text-sub">prompt vs completion</text>
+
+  <!-- 4.2 -->
+  <rect x="670" y="325" width="160" height="50" class="box-sub"/>
+  <text x="680" y="343" class="text-id">4.2</text>
+  <text x="750" y="350" class="text-node">Discriminar por fase</text>
+  <text x="750" y="366" class="text-sub">Setup, Loop e Síntese</text>
+
+  <!-- Legenda de Planos -->
+  <rect x="40" y="480" width="1000" height="46" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="60" y="508" font-size="12" font-weight="bold" fill="#1f2328">Planos HTA:</text>
+  <text x="145" y="508" font-size="11" fill="#57606a">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4 &gt; 5. | Plano 2: 2.1 &gt; 2.2 (opcional ajuste de temperatura). | Plano 4: 4.1 em paralelo com 4.2.</text>
+</svg>
