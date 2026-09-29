@@ -257,12 +257,12 @@ A tabela abaixo consolida as quatro práticas problemáticas investigadas pela e
 
 ## Checklist
 
-- [ x ] Há um cenário completo por integrante.
-- [ x ] Cada cenário tem título, ator, objetivo, contexto e problema.
-- [ x ] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
-- [ x ] O texto descreve a situação atual, sem antecipar a solução.
-- [ x ] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
-- [ x ] Questões de refinamento acrescentam informação nova.
-- [ x ] O refinamento mostra claramente o que foi adicionado/alterado.
-- [ x ] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
-- [ x ] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+- [x] Há um cenário completo por integrante.
+- [x] Cada cenário tem título, ator, objetivo, contexto e problema.
+- [x] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
+- [x] O texto descreve a situação atual, sem antecipar a solução.
+- [x] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
+- [x] Questões de refinamento acrescentam informação nova.
+- [x] O refinamento mostra claramente o que foi adicionado/alterado.
+- [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
+- [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
