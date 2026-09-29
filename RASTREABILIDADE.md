@@ -37,7 +37,7 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 | R01 | Orquestração stateless (Ralph Loop) | Mitigar context rot e obter alta acurácia lógica em perguntas complexas | P01, P04 | C01, C04 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 | R02 | Monitoramento de contexto/tokens | Avaliar eficiência de custos, consumo de tokens e renovação Fresh Context | P02, P03 | C02, C03 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 | R03 | Comparação de fluxos (Ralph Loop vs Direto) | Avaliar experimentalmente o ganho de acurácia frente à inferência baseline | P03 | C03 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
-| R04 | Verificação de critérios de aceite (✓/✗) | Auditar a autocrítica e comprovar conformidade antes da síntese final | P01, P02 | C02, C04 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
+| R04 | Verificação de critérios de aceite (✓/✗) | Auditar a autocrítica e comprovar conformidade antes da síntese final | P01, P02, P04 | C01, C02, C04 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
 
 ## 4. Rastreabilidade de padrões de interface
 
