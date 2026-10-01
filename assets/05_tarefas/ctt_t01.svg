@@ -108,9 +108,9 @@
   <text x="140" y="345" class="text-title">Cancelar execução</text>
   <text x="140" y="365" class="text-type" fill="#cf222e">[Interação / Desativação]</text>
 
-  <path d="M 225 353 L 305 353 L 305 213 L 545 213" stroke="#cf222e" stroke-width="1.5" stroke-dasharray="4" fill="none"/>
-  <rect x="250" y="341" width="30" height="20" fill="#cf222e" rx="4"/>
-  <text x="265" y="355" class="op-text">[&gt;</text>
+  <path d="M 140 320 L 140 265 L 500 265 L 500 213 L 545 213" stroke="#cf222e" stroke-width="1.8" stroke-dasharray="5 3" fill="none"/>
+  <rect x="485" y="228" width="30" height="20" fill="#cf222e" rx="4"/>
+  <text x="500" y="242" class="op-text">[&gt;</text>
 
   <!-- Legenda CTT Paternò -->
   <rect x="30" y="430" width="940" height="85" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
