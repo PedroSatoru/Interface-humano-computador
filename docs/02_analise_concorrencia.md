@@ -50,11 +50,36 @@ Assim, os quatro concorrentes e análogos selecionados representam **quatro form
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Execução de tarefas em etapas autônomas | O agente planeja, executa comandos, lê resultados e decide o próximo passo sem que o usuário precise reformular o pedido a cada etapa | `../assets/02_concorrencia/...` | Reduz a carga de "prompting manual" repetido, mas cria risco de o usuário perder o controle do que está sendo feito — mitigado pelos modos de permissão |
-| Modos de permissão (`ask`, `accept edits`, `plan`, `auto`, `bypass`) | O usuário alterna o nível de autonomia do agente com um atalho de teclado (Shift+Tab), controlando se cada ação (editar arquivo, rodar comando) precisa de aprovação explícita | `../assets/02_concorrencia/...` | `[F]` Padrão de controle de autonomia granular — relevante para o projeto, que também precisa comunicar "o que a IA vai fazer antes de fazer" nos critérios de aceite do Ralph Loop |
-| Plan Mode (modo somente leitura) | Antes de alterar qualquer arquivo, o agente pode gerar um plano de execução revisável pelo usuário, que pode comentar trechos específicos do plano antes de aprovar | `../assets/02_concorrencia/...` *(capturas a serem incluídas pelo integrante Vitor)* | `[F]` Fonte: codewithmukesh.com, claudecode101.com (2026). É um padrão de checkpoint prévio de autorização humana (Human-in-the-loop). No contexto do projeto, inspira o controle do usuário sobre a execução, mas difere conceitualmente da verificação automática de critérios de aceite (✓/✗), que é uma avaliação algorítmica realizada pelo próprio sistema |
-| Saída textual em stream no terminal (raciocínio + ações) | O progresso do agente aparece como texto corrido no terminal, misturando explicações, comandos executados e resultados | `../assets/02_concorrencia/...` *(capturas a serem incluídas pelo integrante Vitor)* | Não existe uma timeline gráfica estruturada por fases — todo o histórico é texto sequencial de console, o que pode dificultar a rápida localização visual do estado atual da tarefa por usuários menos habituados a logs de terminal |
-| Contagem de uso/tokens vinculada ao plano de assinatura | O consumo do agente é contado contra os mesmos limites do plano Claude (Pro/Max), sem exibir custo granular por tarefa dentro da própria CLI | `../assets/02_concorrencia/...` *(capturas a serem incluídas pelo integrante Vitor)* | `[F]` Fonte: cloudzero.com, morphllm.com (2026). A ausência de detalhamento de custo/token por tarefa indica uma oportunidade para o nosso projeto atender pesquisadores e gestores que precisam auditar consumo de contexto (F04, Entrega 1) |
+| Execução de tarefas em etapas autônomas | O agente planeja, executa comandos, lê resultados e decide o próximo passo sem que o usuário precise reformular o pedido a cada etapa | ![Execução em etapas](../assets/02_concorrencia/c01_claude_comandos.png) | Reduz a carga de "prompting manual" repetido, mas cria risco de o usuário perder o controle do que está sendo feito — mitigado pelos modos de permissão. A captura mostra o agente encadeando comandos de shell (`ls`, `find`) e interpretando o resultado sem novo pedido do usuário |
+| Modos de permissão (`ask`, `accept edits`, `plan`, `auto`, `bypass`) | O usuário alterna o nível de autonomia do agente com um atalho de teclado (Shift+Tab), controlando se cada ação (editar arquivo, rodar comando) precisa de aprovação explícita | ![Modo auto](../assets/02_concorrencia/c01_claude_perms_01.png) ![Modo plan](../assets/02_concorrencia/c01_claude_perms_02.png) ![Modo accept edits](../assets/02_concorrencia/c01_claude_perms_03.png) | `[F]` Padrão de controle de autonomia granular — relevante para o projeto, que também precisa comunicar "o que a IA vai fazer antes de fazer" nos critérios de aceite do Ralph Loop |
+| Plan Mode (modo somente leitura) | Antes de alterar qualquer arquivo, o agente pode gerar um plano de execução revisável pelo usuário, que pode comentar trechos específicos do plano antes de aprovar | ![Plan Mode](../assets/02_concorrencia/c01_claude_plan_mode.png) | `[F]` Fonte: codewithmukesh.com, claudecode101.com (2026). É um padrão de checkpoint prévio de autorização humana (Human-in-the-loop). No contexto do projeto, inspira o controle do usuário sobre a execução, mas difere conceitualmente da verificação automática de critérios de aceite (✓/✗), que é uma avaliação algorítmica realizada pelo próprio sistema |
+| Saída textual em stream no terminal (raciocínio + ações) | O progresso do agente aparece como texto corrido no terminal, misturando explicações, comandos executados e resultados | ![Saída em stream](../assets/02_concorrencia/c01_claude_thinking.png) | Não existe uma timeline gráfica estruturada por fases — todo o histórico é texto sequencial de console, o que pode dificultar a rápida localização visual do estado atual da tarefa por usuários menos habituados a logs de terminal |
+| Contagem de uso/tokens vinculada ao plano de assinatura | O consumo do agente é contado contra os mesmos limites do plano Claude (Pro/Max), sem exibir custo granular por tarefa dentro da própria CLI | ![Uso e limites](../assets/02_concorrencia/c01_claude_plan_usage.png) | `[F]` Fonte: cloudzero.com, morphllm.com (2026). A ausência de detalhamento de custo/token por tarefa indica uma oportunidade para o nosso projeto atender pesquisadores e gestores que precisam auditar consumo de contexto (F04, Entrega 1) |
+
+##### Registros visuais da interface (C01)
+
+![Figura C01.1 — Sessão do Claude Code executando comandos em etapas](../assets/02_concorrencia/c01_claude_comandos.png)
+*Figura C01.1 — Claude Code v2.1.278 no terminal: o agente lista o repositório e executa `ls`/`find` encadeados (bloco `Bash(...)`), com a barra inferior indicando o modo `auto mode on (shift+tab to cycle)`. Captura de 04/10/2026.*
+
+![Figura C01.2 — Modo auto](../assets/02_concorrencia/c01_claude_perms_01.png)
+*Figura C01.2 — Modo de permissão `auto mode on`, destacado em vermelho na barra inferior. Com o pedido "delete o arquivo teste.txt", o agente localizou e apagou o arquivo sem solicitar confirmação.*
+
+![Figura C01.3 — Modo plan](../assets/02_concorrencia/c01_claude_perms_02.png)
+*Figura C01.3 — Modo de permissão `plan mode on`, destacado em vermelho na barra inferior, alternado com Shift+Tab na mesma sessão da Figura C01.2.*
+
+![Figura C01.4 — Modo accept edits](../assets/02_concorrencia/c01_claude_perms_03.png)
+*Figura C01.4 — Modo de permissão `accept edits on`, destacado em vermelho na barra inferior. As Figuras C01.2 a C01.4 mostram que a alternância de autonomia é indicada por uma única linha de texto colorida, sem outro elemento gráfico.*
+
+![Figura C01.5 — Plan Mode em uso](../assets/02_concorrencia/c01_claude_plan_mode.png)
+*Figura C01.5 — Sessão com `plan mode on` ativo respondendo "Mostre do que se tratam todos os projetos de código da minha máquina". O agente declara que fará apenas leitura ("somente leitura") e entrega um resumo, sem alterar arquivos. Nesta captura não há um plano com botão de aprovação, apenas o indicador do modo.*
+
+![Figura C01.6 — Saída em stream com chamadas de ferramenta](../assets/02_concorrencia/c01_claude_thinking.png)
+*Figura C01.6 — Saída textual sequencial: comandos `Bash(...)` com resultados brutos e, ao final, a resposta resumida. Não há divisão visual em fases nem indicador de progresso estruturado.*
+
+![Figura C01.7 — Tela de uso e limites](../assets/02_concorrencia/c01_claude_plan_usage.png)
+*Figura C01.7 — Tela `Usage` do comando de configurações: custo da sessão, tokens por modelo, cache de prompt e barras de uso da sessão (4%) e da semana (1%) do plano Claude Pro. O consumo é agregado por sessão e por modelo, sem detalhamento por tarefa.*
+
+> **Nota sobre as capturas de C01:** foram obtidas em sessões reais do Claude Code, em 04/10/2026, em terminal macOS. As Figuras C01.2 a C01.4 usam o mesmo pedido de exclusão de um arquivo de teste apenas para ilustrar os indicadores de modo. Elas não comprovam, por si sós, como cada modo reage a todas as ações.
 
 #### Experiência do usuário e opiniões
 
@@ -266,7 +291,7 @@ Assim, os quatro concorrentes e análogos selecionados representam **quatro form
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
 | Google Antigravity IDE (e editores com agentes de código) | Ambiente de desenvolvimento agentico onde estudantes e pesquisadores supervisionam agentes autônomos de IA para tarefas complexas | Painel de orquestração agentica lateral, Planning Mode com artefatos, visualização de "Thinking" e tool calls com aprovação | ![Planning Mode Antigravity](../assets/02_concorrencia/c02_antigravity_planning_mode.png) | Divisão clara entre painel de planejamento/artefatos e painel de execução, inspirando a disposição da timeline e dos checkpoints do TCC |
-| Terminal / linha de comando | Público técnico (pesquisadores, desenvolvedores, entusiastas avançados) já está habituado a interfaces de texto sequencial para tarefas de IA (Claude Code e ferramentas similares) | Saída em stream, cores para diferenciar tipos de mensagem, atalhos de teclado para controle de modo | *(captura de CLI a ser incluída pelo integrante Vitor)* | Uso de cores e símbolos de status já é convenção aceita por esse público, servindo de inspiração para sinalizadores visuais na interface gráfica (H02) |
+| Terminal / linha de comando | Público técnico (pesquisadores, desenvolvedores, entusiastas avançados) já está habituado a interfaces de texto sequencial para tarefas de IA (Claude Code e ferramentas similares) | Saída em stream, cores para diferenciar tipos de mensagem, atalhos de teclado para controle de modo | ![Claude Code no terminal](../assets/02_concorrencia/c01_claude_thinking.png) | Uso de cores e símbolos de status já é convenção aceita por esse público, servindo de inspiração para sinalizadores visuais na interface gráfica (H02) |
 | ChatGPT / Claude (apps e web) | Uso diário para tirar dúvidas, redigir textos, resumir, programar — é a porta de entrada mais comum de IA generativa para todo o público-alvo, inclusive perfis não técnicos | Chat linear, histórico de conversas na lateral, upload de arquivo | ![Interface do ChatGPT](../assets/02_concorrencia/c03_chatgpt_chat_linear.png) | O campo de entrada de texto (prompt) deve seguir a convenção já dominada por esse público: caixa única, botão de enviar, indicação clara de "carregando" |
 | Windows 11 (com Copilot) | Consultas, redação, resumos e orientação durante estudos e trabalho | Chat conversacional, acesso por voz e compartilhamento autorizado de contexto | ![Copilot no Windows](../assets/02_concorrencia/c04_copilot_chat.png) | Combinar uma entrada simples e familiar com feedback detalhado sobre o andamento das tarefas |
 
@@ -366,8 +391,8 @@ As recomendações a seguir estruturam o aprendizado extraído da análise dos c
 
 - [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
 - [x] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
-- [x] Há pelo menos uma análise por integrante (análises textuais concluídas; evidência visual de C01 em complementação pelo responsável).
-- [ ] Cada análise contém prints legíveis da interface. *(Pendente: análise C01 aguarda inserção de capturas pelo integrante Vitor; C03 possui reconstruções conceituais a serem complementadas com capturas diretas pelo integrante Hugo)*
+- [x] Há pelo menos uma análise por integrante (análises e evidências visuais de C01 concluídas).
+- [ ] Cada análise contém prints legíveis da interface. *(Pendente apenas C03: as imagens são reconstruções conceituais e precisam ser substituídas por capturas diretas pelo integrante Hugo. C01, C02 e C04 estão completos.)*
 - [x] Prints disponíveis mostram telas/estados relevantes, não apenas logos/homepage.
 - [x] Foram analisados concorrentes e/ou interfaces representativas ao público.
 - [x] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido. *(neste caso o TCC já previa interface, mas ainda assim foram investigadas ferramentas análogas de mercado, conforme seção 6 da Entrega 1)*
