@@ -85,7 +85,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟨 |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟩 |
-| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟩 |
+| 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | 4 HTAs + 4 GOMS + 4 CTTs; um de cada por integrante | 🟩 revisada em 12/10/2026 |
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | ⬜ |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | ⬜ |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | ⬜ |
@@ -97,6 +97,12 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | ⬜ |
 
 > Se o docente definir quantidade diferente para a turma/semestre, a orientação da disciplina prevalece.
+
+### Entrega 5 — revisão documental
+
+A [Entrega 5](docs/05_analise_tarefas.md) foi revisada com [hta.md](hta.md) e [goms_e_ctt.md](goms_e_ctt.md). Contém 12 modelos com autoria preservada, oito SVGs e [gerador reproduzível](assets/05_tarefas/gerar_diagramas.mjs). Os quatro GOMS são textuais no relatório. A validação realizada é documental, sem testes com usuários ou validação do backend.
+
+Para conferir os diagramas: `node assets/05_tarefas/gerar_diagramas.mjs --check`. As mudanças, justificativas e sugestões de commits estão no [registro exclusivo da Entrega 5](docs/05_registro_mudancas.md).
 
 ## Visão de continuidade
 

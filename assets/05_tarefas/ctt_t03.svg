@@ -1,126 +1,301 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
-  <defs>
-    <style>
-      .node-abs { fill: #f1f8ff; stroke: #0969da; stroke-width: 2; rx: 6; }
-      .node-usr { fill: #fff8c5; stroke: #bf8700; stroke-width: 2; rx: 6; }
-      .node-int { fill: #dafbe1; stroke: #1a7f37; stroke-width: 2; rx: 6; }
-      .node-sys { fill: #f6f8fa; stroke: #6e7781; stroke-width: 2; rx: 6; }
-      .text-title { fill: #1f2328; font-weight: bold; font-size: 12px; text-anchor: middle; }
-      .text-type { font-size: 10px; font-weight: 600; text-anchor: middle; }
-      .op-badge { fill: #24292f; rx: 4; }
-      .op-text { fill: #ffffff; font-weight: bold; font-size: 11px; text-anchor: middle; }
-      .line { stroke: #8c959f; stroke-width: 1.5; fill: none; }
-    </style>
-  </defs>
-
-  <rect width="1000" height="540" fill="#ffffff"/>
-
-  <!-- Título -->
-  <text x="500" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">CTT T03 — ConcurTaskTrees: Alternar fluxos e inspecionar Fresh Context</text>
-  <text x="500" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Pedro Henrique Satoru Lima Takahashi (22.123.019-6) — Persona: Lucas Zanin (P03)</text>
-
-  <!-- Nó Raiz -->
-  <rect x="330" y="65" width="340" height="55" class="node-abs"/>
-  <text x="500" y="88" class="text-title" font-size="13px">T03: Comparar Fluxos e Contexto</text>
-  <text x="500" y="106" class="text-type" fill="#0969da">[Tarefa Abstrata]</text>
-
-  <!-- Linhas para Nível 1 -->
-  <line x1="500" y1="120" x2="500" y2="150" class="line"/>
-  <line x1="120" y1="150" x2="880" y2="150" class="line"/>
-
-  <line x1="120" y1="150" x2="120" y2="180" class="line"/>
-  <line x1="370" y1="150" x2="370" y2="180" class="line"/>
-  <line x1="630" y1="150" x2="630" y2="180" class="line"/>
-  <line x1="880" y1="150" x2="880" y2="180" class="line"/>
-
-  <!-- Operadores Temporais Nível 1 -->
-  <!-- Entre 1 e 2: Escolha [] -->
-  <rect x="230" y="140" width="30" height="20" class="op-badge"/>
-  <text x="245" y="154" class="op-text">[]</text>
-
-  <!-- Entre 2 e 3: []>> (Habilitação com passagem de dados) -->
-  <rect x="480" y="140" width="40" height="20" class="op-badge"/>
-  <text x="500" y="154" class="op-text">[]&gt;&gt;</text>
-
-  <!-- Entre 3 e 4: >> (Habilitação sequencial) -->
-  <rect x="740" y="140" width="30" height="20" class="op-badge"/>
-  <text x="755" y="154" class="op-text">&gt;&gt;</text>
-
-  <!-- Nível 1 Nós -->
-  <!-- 1: Interação / Escolha de Fluxo -->
-  <rect x="35" y="180" width="170" height="66" class="node-int"/>
-  <text x="120" y="205" class="text-title">Escolher Modo de Fluxo</text>
-  <text x="120" y="222" class="text-type" fill="#1a7f37">[Interação / Escolha]</text>
-
-  <!-- 2: Interação / Execução -->
-  <rect x="285" y="180" width="170" height="66" class="node-int"/>
-  <text x="370" y="205" class="text-title">Executar Inferência</text>
-  <text x="370" y="222" class="text-type" fill="#1a7f37">[Interação / Disparo]</text>
-
-  <!-- 3: Abstrata (Alternância e Inspeção) -->
-  <rect x="545" y="180" width="170" height="66" class="node-abs"/>
-  <text x="630" y="205" class="text-title">Inspecionar Contexto</text>
-  <text x="630" y="222" class="text-type" fill="#0969da">[Abstrata / Inspeção]</text>
-
-  <!-- 4: Usuário (Comparação Empírica) -->
-  <rect x="795" y="180" width="170" height="66" class="node-usr"/>
-  <text x="880" y="205" class="text-title">Confrontar Acurácia</text>
-  <text x="880" y="222" class="text-type" fill="#bf8700">[Usuário / Comparação]</text>
-
-  <!-- Decomposição de Inspecionar Contexto (Nó 3) -->
-  <line x1="630" y1="246" x2="630" y2="285" class="line"/>
-  <line x1="450" y1="285" x2="810" y2="285" class="line"/>
-  <line x1="450" y1="285" x2="450" y2="320" class="line"/>
-  <line x1="630" y1="285" x2="630" y2="320" class="line"/>
-  <line x1="810" y1="285" x2="810" y2="320" class="line"/>
-
-  <!-- Operadores do Sub-nível 3: [] (Escolha) e >> -->
-  <rect x="525" y="275" width="30" height="20" class="op-badge"/>
-  <text x="540" y="289" class="op-text">[]</text>
-
-  <rect x="705" y="275" width="30" height="20" class="op-badge"/>
-  <text x="720" y="289" class="op-text">&gt;&gt;</text>
-
-  <!-- Subtarefas de 3 -->
-  <!-- 3.1: Interação (Alternar ViewModeSwitch com quebra de linha segura) -->
-  <rect x="365" y="320" width="170" height="66" class="node-int"/>
-  <text x="450" y="342" class="text-title">
-    <tspan x="450" dy="0">Alternar Modo</tspan>
-    <tspan x="450" dy="14">ViewModeSwitch</tspan>
-  </text>
-  <text x="450" y="374" class="text-type" fill="#1a7f37">[Interação / Toggle]</text>
-
-  <!-- 3.2: Interação (Clicar onViewStepInChat com quebra de linha segura) -->
-  <rect x="545" y="320" width="170" height="66" class="node-int"/>
-  <text x="630" y="342" class="text-title">
-    <tspan x="630" dy="0">Navegar via atalho</tspan>
-    <tspan x="630" dy="14">onViewStepInChat</tspan>
-  </text>
-  <text x="630" y="374" class="text-type" fill="#1a7f37">[Interação / Salto]</text>
-
-  <!-- 3.3: Usuário (Verificar isolamento semântico com quebra de linha segura) -->
-  <rect x="725" y="320" width="170" height="66" class="node-usr"/>
-  <text x="810" y="342" class="text-title">
-    <tspan x="810" dy="0">Verificar isolamento</tspan>
-    <tspan x="810" dy="14">semântico limpo</tspan>
-  </text>
-  <text x="810" y="374" class="text-type" fill="#bf8700">[Usuário / Checagem]</text>
-
-  <!-- Legenda CTT Paternò -->
-  <rect x="30" y="430" width="940" height="85" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
-  <text x="50" y="452" font-size="12" font-weight="bold" fill="#1f2328">Legenda CTT (Paternò, 2000):</text>
-
-  <rect x="50" y="468" width="20" height="16" class="node-usr"/>
-  <text x="75" y="481" font-size="11" fill="#24292f">Usuário (Cognitiva)</text>
-
-  <rect x="220" y="468" width="20" height="16" class="node-int"/>
-  <text x="245" y="481" font-size="11" fill="#24292f">Interação (Humano-Computador)</text>
-
-  <rect x="440" y="468" width="20" height="16" class="node-sys"/>
-  <text x="465" y="481" font-size="11" fill="#24292f">Sistema (Automática)</text>
-
-  <rect x="620" y="468" width="20" height="16" class="node-abs"/>
-  <text x="645" y="481" font-size="11" fill="#24292f">Abstrata (Composição)</text>
-
-  <text x="50" y="504" font-size="11" fill="#57606a">Operadores Temporais: &gt;&gt; (Habilitação) | []&gt;&gt; (Habilitação com passagem de dados) | [] (Escolha / Alternativa)</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="3272" viewBox="0 0 1360 3272" role="img" aria-labelledby="title desc" font-family="Arial, sans-serif">
+<title id="title">CTT T03: Comparar dois fluxos e inspecionar contexto</title>
+<desc id="desc">Autoria: Pedro Henrique Satoru Lima Takahashi — 22.123.019-6. Árvore com 26 nós e 10 expansões. Planos, condições e categorias reproduzem a tabela da Entrega 5.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="37" font-size="24" font-weight="700" text-anchor="start" fill="#213247" >CTT · T03 — Comparar dois fluxos e inspecionar contexto</text>
+<text x="32" y="66" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >Autoria: Pedro Henrique Satoru Lima Takahashi — 22.123.019-6</text>
+<text x="32" y="91" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Origem: P03 / C03 / R02, R03.  |  Revisão documental: 12/10/2026</text>
+<text x="32" y="121" font-size="15" font-weight="400" text-anchor="start" fill="#52657a" >Árvore por expansões: encontre o ID do objetivo em seu painel. As condições completas estão na tabela do relatório.</text>
+<g data-panel="0"><rect x="24" y="154" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="181" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 0</text>
+<g data-node="0"><title>0. Comparar fluxos e contexto — Condições comuns alimentam ambas as execuções.</title>
+<rect x="450" y="194" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="216" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >0 · A</text>
+<text x="680" y="240" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Comparar fluxos e contexto</text>
+</g>
+<path d="M 680 276 V 295 M 363 295 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="1"><title>1. Registrar condições comuns — Registrar enunciado, referência, modelo e parâmetros externamente.</title>
+<rect x="225" y="313" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="237" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >1 · I</text>
+<text x="363" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Registrar condições comuns</text>
+</g>
+<path d="M 997 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="2"><title>2. Conduzir comparação — Cancelar desativa continuação comparativa.</title>
+<rect x="859" y="313" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="871" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >2 · A</text>
+<text x="997" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conduzir comparação</text>
+</g>
+<rect x="649" y="282" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="301" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]&gt;&gt;</text>
+<text x="40" y="434" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >1 []&gt;&gt; 2 — Condições comuns alimentam ambas as execuções.</text>
+</g>
+<g data-panel="2"><rect x="24" y="459" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="486" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 2</text>
+<g data-node="2"><title>2. Conduzir comparação — Cancelar desativa continuação comparativa.</title>
+<rect x="450" y="499" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="521" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >2 · A</text>
+<text x="680" y="545" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conduzir comparação</text>
+</g>
+<path d="M 680 581 V 600 M 363 600 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 600 V 618" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="3"><title>3. Obter resultados e avaliar — Estado do baseline determina continuação possível.</title>
+<rect x="225" y="618" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="237" y="640" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >3 · A</text>
+<text x="363" y="664" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Obter resultados e avaliar</text>
+</g>
+<path d="M 997 600 V 618" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="4"><title>4. Cancelar comparação em curso — Habilitado quando direto ou Ralph está processando.</title>
+<rect x="859" y="618" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="871" y="640" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >4 · A</text>
+<text x="997" y="664" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Cancelar comparação em curso</text>
+</g>
+<rect x="649" y="587" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="606" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[&gt;</text>
+<text x="40" y="739" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >3 [&gt; 4 — Cancelar desativa continuação comparativa.</text>
+</g>
+<g data-panel="3"><rect x="24" y="764" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="791" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 3</text>
+<g data-node="3"><title>3. Obter resultados e avaliar — Estado do baseline determina continuação possível.</title>
+<rect x="450" y="804" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="826" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >3 · A</text>
+<text x="680" y="850" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Obter resultados e avaliar</text>
+</g>
+<path d="M 680 886 V 905 M 363 905 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 905 V 923" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="5"><title>5. Obter resultado direto — Termina com resposta preservada ou falha identificada.</title>
+<rect x="225" y="923" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="237" y="945" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >5 · A</text>
+<text x="363" y="969" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Obter resultado direto</text>
+</g>
+<path d="M 997 905 V 923" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="6"><title>6. Escolher continuação possível — Com baseline utilizável, 10; se falhou, 11.</title>
+<rect x="859" y="923" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="871" y="945" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >6 · A</text>
+<text x="997" y="969" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Escolher continuação</text>
+<text x="997" y="990" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">possível</text>
+</g>
+<rect x="649" y="892" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="911" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="1044" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >5 &gt;&gt; 6 — Estado do baseline determina continuação possível.</text>
+</g>
+<g data-panel="5"><rect x="24" y="1069" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1096" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 5</text>
+<g data-node="5"><title>5. Obter resultado direto — Termina com resposta preservada ou falha identificada.</title>
+<rect x="450" y="1109" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1131" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >5 · A</text>
+<text x="680" y="1155" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Obter resultado direto</text>
+</g>
+<path d="M 680 1191 V 1210 M 257.33333333333337 1210 H 1102.6666666666667" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 257.33333333333337 1210 V 1228" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="7"><title>7. Configurar e enviar no direto — Selecionar Inferência Simples, conferir parâmetros e enviar questão fixa.</title>
+<rect x="119.33333333333337" y="1228" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="131.33333333333337" y="1250" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >7 · I</text>
+<text x="257.33333333333337" y="1274" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Configurar e enviar no</text>
+<text x="257.33333333333337" y="1295" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">direto</text>
+</g>
+<path d="M 680 1210 V 1228" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="8"><title>8. Produzir resultado direto — Publicar resposta ou falha terminal.</title>
+<rect x="542" y="1228" width="276" height="94" rx="9" fill="#edf0f4" stroke="#52657a" stroke-width="1.6"/>
+<text x="554" y="1250" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >8 · S</text>
+<text x="680" y="1274" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Produzir resultado direto</text>
+</g>
+<rect x="437.6666666666667" y="1197" width="62" height="26" rx="5" fill="#213247"/>
+<text x="468.6666666666667" y="1216" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]&gt;&gt;</text>
+<path d="M 1102.6666666666667 1210 V 1228" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="9"><title>9. Consultar e preservar baseline — Copiar resposta e condições se concluído; caso contrário, identificar falha.</title>
+<rect x="964.6666666666667" y="1228" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="976.6666666666667" y="1250" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >9 · I</text>
+<text x="1102.6666666666667" y="1274" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar e preservar</text>
+<text x="1102.6666666666667" y="1295" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">baseline</text>
+</g>
+<rect x="860.3333333333334" y="1197" width="62" height="26" rx="5" fill="#213247"/>
+<text x="891.3333333333334" y="1216" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="1349" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >7 []&gt;&gt; 8 &gt;&gt; 9 — Termina com resposta preservada ou falha identificada.</text>
+</g>
+<g data-panel="6"><rect x="24" y="1374" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1401" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 6</text>
+<g data-node="6"><title>6. Escolher continuação possível — Com baseline utilizável, 10; se falhou, 11.</title>
+<rect x="450" y="1414" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1436" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >6 · A</text>
+<text x="680" y="1460" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Escolher continuação possível</text>
+</g>
+<path d="M 680 1496 V 1515 M 363 1515 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 1515 V 1533" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="10"><title>10. Executar Ralph e avaliar — Manter questão e parâmetros comuns.</title>
+<rect x="225" y="1533" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="237" y="1555" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >10 · A</text>
+<text x="363" y="1579" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Executar Ralph e avaliar</text>
+</g>
+<path d="M 997 1515 V 1533" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="11"><title>11. Registrar falha do direto — Encerrar sem inventar baseline nem iniciar comparação completa.</title>
+<rect x="859" y="1533" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="871" y="1555" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >11 · I</text>
+<text x="997" y="1579" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Registrar falha do direto</text>
+</g>
+<rect x="649" y="1502" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="1521" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]</text>
+<text x="40" y="1654" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >10 [] 11 — Com baseline utilizável, 10; se falhou, 11.</text>
+</g>
+<g data-panel="10"><rect x="24" y="1679" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1706" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 10</text>
+<g data-node="10"><title>10. Executar Ralph e avaliar — Manter questão e parâmetros comuns.</title>
+<rect x="450" y="1719" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1741" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >10 · A</text>
+<text x="680" y="1765" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Executar Ralph e avaliar</text>
+</g>
+<path d="M 680 1801 V 1820 M 204.5 1820 H 1155.5" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 204.5 1820 V 1838" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="12"><title>12. Preparar e enviar no Ralph — Voltar à entrada, selecionar Ralph, reaplicar condições e enviar.</title>
+<rect x="66.5" y="1838" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="78.5" y="1860" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >12 · I</text>
+<text x="204.5" y="1884" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Preparar e enviar no Ralph</text>
+</g>
+<path d="M 521.5 1820 V 1838" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="13"><title>13. Produzir resultado Ralph — Publicar etapas, contexto disponível e resposta ou falha terminal.</title>
+<rect x="383.5" y="1838" width="276" height="94" rx="9" fill="#edf0f4" stroke="#52657a" stroke-width="1.6"/>
+<text x="395.5" y="1860" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >13 · S</text>
+<text x="521.5" y="1884" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Produzir resultado Ralph</text>
+</g>
+<rect x="332" y="1807" width="62" height="26" rx="5" fill="#213247"/>
+<text x="363" y="1826" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]&gt;&gt;</text>
+<path d="M 838.5 1820 V 1838" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="14"><title>14. Consultar e preservar resultado — Copiar resposta e configuração, ou identificar falha.</title>
+<rect x="700.5" y="1838" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="712.5" y="1860" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >14 · I</text>
+<text x="838.5" y="1884" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar e preservar</text>
+<text x="838.5" y="1905" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">resultado</text>
+</g>
+<rect x="649" y="1807" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="1826" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<path d="M 1155.5 1820 V 1838" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="15"><title>15. Avaliar possibilidade de comparação — Com dois resultados utilizáveis, 16; falha Ralph leva a 17.</title>
+<rect x="1017.5" y="1838" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="1029.5" y="1860" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >15 · A</text>
+<text x="1155.5" y="1884" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Avaliar possibilidade de</text>
+<text x="1155.5" y="1905" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">comparação</text>
+</g>
+<rect x="966" y="1807" width="62" height="26" rx="5" fill="#213247"/>
+<text x="997" y="1826" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="1959" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >12 []&gt;&gt; 13 &gt;&gt; 14 &gt;&gt; 15 — Manter questão e parâmetros comuns.</text>
+</g>
+<g data-panel="15"><rect x="24" y="1984" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2011" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 15</text>
+<g data-node="15"><title>15. Avaliar possibilidade de comparação — Com dois resultados utilizáveis, 16; falha Ralph leva a 17.</title>
+<rect x="450" y="2024" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2046" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >15 · A</text>
+<text x="680" y="2070" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Avaliar possibilidade de comparação</text>
+</g>
+<path d="M 680 2106 V 2125 M 363 2125 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 2125 V 2143" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="16"><title>16. Inspecionar e concluir comparação — Acesso ao detalhe precede julgamento; repetir inspeção por etapa relevante.</title>
+<rect x="225" y="2143" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="237" y="2165" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >16 · A</text>
+<text x="363" y="2189" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Inspecionar e concluir</text>
+<text x="363" y="2210" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">comparação</text>
+</g>
+<path d="M 997 2125 V 2143" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="17"><title>17. Registrar falha do Ralph — Preservar baseline e explicar ausência da segunda resposta.</title>
+<rect x="859" y="2143" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="871" y="2165" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >17 · I</text>
+<text x="997" y="2189" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Registrar falha do Ralph</text>
+</g>
+<rect x="649" y="2112" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="2131" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]</text>
+<text x="40" y="2264" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >16 [] 17 — Com dois resultados utilizáveis, 16; falha Ralph leva a 17.</text>
+</g>
+<g data-panel="16"><rect x="24" y="2289" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2316" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 16</text>
+<g data-node="16"><title>16. Inspecionar e concluir comparação — Acesso ao detalhe precede julgamento; repetir inspeção por etapa relevante.</title>
+<rect x="450" y="2329" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2351" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >16 · A</text>
+<text x="680" y="2375" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Inspecionar e concluir comparação</text>
+</g>
+<path d="M 680 2411 V 2430 M 257.33333333333337 2430 H 1102.6666666666667" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 257.33333333333337 2430 V 2448" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="18"><title>18. Acessar detalhe da etapa — Duas vias para obter o mesmo conteúdo, sem reexecutar.</title>
+<rect x="119.33333333333337" y="2448" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="131.33333333333337" y="2470" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >18 · A</text>
+<text x="257.33333333333337" y="2494" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Acessar detalhe da etapa</text>
+</g>
+<path d="M 680 2430 V 2448" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="19"><title>19. Comparar respostas e contexto — Confrontar respostas com referência e entradas com dados previstos; admitir evidência insuficiente.</title>
+<rect x="542" y="2448" width="276" height="94" rx="9" fill="#fff4d9" stroke="#986513" stroke-width="1.6"/>
+<text x="554" y="2470" font-size="14" font-weight="700" text-anchor="start" fill="#986513" >19 · U</text>
+<text x="680" y="2494" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Comparar respostas e</text>
+<text x="680" y="2515" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">contexto</text>
+</g>
+<rect x="437.6666666666667" y="2417" width="62" height="26" rx="5" fill="#213247"/>
+<text x="468.6666666666667" y="2436" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<path d="M 1102.6666666666667 2430 V 2448" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="20"><title>20. Registrar comparação e limites — Registrar condições, resultados e evidências, sem alegar ganho geral de acurácia.</title>
+<rect x="964.6666666666667" y="2448" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="976.6666666666667" y="2470" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >20 · I</text>
+<text x="1102.6666666666667" y="2494" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Registrar comparação e</text>
+<text x="1102.6666666666667" y="2515" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">limites</text>
+</g>
+<rect x="860.3333333333334" y="2417" width="62" height="26" rx="5" fill="#213247"/>
+<text x="891.3333333333334" y="2436" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="2569" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >18 &gt;&gt; 19 &gt;&gt; 20 — Acesso ao detalhe precede julgamento; repetir inspeção por etapa relevante.</text>
+</g>
+<g data-panel="18"><rect x="24" y="2594" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2621" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 18</text>
+<g data-node="18"><title>18. Acessar detalhe da etapa — Duas vias para obter o mesmo conteúdo, sem reexecutar.</title>
+<rect x="450" y="2634" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2656" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >18 · A</text>
+<text x="680" y="2680" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Acessar detalhe da etapa</text>
+</g>
+<path d="M 680 2716 V 2735 M 363 2735 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 2735 V 2753" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="21"><title>21. Localizar pela visão geral — Usar Gráfico ou Chat, localizar etapa e abrir detalhe.</title>
+<rect x="225" y="2753" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="237" y="2775" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >21 · I</text>
+<text x="363" y="2799" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Localizar pela visão geral</text>
+</g>
+<path d="M 997 2735 V 2753" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="22"><title>22. Usar atalho da etapa — Com nó localizado, usar Ver no modo Chat e confirmar destino.</title>
+<rect x="859" y="2753" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="871" y="2775" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >22 · I</text>
+<text x="997" y="2799" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Usar atalho da etapa</text>
+</g>
+<rect x="649" y="2722" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="2741" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]</text>
+<text x="40" y="2874" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >21 [] 22 — Duas vias para obter o mesmo conteúdo, sem reexecutar.</text>
+</g>
+<g data-panel="4"><rect x="24" y="2899" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2926" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 4</text>
+<g data-node="4"><title>4. Cancelar comparação em curso — Habilitado quando direto ou Ralph está processando.</title>
+<rect x="450" y="2939" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2961" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >4 · A</text>
+<text x="680" y="2985" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Cancelar comparação em curso</text>
+</g>
+<path d="M 680 3021 V 3040 M 257.33333333333337 3040 H 1102.6666666666667" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 257.33333333333337 3040 V 3058" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="23"><title>23. Solicitar parada do fluxo ativo — Pedido identifica a execução a interromper.</title>
+<rect x="119.33333333333337" y="3058" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="131.33333333333337" y="3080" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >23 · I</text>
+<text x="257.33333333333337" y="3104" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Solicitar parada do fluxo</text>
+<text x="257.33333333333337" y="3125" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">ativo</text>
+</g>
+<path d="M 680 3040 V 3058" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="24"><title>24. Encerrar e informar estado — Confirmar estado terminal do fluxo ativo.</title>
+<rect x="542" y="3058" width="276" height="94" rx="9" fill="#edf0f4" stroke="#52657a" stroke-width="1.6"/>
+<text x="554" y="3080" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >24 · S</text>
+<text x="680" y="3104" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Encerrar e informar estado</text>
+</g>
+<rect x="437.6666666666667" y="3027" width="62" height="26" rx="5" fill="#213247"/>
+<text x="468.6666666666667" y="3046" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]&gt;&gt;</text>
+<path d="M 1102.6666666666667 3040 V 3058" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="25"><title>25. Registrar comparação incompleta — Conferir parada, preservar resposta anterior e anotar o que falta.</title>
+<rect x="964.6666666666667" y="3058" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="976.6666666666667" y="3080" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >25 · I</text>
+<text x="1102.6666666666667" y="3104" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Registrar comparação</text>
+<text x="1102.6666666666667" y="3125" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">incompleta</text>
+</g>
+<rect x="860.3333333333334" y="3027" width="62" height="26" rx="5" fill="#213247"/>
+<text x="891.3333333333334" y="3046" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="3179" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >23 []&gt;&gt; 24 &gt;&gt; 25 — Habilitado quando direto ou Ralph está processando.</text>
+</g>
+<text x="32" y="3220" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >A = abstrata   |   I = interação   |   U = usuário fora do sistema   |   S = sistema</text>
+<text x="32" y="3245" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >&gt;&gt; ativação   []&gt;&gt; passagem de informação   [] escolha   |[]| concorrência comunicante   [&gt; desativação</text>
 </svg>

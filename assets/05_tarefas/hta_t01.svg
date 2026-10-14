@@ -1,112 +1,169 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 550" width="1100" height="550" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
-  <defs>
-    <style>
-      .box { fill: #ffffff; stroke: #0969da; stroke-width: 2; rx: 6; }
-      .box-root { fill: #0969da; stroke: #0550ae; stroke-width: 2; rx: 8; }
-      .box-sub { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.5; rx: 6; }
-      .text-title { fill: #ffffff; font-weight: 600; font-size: 15px; text-anchor: middle; }
-      .text-node { fill: #1f2328; font-weight: 600; font-size: 12px; text-anchor: middle; }
-      .text-id { fill: #0969da; font-weight: 700; font-size: 11px; }
-      .text-sub { fill: #57606a; font-size: 10px; text-anchor: middle; }
-      .line { stroke: #8c959f; stroke-width: 1.5; fill: none; }
-    </style>
-  </defs>
-
-  <!-- Background -->
-  <rect width="1100" height="550" fill="#ffffff"/>
-
-  <!-- Título do Diagrama -->
-  <text x="550" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">HTA T01 — Auditar premissas e deduções intermediárias em questão GPQA</text>
-  <text x="550" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Pedro Henrique Correia de Oliveira (22.222.009-7) — Persona: Dra. Mariana Siqueira (P01)</text>
-
-  <!-- Linha tronco do Nível 0 -->
-  <line x1="550" y1="115" x2="550" y2="140" class="line"/>
-  <line x1="120" y1="140" x2="960" y2="140" class="line"/>
-
-  <!-- Linhas para Nível 1 -->
-  <line x1="120" y1="140" x2="120" y2="165" class="line"/>
-  <line x1="330" y1="140" x2="330" y2="165" class="line"/>
-  <line x1="540" y1="140" x2="540" y2="165" class="line"/>
-  <line x1="750" y1="140" x2="750" y2="165" class="line"/>
-  <line x1="960" y1="140" x2="960" y2="165" class="line"/>
-
-  <!-- Nível 0: Meta Principal -->
-  <rect x="310" y="65" width="480" height="50" class="box-root"/>
-  <text x="550" y="88" class="text-title">0. Auditar premissas e deduções lógicas no Ralph Loop</text>
-  <text x="550" y="104" fill="#d0d7de" font-size="11px" text-anchor="middle">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4; se concluído com rigor, faça 5.</text>
-
-  <!-- Nível 1: Subtarefas Principais -->
-  <!-- 1 -->
-  <rect x="40" y="165" width="160" height="60" class="box"/>
-  <text x="50" y="183" class="text-id">1</text>
-  <text x="120" y="191" class="text-node">Formular pergunta</text>
-  <text x="120" y="209" class="text-sub">com restrições GPQA</text>
-
-  <!-- 2 -->
-  <rect x="250" y="165" width="160" height="60" class="box"/>
-  <text x="260" y="183" class="text-id">2</text>
-  <text x="330" y="191" class="text-node">Disparar execução</text>
-  <text x="330" y="209" class="text-sub">no modo Ralph Loop</text>
-
-  <!-- 3 -->
-  <rect x="460" y="165" width="160" height="60" class="box"/>
-  <text x="470" y="183" class="text-id">3</text>
-  <text x="540" y="191" class="text-node">Acompanhar Timeline</text>
-  <text x="540" y="209" class="text-sub">de Open Thinking</text>
-
-  <!-- 4 -->
-  <rect x="670" y="165" width="160" height="60" class="box"/>
-  <text x="680" y="183" class="text-id">4</text>
-  <text x="750" y="191" class="text-node">Auditar critérios</text>
-  <text x="750" y="209" class="text-sub">de aceite (✓/✗)</text>
-
-  <!-- 5 -->
-  <rect x="880" y="165" width="160" height="60" class="box"/>
-  <text x="890" y="183" class="text-id">5</text>
-  <text x="960" y="191" class="text-node">Apropriar síntese</text>
-  <text x="960" y="209" class="text-sub">e exportar Markdown</text>
-
-  <!-- Ramo da Tarefa 3: Coluna Vertical -->
-  <line x1="540" y1="225" x2="540" y2="255" class="line"/>
-  <line x1="540" y1="305" x2="540" y2="325" class="line"/>
-
-  <!-- 3.1 -->
-  <rect x="460" y="255" width="160" height="50" class="box-sub"/>
-  <text x="470" y="273" class="text-id">3.1</text>
-  <text x="540" y="280" class="text-node">Observar nós de tarefas</text>
-  <text x="540" y="296" class="text-sub">Setup &gt; Loop &gt; Síntese</text>
-
-  <!-- 3.2 -->
-  <rect x="460" y="325" width="160" height="50" class="box-sub"/>
-  <text x="470" y="343" class="text-id">3.2</text>
-  <text x="540" y="350" class="text-node">Verificar Fresh Context</text>
-  <text x="540" y="366" class="text-sub">ausência de context rot</text>
-
-  <!-- Ramo da Tarefa 4: Coluna Vertical -->
-  <line x1="750" y1="225" x2="750" y2="255" class="line"/>
-  <line x1="750" y1="305" x2="750" y2="325" class="line"/>
-  <line x1="750" y1="375" x2="750" y2="395" class="line"/>
-
-  <!-- 4.1 -->
-  <rect x="670" y="255" width="160" height="50" class="box-sub"/>
-  <text x="680" y="273" class="text-id">4.1</text>
-  <text x="750" y="280" class="text-node">Identificar falha (✗)</text>
-  <text x="750" y="296" class="text-sub">em critério de aceite</text>
-
-  <!-- 4.2 -->
-  <rect x="670" y="325" width="160" height="50" class="box-sub"/>
-  <text x="680" y="343" class="text-id">4.2</text>
-  <text x="750" y="350" class="text-node">Acompanhar correção</text>
-  <text x="750" y="366" class="text-sub">nova iteração do loop</text>
-
-  <!-- 4.3 -->
-  <rect x="670" y="395" width="160" height="50" class="box-sub"/>
-  <text x="680" y="413" class="text-id">4.3</text>
-  <text x="750" y="420" class="text-node">Confirmar sucesso (✓)</text>
-  <text x="750" y="436" class="text-sub">autocorreção auditada</text>
-
-  <!-- Legenda de Planos -->
-  <rect x="40" y="480" width="1000" height="46" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
-  <text x="60" y="508" font-size="12" font-weight="bold" fill="#1f2328">Planos HTA:</text>
-  <text x="145" y="508" font-size="11" fill="#57606a">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4; se aprovado, faça 5. | Plano 3: 3.1 em paralelo com 3.2. | Plano 4: 4.1; se falha, faça 4.2 repetindo até 4.3.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1768" viewBox="0 0 1360 1768" role="img" aria-labelledby="title desc" font-family="Arial, sans-serif">
+<title id="title">HTA T01: Auditar uma questão científica</title>
+<desc id="desc">Autoria: Pedro Henrique Correia de Oliveira — 22.222.009-7. Árvore com 16 nós e 5 expansões. Planos, condições e categorias reproduzem a tabela da Entrega 5.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="37" font-size="24" font-weight="700" text-anchor="start" fill="#213247" >HTA · T01 — Auditar uma questão científica</text>
+<text x="32" y="66" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >Autoria: Pedro Henrique Correia de Oliveira — 22.222.009-7</text>
+<text x="32" y="91" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Origem: P01 / C01 / R01, R04.  |  Revisão documental: 12/10/2026</text>
+<text x="32" y="121" font-size="15" font-weight="400" text-anchor="start" fill="#52657a" >Árvore por expansões: encontre o ID do objetivo em seu painel. As condições completas estão na tabela do relatório.</text>
+<g data-panel="0"><rect x="24" y="154" width="1312" height="308" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="181" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 0</text>
+<g data-node="0"><title>0. Auditar questão científica — Questão e fontes → decisão fundamentada.</title>
+<rect x="450" y="194" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="216" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >0 · O</text>
+<text x="680" y="240" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Auditar questão científica</text>
+</g>
+<path d="M 680 276 V 295 M 151.66666666666669 295 H 1208.3333333333335" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 151.66666666666669 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="1"><title>1. Preparar a questão — Enunciado → entrada revisada.</title>
+<rect x="54.83333333333336" y="313" width="193.66666666666666" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="66.83333333333336" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >1 · O</text>
+<text x="151.66666666666669" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Preparar a questão</text>
+</g>
+<path d="M 363 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="2"><title>2. Selecionar Ralph e enviar — Questão revisada → início confirmado.</title>
+<rect x="266.1666666666667" y="313" width="193.66666666666666" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="278.1666666666667" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >2 · Op</text>
+<text x="363" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Selecionar Ralph e</text>
+<text x="363" y="380" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">enviar</text>
+<line x1="276.1666666666667" y1="412" x2="449.83333333333337" y2="412" stroke="#52657a" stroke-width="2"/>
+</g>
+<path d="M 574.3333333333334 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="3"><title>3. Consultar progresso e etapa — Execução ativa → etapa ou estado terminal identificado.</title>
+<rect x="477.50000000000006" y="313" width="193.66666666666666" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="489.50000000000006" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >3 · Op</text>
+<text x="574.3333333333334" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar progresso</text>
+<text x="574.3333333333334" y="380" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">e etapa</text>
+<line x1="487.50000000000006" y1="412" x2="661.1666666666667" y2="412" stroke="#52657a" stroke-width="2"/>
+</g>
+<path d="M 785.6666666666667 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="4"><title>4. Auditar a etapa — Etapa disponível → julgamento humano.</title>
+<rect x="688.8333333333334" y="313" width="193.66666666666666" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="700.8333333333334" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >4 · O</text>
+<text x="785.6666666666667" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Auditar a etapa</text>
+</g>
+<path d="M 997 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="5"><title>5. Aproveitar síntese conferida — Execução concluída → conteúdo conferido no destino.</title>
+<rect x="900.1666666666666" y="313" width="193.66666666666666" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="912.1666666666666" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >5 · O</text>
+<text x="997" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Aproveitar síntese</text>
+<text x="997" y="380" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">conferida</text>
+</g>
+<path d="M 1208.3333333333335 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="6"><title>6. Encerrar sem aproveitar — Falha, dúvida ou desistência → pendência registrada.</title>
+<rect x="1111.5000000000002" y="313" width="193.66666666666666" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="1123.5000000000002" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >6 · O</text>
+<text x="1208.3333333333335" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Encerrar sem</text>
+<text x="1208.3333333333335" y="380" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">aproveitar</text>
+</g>
+<text x="40" y="434" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Plano 0: 1 &gt; 2; repetir 3 &gt; 4 para etapas novas ou revistas; após término, 5. Se houver falha, desistência ou ressalva impeditiva, 6 substitui a</text>
+<text x="40" y="455" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >continuação.</text>
+</g>
+<g data-panel="1"><rect x="24" y="480" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="507" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 1</text>
+<g data-node="1"><title>1. Preparar a questão — Enunciado → entrada revisada.</title>
+<rect x="450" y="520" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="542" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >1 · O</text>
+<text x="680" y="566" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Preparar a questão</text>
+</g>
+<path d="M 680 602 V 621 M 363 621 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 621 V 639" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="1.1"><title>1.1. Inserir questão e restrições — Texto original → conteúdo visível.</title>
+<rect x="225" y="639" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="237" y="661" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >1.1 · Op</text>
+<text x="363" y="685" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Inserir questão e restrições</text>
+<line x1="235" y1="738" x2="491" y2="738" stroke="#52657a" stroke-width="2"/>
+</g>
+<path d="M 997 621 V 639" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="1.2"><title>1.2. Conferir premissas inseridas — Entrada → omissões identificadas ou revisão concluída.</title>
+<rect x="859" y="639" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="871" y="661" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >1.2 · Op</text>
+<text x="997" y="685" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conferir premissas inseridas</text>
+<line x1="869" y1="738" x2="1125" y2="738" stroke="#52657a" stroke-width="2"/>
+</g>
+<text x="40" y="760" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Plano 1: 1.1 &gt; 1.2; corrigir em 1.1 se houver omissão.</text>
+</g>
+<g data-panel="4"><rect x="24" y="785" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="812" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 4</text>
+<g data-node="4"><title>4. Auditar a etapa — Etapa disponível → julgamento humano.</title>
+<rect x="450" y="825" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="847" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >4 · O</text>
+<text x="680" y="871" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Auditar a etapa</text>
+</g>
+<path d="M 680 907 V 926 M 257.33333333333337 926 H 1102.6666666666667" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 257.33333333333337 926 V 944" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="4.1"><title>4.1. Consultar critério e evidências — Critério → evidências acessíveis ou ausência indicada.</title>
+<rect x="119.33333333333337" y="944" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="131.33333333333337" y="966" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >4.1 · Op</text>
+<text x="257.33333333333337" y="990" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar critério e</text>
+<text x="257.33333333333337" y="1011" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">evidências</text>
+<line x1="129.33333333333337" y1="1043" x2="385.33333333333337" y2="1043" stroke="#52657a" stroke-width="2"/>
+</g>
+<path d="M 680 926 V 944" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="4.2"><title>4.2. Confrontar com a referência — Evidência e fonte → coerência, divergência ou insuficiência.</title>
+<rect x="542" y="944" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="554" y="966" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >4.2 · Op</text>
+<text x="680" y="990" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Confrontar com a referência</text>
+<line x1="552" y1="1043" x2="808" y2="1043" stroke="#52657a" stroke-width="2"/>
+</g>
+<path d="M 1102.6666666666667 926 V 944" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="4.3"><title>4.3. Registrar julgamento da etapa — Comparação → decisão vinculada à tentativa.</title>
+<rect x="964.6666666666667" y="944" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="976.6666666666667" y="966" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >4.3 · Op</text>
+<text x="1102.6666666666667" y="990" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Registrar julgamento da</text>
+<text x="1102.6666666666667" y="1011" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">etapa</text>
+<line x1="974.6666666666667" y1="1043" x2="1230.6666666666667" y2="1043" stroke="#52657a" stroke-width="2"/>
+</g>
+<text x="40" y="1065" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Plano 4: 4.1 &gt; 4.2 &gt; 4.3; repetir por critério e por tentativa revista publicada. Sem nova evidência, não repetir indefinidamente.</text>
+</g>
+<g data-panel="5"><rect x="24" y="1090" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1117" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 5</text>
+<g data-node="5"><title>5. Aproveitar síntese conferida — Execução concluída → conteúdo conferido no destino.</title>
+<rect x="450" y="1130" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1152" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >5 · O</text>
+<text x="680" y="1176" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Aproveitar síntese conferida</text>
+</g>
+<path d="M 680 1212 V 1231 M 363 1231 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 1231 V 1249" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="5.1"><title>5.1. Conferir síntese final — Síntese e anotações → decisão sobre aproveitamento.</title>
+<rect x="225" y="1249" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="237" y="1271" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >5.1 · Op</text>
+<text x="363" y="1295" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conferir síntese final</text>
+<line x1="235" y1="1348" x2="491" y2="1348" stroke="#52657a" stroke-width="2"/>
+</g>
+<path d="M 997 1231 V 1249" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="5.2"><title>5.2. Copiar e verificar conteúdo — Conteúdo aprovado → transferência verificada.</title>
+<rect x="859" y="1249" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="871" y="1271" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >5.2 · Op</text>
+<text x="997" y="1295" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Copiar e verificar conteúdo</text>
+<line x1="869" y1="1348" x2="1125" y2="1348" stroke="#52657a" stroke-width="2"/>
+</g>
+<text x="40" y="1370" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Plano 5: 5.1; se a síntese respeitar as condições auditadas, 5.2; senão, seguir 6 do Plano 0.</text>
+</g>
+<g data-panel="6"><rect x="24" y="1395" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1422" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 6</text>
+<g data-node="6"><title>6. Encerrar sem aproveitar — Falha, dúvida ou desistência → pendência registrada.</title>
+<rect x="450" y="1435" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1457" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >6 · O</text>
+<text x="680" y="1481" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Encerrar sem aproveitar</text>
+</g>
+<path d="M 680 1517 V 1536 M 363 1536 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 1536 V 1554" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="6.1"><title>6.1. Solicitar e conferir parada — Execução ativa → cancelada, ou concluída antes de aceitar o pedido.</title>
+<rect x="225" y="1554" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="237" y="1576" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >6.1 · Op</text>
+<text x="363" y="1600" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Solicitar e conferir parada</text>
+<line x1="235" y1="1653" x2="491" y2="1653" stroke="#52657a" stroke-width="2"/>
+</g>
+<path d="M 997 1536 V 1554" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="6.2"><title>6.2. Anotar motivo e pendência — Estado terminal → pendência identificada.</title>
+<rect x="859" y="1554" width="276" height="94" rx="9" fill="#ffffff" stroke="#52657a" stroke-width="1.6"/>
+<text x="871" y="1576" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >6.2 · Op</text>
+<text x="997" y="1600" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Anotar motivo e pendência</text>
+<line x1="869" y1="1653" x2="1125" y2="1653" stroke="#52657a" stroke-width="2"/>
+</g>
+<text x="40" y="1675" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Plano 6: se ainda processando, 6.1 &gt; 6.2; se já terminou, apenas 6.2. Pode interromper 3 ou 4 por decisão da pessoa.</text>
+</g>
+<text x="32" y="1716" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >O = objetivo decomposto   |   Op = operação (folha sublinhada)</text>
+<text x="32" y="1741" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >&gt; sequência   / seleção   + paralelo. A ordem é dada pelo plano; as linhas indicam pertencimento.</text>
 </svg>

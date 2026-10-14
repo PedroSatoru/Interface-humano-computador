@@ -1,123 +1,298 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
-  <defs>
-    <style>
-      .node-abs { fill: #f1f8ff; stroke: #0969da; stroke-width: 2; rx: 6; }
-      .node-usr { fill: #fff8c5; stroke: #bf8700; stroke-width: 2; rx: 6; }
-      .node-int { fill: #dafbe1; stroke: #1a7f37; stroke-width: 2; rx: 6; }
-      .node-sys { fill: #f6f8fa; stroke: #6e7781; stroke-width: 2; rx: 6; }
-      .text-title { fill: #1f2328; font-weight: bold; font-size: 12px; text-anchor: middle; }
-      .text-type { font-size: 10px; font-weight: 600; text-anchor: middle; }
-      .op-badge { fill: #24292f; rx: 4; }
-      .op-text { fill: #ffffff; font-weight: bold; font-size: 11px; text-anchor: middle; }
-      .line { stroke: #8c959f; stroke-width: 1.5; fill: none; }
-    </style>
-  </defs>
-
-  <rect width="1000" height="540" fill="#ffffff"/>
-
-  <!-- Título -->
-  <text x="500" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2328">CTT T04 — ConcurTaskTrees: Submeter exercício e acompanhar validação didática</text>
-  <text x="500" y="48" text-anchor="middle" font-size="12" fill="#656d76">Autoria: Hugo Emílio Nomura (22.123.051-9) — Persona: Beatriz Fagundes (P04)</text>
-
-  <!-- Nó Raiz -->
-  <rect x="340" y="65" width="320" height="55" class="node-abs"/>
-  <text x="500" y="88" class="text-title" font-size="13px">T04: Submissão e Tutoria Didática</text>
-  <text x="500" y="106" class="text-type" fill="#0969da">[Tarefa Abstrata]</text>
-
-  <!-- Linhas para Nível 1 -->
-  <line x1="500" y1="120" x2="500" y2="150" class="line"/>
-  <line x1="120" y1="150" x2="880" y2="150" class="line"/>
-
-  <line x1="120" y1="150" x2="120" y2="180" class="line"/>
-  <line x1="370" y1="150" x2="370" y2="180" class="line"/>
-  <line x1="630" y1="150" x2="630" y2="180" class="line"/>
-  <line x1="880" y1="150" x2="880" y2="180" class="line"/>
-
-  <!-- Operadores Temporais Nível 1 -->
-  <rect x="225" y="140" width="40" height="20" class="op-badge"/>
-  <text x="245" y="154" class="op-text">[]&gt;&gt;</text>
-
-  <rect x="485" y="140" width="30" height="20" class="op-badge"/>
-  <text x="500" y="154" class="op-text">&gt;&gt;</text>
-
-  <rect x="740" y="140" width="30" height="20" class="op-badge"/>
-  <text x="755" y="154" class="op-text">&gt;&gt;</text>
-
-  <!-- Nível 1 Nós -->
-  <!-- 1: Interação / Entrada Simples -->
-  <rect x="35" y="180" width="170" height="66" class="node-int"/>
-  <text x="120" y="205" class="text-title">Digitar no Composer</text>
-  <text x="120" y="222" class="text-type" fill="#1a7f37">[Interação / Entrada]</text>
-
-  <!-- 2: Interação / Envio -->
-  <rect x="285" y="180" width="170" height="66" class="node-int"/>
-  <text x="370" y="205" class="text-title">Acionar Ralph Loop</text>
-  <text x="370" y="222" class="text-type" fill="#1a7f37">[Interação / Disparo]</text>
-
-  <!-- 3: Abstrata (Acompanhar e Verificar Critérios) -->
-  <rect x="545" y="180" width="170" height="66" class="node-abs"/>
-  <text x="630" y="205" class="text-title">Acompanhar Validação*</text>
-  <text x="630" y="222" class="text-type" fill="#0969da">[Abstrata Iterativa]</text>
-
-  <!-- 4: Usuário (Fixação Conceitual) -->
-  <rect x="795" y="180" width="170" height="66" class="node-usr"/>
-  <text x="880" y="205" class="text-title">Fixar conceito lógico</text>
-  <text x="880" y="222" class="text-type" fill="#bf8700">[Usuário / Aprendizado]</text>
-
-  <!-- Decomposição de Acompanhar Validação (Nó 3) -->
-  <line x1="630" y1="246" x2="630" y2="285" class="line"/>
-  <line x1="450" y1="285" x2="810" y2="285" class="line"/>
-  <line x1="450" y1="285" x2="450" y2="320" class="line"/>
-  <line x1="630" y1="285" x2="630" y2="320" class="line"/>
-  <line x1="810" y1="285" x2="810" y2="320" class="line"/>
-
-  <!-- Operadores do Sub-nível 3 -->
-  <rect x="525" y="275" width="30" height="20" class="op-badge"/>
-  <text x="540" y="289" class="op-text">&gt;&gt;</text>
-
-  <rect x="705" y="275" width="30" height="20" class="op-badge"/>
-  <text x="720" y="289" class="op-text">&gt;&gt;</text>
-
-  <!-- Subtarefas de 3 -->
-  <!-- 3.1: Sistema -->
-  <rect x="365" y="320" width="170" height="66" class="node-sys"/>
-  <text x="450" y="342" class="text-title">
-    <tspan x="450" dy="0">Exibir subtarefa</tspan>
-    <tspan x="450" dy="14">com status</tspan>
-  </text>
-  <text x="450" y="374" class="text-type" fill="#6e7781">[Sistema]</text>
-
-  <!-- 3.2: Usuário -->
-  <rect x="545" y="320" width="170" height="66" class="node-usr"/>
-  <text x="630" y="342" class="text-title">
-    <tspan x="630" dy="0">Interpretar badge</tspan>
-    <tspan x="630" dy="14">de critério (✓/✗)</tspan>
-  </text>
-  <text x="630" y="374" class="text-type" fill="#bf8700">[Usuário / Checagem]</text>
-
-  <!-- 3.3: Interação -->
-  <rect x="725" y="320" width="170" height="66" class="node-int"/>
-  <text x="810" y="342" class="text-title">
-    <tspan x="810" dy="0">Expandir detalhes</tspan>
-    <tspan x="810" dy="14">da tentativa</tspan>
-  </text>
-  <text x="810" y="374" class="text-type" fill="#1a7f37">[Interação / Opcional]</text>
-
-  <!-- Legenda CTT Paternò -->
-  <rect x="30" y="430" width="940" height="85" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
-  <text x="50" y="452" font-size="12" font-weight="bold" fill="#1f2328">Legenda CTT (Paternò, 2000):</text>
-
-  <rect x="50" y="468" width="20" height="16" class="node-usr"/>
-  <text x="75" y="481" font-size="11" fill="#24292f">Usuário (Cognitiva)</text>
-
-  <rect x="220" y="468" width="20" height="16" class="node-int"/>
-  <text x="245" y="481" font-size="11" fill="#24292f">Interação (Humano-Computador)</text>
-
-  <rect x="440" y="468" width="20" height="16" class="node-sys"/>
-  <text x="465" y="481" font-size="11" fill="#24292f">Sistema (Automática)</text>
-
-  <rect x="620" y="468" width="20" height="16" class="node-abs"/>
-  <text x="645" y="481" font-size="11" fill="#24292f">Abstrata (Composição)</text>
-
-  <text x="50" y="504" font-size="11" fill="#57606a">Operadores Temporais: &gt;&gt; (Habilitação) | []&gt;&gt; (Passagem de dados) | * (Iteração do Ralph Loop)</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="3272" viewBox="0 0 1360 3272" role="img" aria-labelledby="title desc" font-family="Arial, sans-serif">
+<title id="title">CTT T04: Estudar um exercício passo a passo</title>
+<desc id="desc">Autoria: Hugo Emílio Nomura — 22.123.051-9. Árvore com 26 nós e 10 expansões. Planos, condições e categorias reproduzem a tabela da Entrega 5.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="37" font-size="24" font-weight="700" text-anchor="start" fill="#213247" >CTT · T04 — Estudar um exercício passo a passo</text>
+<text x="32" y="66" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >Autoria: Hugo Emílio Nomura — 22.123.051-9</text>
+<text x="32" y="91" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >Origem: P04 / C04 / R01, R04.  |  Revisão documental: 12/10/2026</text>
+<text x="32" y="121" font-size="15" font-weight="400" text-anchor="start" fill="#52657a" >Árvore por expansões: encontre o ID do objetivo em seu painel. As condições completas estão na tabela do relatório.</text>
+<g data-panel="0"><rect x="24" y="154" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="181" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 0</text>
+<g data-node="0"><title>0. Estudar exercício passo a passo — Exercício revisado alimenta envio e estudo.</title>
+<rect x="450" y="194" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="216" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >0 · A</text>
+<text x="680" y="240" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Estudar exercício passo a passo</text>
+</g>
+<path d="M 680 276 V 295 M 363 295 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="1"><title>1. Preparar exercício — Revisar antes de enviar, independentemente da origem.</title>
+<rect x="225" y="313" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="237" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >1 · A</text>
+<text x="363" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Preparar exercício</text>
+</g>
+<path d="M 997 295 V 313" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="2"><title>2. Conduzir sessão de estudo — Cancelamento desativa continuação normal.</title>
+<rect x="859" y="313" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="871" y="335" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >2 · A</text>
+<text x="997" y="359" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conduzir sessão de estudo</text>
+</g>
+<rect x="649" y="282" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="301" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]&gt;&gt;</text>
+<text x="40" y="434" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >1 []&gt;&gt; 2 — Exercício revisado alimenta envio e estudo.</text>
+</g>
+<g data-panel="1"><rect x="24" y="459" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="486" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 1</text>
+<g data-node="1"><title>1. Preparar exercício — Revisar antes de enviar, independentemente da origem.</title>
+<rect x="450" y="499" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="521" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >1 · A</text>
+<text x="680" y="545" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Preparar exercício</text>
+</g>
+<path d="M 680 581 V 600 M 363 600 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 600 V 618" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="3"><title>3. Escolher origem do enunciado — Questão específica seleciona 5; estudo exploratório com exemplo pertinente permite 6.</title>
+<rect x="225" y="618" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="237" y="640" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >3 · A</text>
+<text x="363" y="664" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Escolher origem do enunciado</text>
+</g>
+<path d="M 997 600 V 618" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="4"><title>4. Revisar condições inseridas — Conferir texto, números e restrições.</title>
+<rect x="859" y="618" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="871" y="640" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >4 · I</text>
+<text x="997" y="664" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Revisar condições inseridas</text>
+</g>
+<rect x="649" y="587" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="606" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="739" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >3 &gt;&gt; 4 — Revisar antes de enviar, independentemente da origem.</text>
+</g>
+<g data-panel="3"><rect x="24" y="764" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="791" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 3</text>
+<g data-node="3"><title>3. Escolher origem do enunciado — Questão específica seleciona 5; estudo exploratório com exemplo pertinente permite 6.</title>
+<rect x="450" y="804" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="826" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >3 · A</text>
+<text x="680" y="850" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Escolher origem do enunciado</text>
+</g>
+<path d="M 680 886 V 905 M 363 905 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 905 V 923" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="5"><title>5. Digitar ou colar exercício — Inserir questão pretendida.</title>
+<rect x="225" y="923" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="237" y="945" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >5 · I</text>
+<text x="363" y="969" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Digitar ou colar exercício</text>
+</g>
+<path d="M 997 905 V 923" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="6"><title>6. Selecionar exemplo pertinente — Preencher campo com sugestão; não enviar ainda.</title>
+<rect x="859" y="923" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="871" y="945" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >6 · I</text>
+<text x="997" y="969" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Selecionar exemplo</text>
+<text x="997" y="990" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">pertinente</text>
+</g>
+<rect x="649" y="892" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="911" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]</text>
+<text x="40" y="1044" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >5 [] 6 — Questão específica seleciona 5; estudo exploratório com exemplo pertinente permite 6.</text>
+</g>
+<g data-panel="2"><rect x="24" y="1069" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1096" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 2</text>
+<g data-node="2"><title>2. Conduzir sessão de estudo — Cancelamento desativa continuação normal.</title>
+<rect x="450" y="1109" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1131" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >2 · A</text>
+<text x="680" y="1155" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conduzir sessão de estudo</text>
+</g>
+<path d="M 680 1191 V 1210 M 363 1210 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 1210 V 1228" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="7"><title>7. Resolver, conferir e registrar — Avaliar síntese após término e conferência dos passos.</title>
+<rect x="225" y="1228" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="237" y="1250" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >7 · A</text>
+<text x="363" y="1274" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Resolver, conferir e</text>
+<text x="363" y="1295" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">registrar</text>
+</g>
+<path d="M 997 1210 V 1228" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="8"><title>8. Cancelar e registrar dúvida — Apenas durante processamento; encerrar sem presumir aprendizado.</title>
+<rect x="859" y="1228" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="871" y="1250" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >8 · A</text>
+<text x="997" y="1274" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Cancelar e registrar dúvida</text>
+</g>
+<rect x="649" y="1197" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="1216" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[&gt;</text>
+<text x="40" y="1349" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >7 [&gt; 8 — Cancelamento desativa continuação normal.</text>
+</g>
+<g data-panel="7"><rect x="24" y="1374" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1401" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 7</text>
+<g data-node="7"><title>7. Resolver, conferir e registrar — Avaliar síntese após término e conferência dos passos.</title>
+<rect x="450" y="1414" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1436" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >7 · A</text>
+<text x="680" y="1460" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Resolver, conferir e registrar</text>
+</g>
+<path d="M 680 1496 V 1515 M 257.33333333333337 1515 H 1102.6666666666667" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 257.33333333333337 1515 V 1533" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="9"><title>9. Selecionar Ralph e enviar — Transmitir exercício revisado e conferir recebimento.</title>
+<rect x="119.33333333333337" y="1533" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="131.33333333333337" y="1555" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >9 · I</text>
+<text x="257.33333333333337" y="1579" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Selecionar Ralph e enviar</text>
+</g>
+<path d="M 680 1515 V 1533" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="10"><title>10. Acompanhar passos publicados — Publicação comunica-se com conferência; encerrar após estado terminal consultado e passos recebidos conferidos.</title>
+<rect x="542" y="1533" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="554" y="1555" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >10 · A</text>
+<text x="680" y="1579" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Acompanhar passos publicados</text>
+</g>
+<rect x="437.6666666666667" y="1502" width="62" height="26" rx="5" fill="#213247"/>
+<text x="468.6666666666667" y="1521" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]&gt;&gt;</text>
+<path d="M 1102.6666666666667 1515 V 1533" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="11"><title>11. Consolidar ou registrar dúvida — Estado final e verificações fundamentam registro.</title>
+<rect x="964.6666666666667" y="1533" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="976.6666666666667" y="1555" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >11 · A</text>
+<text x="1102.6666666666667" y="1579" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consolidar ou registrar</text>
+<text x="1102.6666666666667" y="1600" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">dúvida</text>
+</g>
+<rect x="860.3333333333334" y="1502" width="62" height="26" rx="5" fill="#213247"/>
+<text x="891.3333333333334" y="1521" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="1654" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >9 []&gt;&gt; 10 &gt;&gt; 11 — Avaliar síntese após término e conferência dos passos.</text>
+</g>
+<g data-panel="10"><rect x="24" y="1679" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="1706" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 10</text>
+<g data-node="10"><title>10. Acompanhar passos publicados — Publicação comunica-se com conferência; encerrar após estado terminal consultado e passos recebidos conferidos.</title>
+<rect x="450" y="1719" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="1741" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >10 · A</text>
+<text x="680" y="1765" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Acompanhar passos publicados</text>
+</g>
+<path d="M 680 1801 V 1820 M 363 1820 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 1820 V 1838" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="12"><title>12. Publicar passos e resultado — Exibir condições, verificações, justificativas e término ou falha.</title>
+<rect x="225" y="1838" width="276" height="94" rx="9" fill="#edf0f4" stroke="#52657a" stroke-width="1.6"/>
+<text x="237" y="1860" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >12 · S</text>
+<text x="363" y="1884" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Publicar passos e resultado</text>
+</g>
+<path d="M 997 1820 V 1838" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="13"><title>13. Conferir um passo — Repetir por passo ou tentativa revista; julgamento não bloqueia processamento automático.</title>
+<rect x="859" y="1838" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="871" y="1860" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >13 · A</text>
+<text x="997" y="1884" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conferir um passo</text>
+</g>
+<rect x="649" y="1807" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="1826" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >|[]|</text>
+<text x="40" y="1959" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >12 |[]| 13 — Publicação comunica-se com conferência; encerrar após estado terminal consultado e passos recebidos conferidos.</text>
+</g>
+<g data-panel="13"><rect x="24" y="1984" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2011" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 13</text>
+<g data-node="13"><title>13. Conferir um passo — Repetir por passo ou tentativa revista; julgamento não bloqueia processamento automático.</title>
+<rect x="450" y="2024" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2046" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >13 · A</text>
+<text x="680" y="2070" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conferir um passo</text>
+</g>
+<path d="M 680 2106 V 2125 M 257.33333333333337 2125 H 1102.6666666666667" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 257.33333333333337 2125 V 2143" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="14"><title>14. Ler condição e estado — Consultar texto, símbolo e justificativa inicial.</title>
+<rect x="119.33333333333337" y="2143" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="131.33333333333337" y="2165" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >14 · I</text>
+<text x="257.33333333333337" y="2189" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Ler condição e estado</text>
+</g>
+<path d="M 680 2125 V 2143" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="15"><title>15. Consultar explicação necessária — Resumo suficiente e sem dúvida permite 17; dúvida, reprovação ou insuficiência exige 18.</title>
+<rect x="542" y="2143" width="276" height="94" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="554" y="2165" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >15 · A</text>
+<text x="680" y="2189" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar explicação</text>
+<text x="680" y="2210" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">necessária</text>
+</g>
+<rect x="437.6666666666667" y="2112" width="62" height="26" rx="5" fill="#213247"/>
+<text x="468.6666666666667" y="2131" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<path d="M 1102.6666666666667 2125 V 2143" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="16"><title>16. Confrontar regra com anotações — Verificar aplicação e identificar entendimento ou dúvida.</title>
+<rect x="964.6666666666667" y="2143" width="276" height="94" rx="9" fill="#fff4d9" stroke="#986513" stroke-width="1.6"/>
+<text x="976.6666666666667" y="2165" font-size="14" font-weight="700" text-anchor="start" fill="#986513" >16 · U</text>
+<text x="1102.6666666666667" y="2189" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Confrontar regra com</text>
+<text x="1102.6666666666667" y="2210" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">anotações</text>
+</g>
+<rect x="860.3333333333334" y="2112" width="62" height="26" rx="5" fill="#213247"/>
+<text x="891.3333333333334" y="2131" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="2264" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >14 &gt;&gt; 15 &gt;&gt; 16 — Repetir por passo ou tentativa revista; julgamento não bloqueia processamento automático.</text>
+</g>
+<g data-panel="15"><rect x="24" y="2289" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2316" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 15</text>
+<g data-node="15"><title>15. Consultar explicação necessária — Resumo suficiente e sem dúvida permite 17; dúvida, reprovação ou insuficiência exige 18.</title>
+<rect x="450" y="2329" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2351" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >15 · A</text>
+<text x="680" y="2375" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar explicação necessária</text>
+</g>
+<path d="M 680 2411 V 2430 M 363 2430 H 997" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 363 2430 V 2448" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="17"><title>17. Consultar justificativa resumida — Usar explicação já disponível da condição.</title>
+<rect x="225" y="2448" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="237" y="2470" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >17 · I</text>
+<text x="363" y="2494" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar justificativa</text>
+<text x="363" y="2515" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">resumida</text>
+</g>
+<path d="M 997 2430 V 2448" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="18"><title>18. Abrir e ler detalhe — Expandir tentativa mesmo com critério aprovado.</title>
+<rect x="859" y="2448" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="871" y="2470" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >18 · I</text>
+<text x="997" y="2494" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Abrir e ler detalhe</text>
+</g>
+<rect x="649" y="2417" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="2436" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]</text>
+<text x="40" y="2569" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >17 [] 18 — Resumo suficiente e sem dúvida permite 17; dúvida, reprovação ou insuficiência exige 18.</text>
+</g>
+<g data-panel="11"><rect x="24" y="2594" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2621" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 11</text>
+<g data-node="11"><title>11. Consolidar ou registrar dúvida — Estado final e verificações fundamentam registro.</title>
+<rect x="450" y="2634" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2656" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >11 · A</text>
+<text x="680" y="2680" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consolidar ou registrar dúvida</text>
+</g>
+<path d="M 680 2716 V 2735 M 257.33333333333337 2735 H 1102.6666666666667" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 257.33333333333337 2735 V 2753" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="19"><title>19. Consultar síntese ou falha — Ler resultado ou reconhecer conclusão incompleta.</title>
+<rect x="119.33333333333337" y="2753" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="131.33333333333337" y="2775" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >19 · I</text>
+<text x="257.33333333333337" y="2799" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Consultar síntese ou falha</text>
+</g>
+<path d="M 680 2735 V 2753" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="20"><title>20. Avaliar se consegue explicar — Confrontar conclusão, condições e cálculo próprio; contradição mantém dúvida.</title>
+<rect x="542" y="2753" width="276" height="94" rx="9" fill="#fff4d9" stroke="#986513" stroke-width="1.6"/>
+<text x="554" y="2775" font-size="14" font-weight="700" text-anchor="start" fill="#986513" >20 · U</text>
+<text x="680" y="2799" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Avaliar se consegue explicar</text>
+</g>
+<rect x="437.6666666666667" y="2722" width="62" height="26" rx="5" fill="#213247"/>
+<text x="468.6666666666667" y="2741" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<path d="M 1102.6666666666667 2735 V 2753" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="21"><title>21. Anotar explicação ou dúvida — Escrever no caderno justificativa própria ou condição a discutir com monitoria.</title>
+<rect x="964.6666666666667" y="2753" width="276" height="94" rx="9" fill="#fff4d9" stroke="#986513" stroke-width="1.6"/>
+<text x="976.6666666666667" y="2775" font-size="14" font-weight="700" text-anchor="start" fill="#986513" >21 · U</text>
+<text x="1102.6666666666667" y="2799" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Anotar explicação ou dúvida</text>
+</g>
+<rect x="860.3333333333334" y="2722" width="62" height="26" rx="5" fill="#213247"/>
+<text x="891.3333333333334" y="2741" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="2874" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >19 &gt;&gt; 20 &gt;&gt; 21 — Estado final e verificações fundamentam registro.</text>
+</g>
+<g data-panel="8"><rect x="24" y="2899" width="1312" height="287" rx="12" fill="#f8fafc" stroke="#d4deea"/>
+<text x="40" y="2926" font-size="13" font-weight="700" text-anchor="start" fill="#52657a" >EXPANSÃO 8</text>
+<g data-node="8"><title>8. Cancelar e registrar dúvida — Apenas durante processamento; encerrar sem presumir aprendizado.</title>
+<rect x="450" y="2939" width="460" height="82" rx="9" fill="#eaf2ff" stroke="#2357a4" stroke-width="1.6"/>
+<text x="462" y="2961" font-size="14" font-weight="700" text-anchor="start" fill="#2357a4" >8 · A</text>
+<text x="680" y="2985" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Cancelar e registrar dúvida</text>
+</g>
+<path d="M 680 3021 V 3040 M 204.5 3040 H 1155.5" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<path d="M 204.5 3040 V 3058" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="22"><title>22. Solicitar cancelamento — Transmitir pedido de parada.</title>
+<rect x="66.5" y="3058" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="78.5" y="3080" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >22 · I</text>
+<text x="204.5" y="3104" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Solicitar cancelamento</text>
+</g>
+<path d="M 521.5 3040 V 3058" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="23"><title>23. Encerrar e informar estado — Confirmar estado terminal.</title>
+<rect x="383.5" y="3058" width="276" height="94" rx="9" fill="#edf0f4" stroke="#52657a" stroke-width="1.6"/>
+<text x="395.5" y="3080" font-size="14" font-weight="700" text-anchor="start" fill="#52657a" >23 · S</text>
+<text x="521.5" y="3104" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Encerrar e informar estado</text>
+</g>
+<rect x="332" y="3027" width="62" height="26" rx="5" fill="#213247"/>
+<text x="363" y="3046" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >[]&gt;&gt;</text>
+<path d="M 838.5 3040 V 3058" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="24"><title>24. Conferir confirmação de parada — Consultar estado retornado.</title>
+<rect x="700.5" y="3058" width="276" height="94" rx="9" fill="#e6f5eb" stroke="#237748" stroke-width="1.6"/>
+<text x="712.5" y="3080" font-size="14" font-weight="700" text-anchor="start" fill="#237748" >24 · I</text>
+<text x="838.5" y="3104" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Conferir confirmação de</text>
+<text x="838.5" y="3125" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">parada</text>
+</g>
+<rect x="649" y="3027" width="62" height="26" rx="5" fill="#213247"/>
+<text x="680" y="3046" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<path d="M 1155.5 3040 V 3058" fill="none" stroke="#7c8ca0" stroke-width="1.5"/>
+<g data-node="25"><title>25. Anotar dúvida remanescente — Registrar no caderno condição não compreendida.</title>
+<rect x="1017.5" y="3058" width="276" height="94" rx="9" fill="#fff4d9" stroke="#986513" stroke-width="1.6"/>
+<text x="1029.5" y="3080" font-size="14" font-weight="700" text-anchor="start" fill="#986513" >25 · U</text>
+<text x="1155.5" y="3104" font-size="16" font-weight="600" text-anchor="middle" fill="#213247" data-label="true">Anotar dúvida remanescente</text>
+</g>
+<rect x="966" y="3027" width="62" height="26" rx="5" fill="#213247"/>
+<text x="997" y="3046" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff" >&gt;&gt;</text>
+<text x="40" y="3179" font-size="15" font-weight="400" text-anchor="start" fill="#213247" >22 []&gt;&gt; 23 &gt;&gt; 24 &gt;&gt; 25 — Apenas durante processamento; encerrar sem presumir aprendizado.</text>
+</g>
+<text x="32" y="3220" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >A = abstrata   |   I = interação   |   U = usuário fora do sistema   |   S = sistema</text>
+<text x="32" y="3245" font-size="16" font-weight="400" text-anchor="start" fill="#213247" >&gt;&gt; ativação   []&gt;&gt; passagem de informação   [] escolha   |[]| concorrência comunicante   [&gt; desativação</text>
 </svg>
