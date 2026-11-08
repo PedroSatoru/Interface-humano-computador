@@ -4,7 +4,7 @@ Esta lista serve como base conceitual. Utilize a bibliografia indicada pelo doce
 
 ## Fundamentos de IHC e design de interação
 
-- BARBOSA, Simone D. J.; SILVA, Bruno S. **Interação Humano-Computador**. Elsevier/Campus.
+- BARBOSA, Simone D. J.; SILVA, Bruno S. **Interação Humano-Computador**. Elsevier/Campus, 2010.
 - ROGERS, Yvonne; SHARP, Helen; PREECE, Jennifer. **Interaction Design: Beyond Human-Computer Interaction**. Wiley.
 - NORMAN, Donald A. **The Design of Everyday Things**. Basic Books.
 - NIELSEN, Jakob. **Usability Engineering**. Academic Press, 1993.

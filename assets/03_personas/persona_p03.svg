@@ -57,7 +57,7 @@
 
   <text x="42" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#334155">Comportamento Chave:</text>
   <text x="42" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">Gosta de testar limites do sistema;</text>
-  <text x="42" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">inspeciona requisições WebSocket e</text>
+  <text x="42" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">inspeciona eventos SSE e</text>
   <text x="42" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b">compara arquiteturas lado a lado.</text>
 
   <rect x="40" y="456" width="250" height="26" rx="5" fill="#f1f5f9"/>
@@ -73,7 +73,7 @@
   <text x="352" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">supera a inferência direta em acurácia lógica.</text>
   <text x="342" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Entender o funcionamento do Fresh Context e</text>
   <text x="352" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">como ele impede o envenenamento de contexto.</text>
-  <text x="342" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Visualizar o fluxo de streaming WebSocket</text>
+  <text x="342" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Visualizar o fluxo de streaming SSE</text>
   <text x="352" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">sem engasgos ou perda de eventos de fase.</text>
   <text x="342" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#334155">• Inspecionar o grafo e topologia das tarefas.</text>
 
@@ -102,7 +102,7 @@
   <text x="342" y="372" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Permite disparar a mesma pergunta em modo direto ou estruturado para comparar acurácia e comportamento.</text>
 
   <text x="342" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#047857">2. Modos de Visualização (Modo Gráfico e Modo Chat):</text>
-  <text x="342" y="412" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Permite alternar entre visualização em grafo/timeline ou transcrição textual via WebSocket.</text>
+  <text x="342" y="412" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Permite alternar entre visualização em grafo/timeline ou transcrição textual via SSE.</text>
 
   <text x="342" y="438" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" fill="#047857">3. Divulgação Progressiva de Detalhes Técnicos (Progressive Disclosure):</text>
   <text x="342" y="452" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#475569">Cards da timeline colapsados por padrão, com abertura sob demanda para inspecionar aprendizados e parâmetros.</text>

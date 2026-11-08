@@ -191,13 +191,13 @@ Não foram identificados stakeholders afetados que não utilizariam a interface 
 
 ## 4.5 Conte uma situação concreta.
 
-`[F]` **Caso de uso do Ralph Wiggum Loop:** Maria, uma pesquisadora (ou representante de empresa), precisa resolver uma questão lógica complexa de biologia molecular. Ao utilizar um chatbot tradicional, a IA comete erros lógicos e entrega uma resposta incorreta. Ao utilizar o orquestrador do TCC, a pergunta é dividida em tarefas atômicas executadas pelo Ralph Wiggum Loop adaptado, permitindo autocrítica e reflexão para melhorar a resposta final. Com a adição posterior da interface gráfica, Maria pode selecionar o modelo de LLM desejado, acompanhar o raciocínio em tempo real e decidir com segurança se a resposta gerada está correta.
+`[H]` **Caso de uso do Ralph Wiggum Loop:** Maria, uma pesquisadora (ou representante de empresa), precisa resolver uma questão lógica complexa de biologia molecular. Ao utilizar um chatbot tradicional, a IA comete erros lógicos e entrega uma resposta incorreta. Ao utilizar o orquestrador do TCC, a pergunta é dividida em tarefas atômicas executadas pelo Ralph Wiggum Loop adaptado, permitindo autocrítica e reflexão para melhorar a resposta final. Com a adição posterior da interface gráfica, Maria pode selecionar o modelo de LLM desejado, acompanhar o raciocínio em tempo real e decidir com segurança se a resposta gerada está correta.
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
-| Literatura de LLMs e Benchmarks do TCC | A limitação na acurácia de LLMs em tarefas de raciocínio complexo e o ganho comprovado de qualidade com a orquestração do Ralph Loop nos datasets MMLU/GPQA. | Artigos da literatura e resultados dos testes de benchmark do projeto. |
+| Literatura de LLMs e Benchmarks do TCC | A limitação na acurácia de LLMs em tarefas de raciocínio complexo e o ganho de qualidade esperado com a orquestração do Ralph Loop, a avaliar nos datasets MMLU/GPQA. | Artigos da literatura e planejamento dos benchmarks do projeto. |
 
 ---
 
@@ -295,7 +295,7 @@ Obter respostas com qualidade e acurácia superiores em perguntas complexas, aco
 - [ ] É um protótipo demonstrativo de aplicação potencial.
 - [ ] Outra.
 
-> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for posteriormente decidido pela equipe e pelo orientador.
+> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Neste projeto, a interface demonstrativa já integra o escopo previsto do TCC.
 
 ---
 
@@ -337,7 +337,7 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | F01 | Enviar uma pergunta complexa em linguagem natural | Disparar o orquestrador para gerar a resposta de alta qualidade | Alta |
 | F02 | Selecionar o modelo de LLM (Llama 3.1 8B, 70B, 405B) | Escolher o modelo de linguagem mais adequado às necessidades do problema | Alta |
 | F03 | Alternar entre o fluxo "Ralph Wiggum Loop" e "Inferência Simples" | Comparar a resposta refinada e estruturada com a resposta linear comum | Alta |
-| F04 | Acompanhar a execução por etapas e métricas do fluxo | Visualizar a evolução do pensamento da IA e confirmar se a resposta final está correta | Alta |
+| F04 | Acompanhar a execução por etapas e métricas do fluxo | Acompanhar etapas e métricas para apoiar a conferência humana da resposta final | Alta |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -354,7 +354,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | Estudantes, pesquisadores, empresas e entusiastas preferem acompanhar a resolução lógica das subtarefas em formato de linha do tempo vertical (timeline) para entender a geração da resposta. | Define a arquitetura de informação e a disposição visual da tela principal (Open Thinking). | Prototipação em papel (Entrega 6) e avaliação heurística (Entrega 13). |
+| H01 | Estudantes, pesquisadores, empresas e entusiastas preferem acompanhar a resolução lógica das subtarefas em formato de linha do tempo vertical (timeline) para entender a geração da resposta. | Define a arquitetura de informação e a disposição visual da tela principal (Open Thinking). | Prototipação em papel (Entrega 6) e observação de usuários (Entrega 14). |
 | H02 | A sinalização de sucesso (✓) ou falha (✗) dos critérios de aceite na timeline é suficiente para indicar a autocorreção e o refinamento da resposta do modelo. | Evita a sobrecarga cognitiva do usuário ao ler logs de texto longos de autocrítica do modelo. | Avaliação heurística (Entrega 13) e testes de usabilidade com usuários (Entrega 14). |
 
 

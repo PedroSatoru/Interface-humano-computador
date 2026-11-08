@@ -37,7 +37,7 @@ P01–P04 são personas da Entrega 3; C01–C04, cenários da Entrega 4; F01–F
 - **GOMS:** `GOAL` é uma meta; `METHOD` é uma maneira de alcançá-la; `SR` é a regra de seleção. Operadores externos são ações como clicar e digitar; internos são leitura, comparação e decisão. Quando há um caminho único, os operadores aparecem diretamente sob o objetivo, como no exemplo da aula. A análise é qualitativa, sem estimativas KLM.
 - **CTT:** `U` = tarefa do usuário fora do harness; `I` = interação com o harness; `S` = processamento do sistema; `A` = composição abstrata de tarefas. As relações temporais estão no nó abstrato e na legenda; as arestas mostram a decomposição. Os tipos são identificados por letras em lugar dos ícones tradicionais.
 
-Os oito diagramas Mermaid ficam no próprio Markdown, que também é sua fonte editável. Os SVGs e o gerador da revisão anterior permanecem como arquivos históricos e não representam esta versão.
+Os oito diagramas Mermaid ficam no próprio Markdown, que também é sua fonte editável.
 
 **Limite comum:** se houver falha técnica ou interrupção, identificar o estado e registrar a pendência, sem tratar saída parcial como conclusão da tarefa. Os modelos detalham o percurso principal e as decisões sobre o resultado, sem decompor mecanismos internos de recuperação do serviço.
 
@@ -719,16 +719,16 @@ As quatro tarefas devem orientar o protótipo e o teste de usabilidade. T01 é p
 
 ## Rastreabilidade e referências
 
-Os vínculos individuais estão na [matriz de rastreabilidade](../RASTREABILIDADE.md) e no [arquivo de justificativas](05_justificativas.md). A base conceitual utilizada é a de Barbosa e Silva (2010), apresentada nos materiais locais [HTA](../hta.md) e [GOMS/CTT](../goms_e_ctt.md), registrados na [bibliografia](../BIBLIOGRAFIA.md#materiais-utilizados-na-entrega-5).
+Os vínculos individuais estão na [matriz de rastreabilidade](../RASTREABILIDADE.md). As descrições, interpretações e decisões de cada modelo estão neste relatório. A base conceitual utilizada é a de Barbosa e Silva (2010), registrada na [bibliografia](../BIBLIOGRAFIA.md#fundamentos-de-ihc-e-design-de-interação).
 
-Da transcrição fornecida, foram usados os trechos 2:27–7:22 (elementos GOMS), 8:31–8:46 (organização textual), 13:21–13:42 e 21:22–22:55 (decomposição, regras e operadores), 31:06–36:53 (categorias CTT) e 37:47–42:33 (relações temporais). `moldes.md` e `transcricao_goms.txt` estão na pasta de trabalho, fora da raiz do repositório; por isso seus nomes não são links de navegação do GitHub.
+Da transcrição fornecida, foram usados os trechos 2:27–7:22 (elementos GOMS), 8:31–8:46 (organização textual), 13:21–13:42 e 21:22–22:55 (decomposição, regras e operadores), 31:06–36:53 (categorias CTT) e 37:47–42:33 (relações temporais). Os materiais de apoio `hta.md`, `goms_e_ctt.md`, `moldes.md` e `transcricao_goms.txt` não estão incluídos neste repositório.
 
 ## Histórico de revisões
 
 | Data | Revisão |
 |---|---|
 | 29/09/2026 | Data original da entrega. |
-| 12/10/2026 | Revisão anterior de planos, métodos e relações temporais; [registro histórico preservado](05_registro_mudancas.md). |
+| 12/10/2026 | Revisão anterior de planos, métodos e relações temporais. |
 | 04/11/2026 | Organização por aluno segundo o molde; simplificação dos 12 modelos; diagramas editáveis no Markdown; justificativas individuais baseadas nas Entregas 1–4 e nos materiais fornecidos. |
 
 ## Checklist
@@ -743,5 +743,5 @@ Da transcrição fornecida, foram usados os trechos 2:27–7:22 (elementos GOMS)
 - [x] As tarefas estão ligadas às personas e aos cenários na rastreabilidade.
 - [x] Os modelos descrevem o uso humano da contribuição, sem decompor o código.
 - [x] Registros e consultas foram escolhidos por sua relação com o objetivo do usuário.
-- [x] Há justificativa individual para cada um dos 12 modelos.
+- [x] Há descrição e interpretação individual para cada um dos 12 modelos.
 - [x] Hipóteses e propostas estão separadas de evidências de testes com usuários.
